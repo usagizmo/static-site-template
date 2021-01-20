@@ -1,0 +1,20 @@
+{
+  "name": "static-site-template",
+  "version": "1.0.0",
+  "repository": "ssh://git@github.com/usagizmo/static-site-template.git",
+  "author": "usagizmo <usagizmo@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write .",
+    "dev:serve": "browser-sync public/ -w --startPath index.html",
+    "dev:format": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+    "dev": "concurrently \"yarn dev:serve\" \"yarn dev:format\"",
+    "deploy": "rsync -ahvu --delete --exclude=\".*\" public/ <SSH_HOST>:/var/www/html/"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "concurrently": "^5.3.0",
+    "onchange": "^7.1.0",
+    "prettier": "^2.2.1"
+  }
+}
