@@ -1,14 +1,249 @@
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ────────────────────
+Base
+──────────────────── */
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.content {
-  height: 100vh;
+body {
+  overflow-x: hidden;
+}
+
+/* Optional */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  /* Edge */
+  color: #a0aec0;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #a0aec0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #a0aec0;
+}
+
+/* ────────────────────
+Components
+──────────────────── */
+.container {
+  box-sizing: content-box; /* Optional */
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 980px;
+  height: 100%;
+  background-color: #d9435f0f;
+}
+.container.\--768 {
+  max-width: 768px;
+}
+.container.\--1200 {
+  max-width: 1200px;
+}
+.container.\--tablet {
+  max-width: 768px;
+}
+.container.\--small {
+  max-width: 768px;
+}
+.container.\--large {
+  max-width: 1200px;
+}
+.container.\--full {
+  max-width: none;
+}
+.container.\--no-pad {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d9435f;
+}
+.header_inner {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.header_logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.header_nav {
+}
+.header_nav ul {
+  display: flex;
+}
+.header_nav li {
+}
+.header_nav a {
+  display: block;
+  padding: 12px 20px;
+  color: #fff;
+}
+.header_nav a:hover {
+  opacity: 0.7;
+}
+
+.header_menu-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.header_menu-button span {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 1.5px);
+  left: 50%;
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.header_menu-button span:nth-child(1) {
+  transform: translate(-50%, -8px);
+}
+.header_menu-button span:nth-child(2) {
+  transform: translate(-50%, 0);
+}
+.header_menu-button span:nth-child(3) {
+  transform: translate(-50%, 8px);
+}
+body.\--menu-open .header_menu-button span:nth-child(1) {
+  transform: translate(-50%, 0) rotate(45deg);
+}
+body.\--menu-open .header_menu-button span:nth-child(2) {
+  transform: translate(-50%, 0) rotate(-45deg);
+}
+body.\--menu-open .header_menu-button span:nth-child(3) {
+  opacity: 0;
+}
+
+.sp-menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.sp-menu_inner {
+  display: flex;
+  height: 100%;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.sp-menu_link {
+  display: block;
+  padding: 6px 12px;
+}
+body.\--menu-open .sp-menu {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.footer {
+  height: 40px;
+  background-color: #d9435f0f;
+}
+.footer_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background-color: #d9435f0f;
+}
+.footer_title {
+  font-size: 14px;
+  font-weight: bold;
+}
+.footer_copyright {
+  font-size: 12px;
+}
+
+.component-01 {
+  position: fixed;
+  right: 40px;
+  height: 40px;
+  bottom: 40px;
+  width: 40px;
+  background-color: crimson;
+}
+.component-02 {
+  right: 40px;
+  height: 40px;
+  bottom: 40px;
+  width: 40px;
+  background-color: crimson;
+}
+
+/* ────────────────────
+Animations
+──────────────────── */
+[data-in='fade'] {
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+[data-in='fade'].\--in {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ────────────────────
+Utilities
+──────────────────── */
+@media screen and (min-width: 768px) {
+  .u-sp {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .u-pc {
+    display: none !important;
+  }
+}
+
+.u-flex {
+  display: flex;
+}
+.u-justify-center {
+  justify-content: center;
+}
+.u-justify-center {
+  justify-content: center;
+}
+.u-justify-between {
+  justify-content: space-between;
+}
+
+.u-mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-h-400 {
+  height: 400px;
 }
