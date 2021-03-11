@@ -1,8 +1,10 @@
 ;(function () {
   'use strict'
 
+  const INTERVAL = 100
+
   const setIn = function () {
-    const inRatio = 0.98
+    const inRatio = 1
     const $ins = $('[data-in]')
 
     const onScroll = function () {
@@ -29,7 +31,7 @@
 
     $(window).on(
       'scroll',
-      $.throttle(200, function () {
+      $.throttle(INTERVAL, function () {
         onScroll()
       })
     )
@@ -49,7 +51,7 @@
 
     $(window).on(
       'resize',
-      $.throttle(200, function () {
+      $.throttle(INTERVAL, function () {
         onResize()
       })
     )
