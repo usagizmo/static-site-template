@@ -126,7 +126,7 @@
       }
 
       const scrollTop = $target.offset().top - offsetTop
-      $('html, body').animate(
+      $('html, body').stop().animate(
         {
           scrollTop: scrollTop,
         },
