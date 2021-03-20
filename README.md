@@ -1,10 +1,21 @@
 # Static Site Template
 
+A great, small starting point for building a static site.
+
+- Plain CSS / JS
+- eslint / stylelint
+- prettier
+- husky + lint-staged
+
 ## Development
 
 ```bash
 yarn
-yarn dev
+yarn format # Launch the browser-sync server with hot reload
+yarn serve  # php built-in server (To adjust CSS styles with Chrome's Developer Tools)
+yarn dev    # Launch the browser-sync server with hot reload
+yarn lint   # Linting and Formatting of JS and CSS files
+yarn deploy # When deploying to a VPS such as DigitalOcean using `rsync`
 ```
 
 ## Deploy a static site to Vercel with Basic Auth
@@ -55,8 +66,8 @@ vercel link
 # ? What’s your project’s name? <kebab-case-project-name>
 
 # Set the `Environment Variables` in the Vercel.
-vercel env add plain BASIC_USER
-vercel env add plain BASIC_PASS
+vercel env add plain <BASIC_USER>
+vercel env add plain <BASIC_PASS>
 # ? What’s the value of BASIC_PASS? [hidden]
 # ? Add BASIC_PASS to which Environments (select multiple)? Production, Preview, Development
 
