@@ -6,6 +6,7 @@ A great, small starting point for building a static site.
 - eslint / stylelint
 - prettier
 - husky + lint-staged
+- GitHub Actions (Linting + Formatting)
 
 ## Development
 
