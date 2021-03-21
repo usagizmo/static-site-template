@@ -222,25 +222,14 @@ Utilities
   }
 }
 
-.u-flex {
-  display: flex;
-}
-.u-justify-center {
-  justify-content: center;
-}
-.u-justify-between {
-  justify-content: space-between;
-}
-
-.u-mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.u-text-center {
-  text-align: center;
-}
-
-.u-h-400 {
-  height: 400px;
+.u-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
