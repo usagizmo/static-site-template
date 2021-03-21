@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  const INTERVAL = 100
+  const INTERVAL = 50
 
   const setIn = function () {
     const inRatio = 1
