@@ -7,8 +7,8 @@
   "scripts": {
     "prepare": "husky install",
     "format": "prettier --write .",
-    "serve": "php -S localhost:3000 -t public/",
     "dev": "browser-sync public/ -w --startPath index.html",
+    "dev:ignore-css": "browser-sync public/ -w --ignore \"**/*.css\" --startPath index.html",
     "lint": "eslint --cache **/*.js --fix & stylelint --cache **/*.css --fix",
     "deploy": "rsync -ahvu --delete --exclude=\".*\" public/ <SSH_HOST>:/var/www/html/"
   },

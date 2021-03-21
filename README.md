@@ -12,11 +12,14 @@ A great, small starting point for building a static site.
 
 ```bash
 yarn
-yarn format # Launch the browser-sync server with hot reload
-yarn serve  # php built-in server (To adjust CSS styles with Chrome's Developer Tools)
-yarn dev    # Launch the browser-sync server with hot reload
-yarn lint   # Linting and Formatting of JS and CSS files
-yarn deploy # When deploying to a VPS such as DigitalOcean using `rsync`
+yarn format  # Format files that are not written in .prettierignore
+yarn dev     # Launch the browser-sync server
+yarn lint    # Linting and Formatting of JS and CSS files
+yarn deploy  # When deploying to a VPS such as DigitalOcean using `rsync`
+
+# Launch the browser-sync server (without CSS watching)
+# To use synchronous editing of CSS styles in Chrome's Developer Tools
+yarn dev:ignore-css
 ```
 
 ## Deploy a static site to Vercel with Basic Auth
