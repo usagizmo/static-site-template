@@ -70,8 +70,8 @@ vercel link
 # ? What’s your project’s name? <kebab-case-project-name>
 
 # Set the `Environment Variables` in the Vercel.
-vercel env add plain <BASIC_USER>
-vercel env add plain <BASIC_PASS>
+vercel env add plain BASIC_USER
+vercel env add plain BASIC_PASS
 # ? What’s the value of BASIC_PASS? [hidden]
 # ? Add BASIC_PASS to which Environments (select multiple)? Production, Preview, Development
 
