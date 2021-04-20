@@ -1,15 +1,16 @@
 ;(function () {
   'use strict'
 
-  const INTERVAL = 50
+  const $window = $(window)
+  const INTERVAL = 30
 
   const setIn = function () {
     const inRatio = 1
     const $ins = $('[data-in]')
 
     const onScroll = function () {
-      const windowHeight = $(window).height()
-      const scrollTop = $(window).scrollTop()
+      const windowHeight = $window.height()
+      const scrollTop = $window.scrollTop()
 
       $ins.each(function () {
         const $el = $(this)
@@ -30,7 +31,7 @@
       })
     }
 
-    $(window).on(
+    $window.on(
       'scroll',
       $.throttle(INTERVAL, function () {
         onScroll()
@@ -50,7 +51,7 @@
       })
     }
 
-    $(window).on(
+    $window.on(
       'resize',
       $.throttle(INTERVAL, function () {
         onResize()

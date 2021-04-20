@@ -233,3 +233,7 @@ Utilities
   white-space: nowrap;
   border-width: 0;
 }
+
+.u-h-400 {
+  height: 400px;
+}
