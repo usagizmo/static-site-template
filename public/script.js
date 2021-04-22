@@ -31,13 +31,14 @@
       })
     }
 
-    $window.on(
-      'scroll',
-      $.throttle(INTERVAL, function () {
+    $window.on({
+      scroll: $.throttle(INTERVAL, function () {
         onScroll()
-      })
-    )
-    onScroll()
+      }),
+      load: function () {
+        onScroll()
+      },
+    })
   }
 
   const setSamaHeight = function () {
