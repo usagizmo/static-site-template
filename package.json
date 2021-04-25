@@ -9,7 +9,8 @@
     "format": "prettier --write .",
     "dev": "browser-sync public/ -w --startPath index.html",
     "dev:ignore-css": "browser-sync public/ -w --ignore \"**/*.css\" --startPath index.html",
-    "lint": "eslint --cache **/*.js --fix & stylelint --cache **/*.css --fix",
+    "lint": "eslint --cache **/*.js & stylelint --cache **/*.css",
+    "lint:fix": "eslint --cache **/*.js --fix & stylelint --cache **/*.css --fix",
     "deploy": "rsync -ahvu --delete --exclude=\".*\" public/ <SSH_HOST>:/var/www/html/"
   },
   "lint-staged": {
