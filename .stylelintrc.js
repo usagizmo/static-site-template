@@ -1,8 +1,8 @@
-const ignorePatterns = require('./ignore-patterns')
+const ignoreFiles = require('./ignore-patterns')
 
 module.exports = {
   extends: ['stylelint-config-standard', 'stylelint-prettier/recommended'],
-  ignorePatterns,
+  ignoreFiles,
   rules: {
     'prettier/prettier': true,
     'block-no-empty': null,
