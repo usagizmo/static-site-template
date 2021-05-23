@@ -27,7 +27,7 @@
 
         const $group = $el.closest('[data-in-group]')
         const elTop = $group.length ? $group.offset().top : $el.offset().top
-        $el.toggleClass('--in', inRatio >= (elTop - scrollTop) / windowHeight)
+        $group.add($el).toggleClass('--in', inRatio >= (elTop - scrollTop) / windowHeight)
       })
     }
 
