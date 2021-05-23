@@ -198,13 +198,11 @@ body.\--menu-open .c-sp-menu {
 Animations
 ──────────────────── */
 [data-in='fade'] {
-  opacity: 0;
   transition: 0.3s;
-  pointer-events: none;
 }
-[data-in='fade'].\--in {
-  opacity: 1;
-  pointer-events: auto;
+[data-in='fade']:not(.\--in) {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* ────────────────────
