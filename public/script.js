@@ -15,19 +15,19 @@
       $ins.each(function () {
         const $el = $(this)
 
-        if (!$el.is('[data-in-out]') && $el.hasClass('--in')) {
+        if (!$el.is('[data-in-out]') && $el.hasClass('is-in')) {
           return
         }
 
         const inOutTop = $el.data('in-top')
         if (inOutTop) {
-          $el.toggleClass('--in', scrollTop >= inOutTop)
+          $el.toggleClass('is-in', scrollTop >= inOutTop)
           return
         }
 
         const $group = $el.closest('[data-in-group]')
         const elTop = $group.length ? $group.offset().top : $el.offset().top
-        $group.add($el).toggleClass('--in', inRatio >= (elTop - scrollTop) / windowHeight)
+        $group.add($el).toggleClass('is-in', inRatio >= (elTop - scrollTop) / windowHeight)
       })
     }
 

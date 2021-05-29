@@ -200,7 +200,7 @@ Animations
 [data-in='fade'] {
   transition: 0.3s;
 }
-[data-in='fade']:not(.\--in) {
+[data-in='fade']:not(.\is-in) {
   opacity: 0;
   pointer-events: none;
 }
