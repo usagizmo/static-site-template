@@ -62,7 +62,7 @@
   }
 
   const setSticky = function () {
-    $('.js-sticky').sticky()
+    $('[data-sticky]').sticky()
   }
 
   const fixPage = function () {
@@ -102,13 +102,13 @@
       nextIsOpen ? fixPage() : releasePage()
     }
 
-    $('.js-toggle-menu').on('click', function () {
+    $('[data-toggle-menu]').on('click', function () {
       toggleModal()
     })
-    $('.js-open-menu').on('click', function () {
+    $('[data-open-menu]').on('click', function () {
       toggleModal(true)
     })
-    $('.js-close-menu').on('click', function () {
+    $('[data-close-menu]').on('click', function () {
       toggleModal(false)
     })
   }
@@ -117,7 +117,7 @@
     $('a[href^="#"]:not([href="#"])').on('click', function (ev) {
       ev.preventDefault()
       const $target = $($(this).attr('href'))
-      const $offset = $('.js-scroll-offset')
+      const $offset = $('[data-scroll-offset]')
       let offsetTop = 0
 
       if (!$target.length) {
