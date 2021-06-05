@@ -9,8 +9,13 @@
     "format": "prettier --write .",
     "dev": "browser-sync public/ -w --startPath index.html",
     "dev:ignore-css": "browser-sync public/ -w --ignore \"**/*.css\" --startPath index.html",
-    "lint": "htmlhint **/*.html & eslint --cache **/*.js & stylelint --cache **/*.css",
-    "lint:fix": "htmlhint **/*.html & eslint --cache **/*.js --fix & stylelint --cache **/*.css --fix",
+    "lint:html": "htmlhint **/*.html",
+    "lint:css": "stylelint --cache **/*.css",
+    "lint:css:fix": "stylelint --cache **/*.css --fix",
+    "lint:js": "eslint --cache **/*.js",
+    "lint:js:fix": "eslint --cache **/*.js --fix",
+    "lint": "npm-run-all -p lint:html lint:css lint:js",
+    "lint:fix": "npm-run-all -p lint:html lint:css:fix lint:js:fix -s format",
     "deploy": "rsync -ahvu --delete --exclude=\".*\" public/ <SSH_HOST>:/var/www/html/"
   },
   "lint-staged": {
@@ -27,6 +32,7 @@
     "htmlhint": "^0.14.2",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
     "stylelint": "^13.12.0",
