@@ -176,10 +176,10 @@ body.\--menu-open .c-sp-menu {
 /* ────────────────────
 Animations
 ──────────────────── */
-[data-in='fade'] {
+[data-in="fade"] {
   transition: 0.3s;
 }
-[data-in='fade']:not(.is-in) {
+[data-in="fade"]:not(.is-in) {
   opacity: 0;
   pointer-events: none;
 }

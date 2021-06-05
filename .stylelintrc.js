@@ -7,5 +7,6 @@ module.exports = {
     'prettier/prettier': true,
     'block-no-empty': null,
     'no-descending-specificity': null,
+    'string-quotes': 'double',
   },
 }
