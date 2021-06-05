@@ -114,21 +114,14 @@
   }
 
   const setSmoothScroll = function () {
-    $('a[href^="#"]:not([href="#"])').on('click', function (ev) {
+    $('a[href^="#"]').on('click', function (ev) {
       ev.preventDefault()
-      const $target = $($(this).attr('href'))
+      const href = $(this).attr('href')
+      const $target = href !== '#' ? $(href) : $('body')
       const $offset = $('[data-scroll-offset]')
-      let offsetTop = 0
-
-      if (!$target.length) {
-        return
-      }
-
-      if ($offset.length) {
-        offsetTop = $offset.height()
-      }
-
-      const scrollTop = $target.offset().top - offsetTop
+      const targetTop = $target.offset().top
+      const offsetTop = $offset.length ? $offset.height() : 0
+      const scrollTop = targetTop - offsetTop
       $('html, body').stop().animate(
         {
           scrollTop: scrollTop,
