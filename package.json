@@ -9,11 +9,12 @@
     "format": "prettier --write .",
     "dev": "browser-sync public/ -w --startPath index.html",
     "dev:ignore-css": "browser-sync public/ -w --ignore \"**/*.css\" --startPath index.html",
-    "lint": "eslint --cache **/*.js & stylelint --cache **/*.css",
-    "lint:fix": "eslint --cache **/*.js --fix & stylelint --cache **/*.css --fix",
+    "lint": "htmlhint **/*.html & eslint --cache **/*.js & stylelint --cache **/*.css",
+    "lint:fix": "htmlhint **/*.html & eslint --cache **/*.js --fix & stylelint --cache **/*.css --fix",
     "deploy": "rsync -ahvu --delete --exclude=\".*\" public/ <SSH_HOST>:/var/www/html/"
   },
   "lint-staged": {
+    "**/*.html": "htmlhint",
     "**/*.js": "eslint --cache --fix",
     "**/*.css": "stylelint --cache --fix --allow-empty-input",
     "*": "pretty-quick --staged"
@@ -23,6 +24,7 @@
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "htmlhint": "^0.14.2",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
