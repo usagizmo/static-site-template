@@ -7,5 +7,6 @@ module.exports = {
     'prettier/prettier': true,
     'block-no-empty': null,
     'no-descending-specificity': null,
+    'selector-class-pattern': '^(?:c|is|u)-(?:[a-z0-9-]+?_)?[a-z0-9-]+$',
   },
 }
