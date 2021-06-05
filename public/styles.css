@@ -1,37 +1,16 @@
 /* ────────────────────
 Base
 ──────────────────── */
-html {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
 
-body {
-  overflow-x: hidden;
-}
+/* html {} */
 
-/* Optional */
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  /* Edge */
-  color: #a0aec0;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #a0aec0;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #a0aec0;
-}
+/* body {} */
 
 /* ────────────────────
 Components
 ──────────────────── */
 .c-container {
-  box-sizing: content-box; /* Optional */
+  box-sizing: content-box;
   margin: 0 auto;
   padding: 0 20px;
   max-width: 980px;
@@ -200,7 +179,7 @@ Animations
 [data-in='fade'] {
   transition: 0.3s;
 }
-[data-in='fade']:not(.\is-in) {
+[data-in='fade']:not(.is-in) {
   opacity: 0;
   pointer-events: none;
 }
