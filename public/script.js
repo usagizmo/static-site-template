@@ -97,8 +97,8 @@
     const $body = $('body')
 
     const toggleModal = function (isOpen) {
-      const nextIsOpen = isOpen === undefined ? !$body.hasClass('--menu-open') : isOpen
-      $body.toggleClass('--menu-open', nextIsOpen)
+      const nextIsOpen = isOpen === undefined ? !$body.hasClass('is-menu-open') : isOpen
+      $body.toggleClass('is-menu-open', nextIsOpen)
       nextIsOpen ? fixPage() : releasePage()
     }
 
