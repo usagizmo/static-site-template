@@ -69,11 +69,11 @@
     const $body = $('body')
     const scrollTop = $('html, body').scrollTop()
 
-    if ($body.hasClass('--fixed')) {
+    if ($body.hasClass('is-fixed')) {
       return
     }
 
-    $body.data('scrollTop', scrollTop).addClass('--fixed').css({
+    $body.data('scrollTop', scrollTop).addClass('is-fixed').css({
       position: 'fixed',
       left: 0,
       top: -scrollTop,
@@ -85,11 +85,11 @@
     const $body = $('body')
     const scrollTop = $body.data('scrollTop') || 0
 
-    if (!$body.hasClass('--fixed')) {
+    if (!$body.hasClass('is-fixed')) {
       return
     }
 
-    $body.removeClass('--fixed').removeAttr('style')
+    $body.removeClass('is-fixed').removeAttr('style')
     $('html, body').scrollTop(scrollTop)
   }
 
