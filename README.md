@@ -14,8 +14,8 @@ A great, small starting point for building a static site.
 yarn
 yarn format    # Format files that are not written in .prettierignore
 yarn dev       # Launch the browser-sync server
-yarn lint      # Linting of JS and CSS files
-yarn lint:fix  # Linting and Formatting of JS and CSS files
+yarn lint      # Linting of HTML, CSS and JS files
+yarn lint:fix  # Linting and Formatting
 yarn deploy    # When deploying to a VPS such as DigitalOcean using `rsync`
 
 # Launch the browser-sync server (without CSS watching)
