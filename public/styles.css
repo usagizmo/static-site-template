@@ -97,11 +97,15 @@ Components
 
 .c-header_menu-button {
   position: relative;
+  overflow: hidden;
   width: 40px;
   height: 40px;
 }
-.c-header_menu-button span {
+.c-header_menu-button span:first-child::before,
+.c-header_menu-button span:first-child span,
+.c-header_menu-button span:first-child::after {
   position: absolute;
+  content: "";
   display: inline-block;
   top: calc(50% - 1.5px);
   left: 50%;
@@ -110,22 +114,22 @@ Components
   background-color: #fff;
   transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.c-header_menu-button span:nth-child(1) {
+.c-header_menu-button span:first-child::before {
   transform: translate(-50%, -8px);
 }
-.c-header_menu-button span:nth-child(2) {
+.c-header_menu-button span:first-child span {
   transform: translate(-50%, 0);
 }
-.c-header_menu-button span:nth-child(3) {
+.c-header_menu-button span:first-child::after {
   transform: translate(-50%, 8px);
 }
-body.is-menu-open .c-header_menu-button span:nth-child(1) {
+body.is-menu-open .c-header_menu-button span:first-child::before {
   transform: translate(-50%, 0) rotate(45deg);
 }
-body.is-menu-open .c-header_menu-button span:nth-child(2) {
+body.is-menu-open .c-header_menu-button span:first-child span {
   transform: translate(-50%, 0) rotate(-45deg);
 }
-body.is-menu-open .c-header_menu-button span:nth-child(3) {
+body.is-menu-open .c-header_menu-button span:first-child::after {
   opacity: 0;
 }
 
