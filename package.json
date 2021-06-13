@@ -5,10 +5,10 @@
   "author": "usagizmo <usagizmo@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build:format": "prettier --write .",
+    "format": "prettier --write .",
     "build:gulp": "gulp build",
-    "build": "npm-run-all -s build:format build:gulp",
-    "dev:format": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+    "build": "npm-run-all -s format build:gulp",
+    "dev:format": "onchange \"**/*\" -e \"dist/**/*\" -- prettier --write --ignore-unknown {{changed}}",
     "dev:gulp": "gulp dev",
     "dev": "npm-run-all -p dev:format dev:gulp",
     "deploy": "rsync -ahvu --delete --exclude=\".*\" dist/ <SSH_HOST>:/var/www/html/"
