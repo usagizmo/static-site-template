@@ -1,6 +1,4 @@
 const { src, dest, series, parallel, watch } = require('gulp')
-const notify = require('gulp-notify')
-const plumber = require('gulp-plumber')
 const pug = require('gulp-pug')
 const postcss = require('gulp-postcss')
 const postcssPresetEnv = require('postcss-preset-env')
@@ -15,10 +13,6 @@ const stylelint = require('stylelint')
 const reporter = require('postcss-reporter')
 const htmlhint = require('gulp-htmlhint')
 const eslint = require('gulp-eslint')
-
-const errorHandler = {
-  errorHandler: notify.onError('Error: <%= error.message %>'),
-}
 
 const paths = {
   dist: './dist',
