@@ -40,3 +40,6 @@ jobs:
         run: yarn build
 
       - uses: stefanzweifel/git-auto-commit-action@v4
+
+      - name: Run test
+        run: yarn test
