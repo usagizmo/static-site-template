@@ -14,6 +14,7 @@ const mqpacker = require('css-mqpacker')
 const stylelint = require('stylelint')
 const reporter = require('postcss-reporter')
 const htmlhint = require('gulp-htmlhint')
+const eslint = require('gulp-eslint')
 
 const errorHandler = {
   errorHandler: notify.onError('Error: <%= error.message %>'),
@@ -77,6 +78,10 @@ function buildCSS() {
     .pipe(browserSync.stream())
 }
 
+function buildJS() {
+  return src(`${paths.src}/public/script.js`).pipe(eslint()).pipe(dest(paths.dist))
+}
+
 function browser(cb) {
   browserSync.init({
     server: paths.dist,
@@ -92,10 +97,11 @@ function watchFiles(cb) {
 
   watch(`${paths.src}/**/*.pug`, series(buildPug, reload))
   watch(`${paths.src}/**/*.pcss`, series(buildCSS))
+  watch(`${paths.src}/public/script.js`, series(buildJS))
   cb()
 }
 
-const build = series(clear, copy, parallel(buildPug, buildCSS))
+const build = series(clear, copy, parallel(buildPug, buildCSS, buildJS))
 const dev = series(build, parallel(browser, watchFiles))
 
 exports.build = build
