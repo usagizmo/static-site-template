@@ -2,9 +2,8 @@
 
 A great, small starting point for building a static site.
 
-- Plain CSS / JS
-- eslint / stylelint
-- prettier
+- Pug / PostCSS / Vanilla JS
+- gulp / prettier / htmlhint / eslint / stylelint
 - husky + lint-staged
 - GitHub Actions (Linting + Formatting)
 
@@ -12,15 +11,9 @@ A great, small starting point for building a static site.
 
 ```bash
 yarn
-yarn format    # Format files that are not written in .prettierignore
-yarn dev       # Launch the browser-sync server
-yarn lint      # Linting of HTML, CSS and JS files
-yarn lint:fix  # Linting and Formatting
-yarn deploy    # When deploying to a VPS such as DigitalOcean using `rsync`
-
-# Launch the browser-sync server (without CSS watching)
-# To use synchronous editing of CSS styles in Chrome's Developer Tools
-yarn dev:ignore-css
+yarn build   # build and format
+yarn dev     # Launch the browser-sync server and watch the files for build and format
+yarn deploy  # When deploying to a VPS such as DigitalOcean using `rsync`
 ```
 
 ## Deploy a static site to Vercel with Basic Auth

@@ -1,0 +1,27 @@
+.c-sp-menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.c-sp-menu_inner {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.c-sp-menu_link {
+  display: block;
+  padding: 6px 12px;
+}
+body.is-menu-open .c-sp-menu {
+  opacity: 1;
+  pointer-events: auto;
+}

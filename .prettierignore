@@ -1,2 +1,3 @@
-/**/*.min.*
-/public/libs
+*.min.*
+dist
+libs

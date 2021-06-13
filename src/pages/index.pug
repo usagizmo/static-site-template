@@ -1,0 +1,56 @@
+doctype html
+html(lang="ja")
+  include ../partials/header.pug
+  body
+    header.c-header(data-scroll-offset="")
+      .c-container
+        .c-header_inner
+          h1.c-header_logo
+            a(href="#") Rabi Inc.
+          nav.c-header_nav.u-pc
+            ul
+              li
+                a(href="#section-01") 01
+              li
+                a(href="#section-02") 02
+              li
+                a(href="#section-03") 03
+          button.c-header_menu-button.u-sp(type="button", data-toggle-menu="")
+            span.c-header_menu-icons
+              span
+            span.u-sr-only MENU
+    div(data-same-height=".c-header", style={ color: 'red' })
+    .c-sp-menu.u-sp
+      ul.c-sp-menu_inner
+        li
+          a.c-sp-menu_link(href="#section-01", data-close-menu="") 01
+        li
+          a.c-sp-menu_link(href="#section-02", data-close-menu="") 02
+        li
+          a.c-sp-menu_link(href="#section-03", data-close-menu="") 03
+    main
+      section
+        .c-container
+          .c-other-01 .c-container
+      section
+        .c-container.is-large
+          .c-other-01 .c-container.is-large
+      section
+        .c-container.is-large.is-no-pad
+          .c-container.is-full
+            .c-other-01 .c-container.is-large.is-no-pad &gt; .c-container.is-full
+          .c-container
+            .c-other-01 .c-container.is-large.is-no-pad &gt; .c-container
+      div
+        section#section-01.u-h-400
+          .c-container #c-section-01.u-h-400
+        section#section-02.u-h-400
+          .c-container #c-section-02.u-h-400
+        .u-flex.u-justify-center
+          .c-component-02(data-in="fade")
+          .c-component-02(data-in="fade", data-in-out="")
+        section#section-03.u-h-400
+          .c-container #c-section-03.u-h-400
+    a.c-component-01(href="#", data-in="fade", data-in-out="", data-in-top="200")
+      span.u-sr-only TO TOP
+    include ../partials/footer.pug

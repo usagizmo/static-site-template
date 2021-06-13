@@ -1,3 +1,5 @@
 {
-  "attr-lowercase": ["viewBox"]
+  "attr-lowercase": ["viewBox"],
+  "alt-require": true,
+  "space-tab-mixed-disabled": "space"
 }

@@ -36,7 +36,7 @@ jobs:
       - name: Install packages
         run: yarn
 
-      - name: Run lint:fix
-        run: yarn lint:fix
+      - name: Run build
+        run: yarn build
 
       - uses: stefanzweifel/git-auto-commit-action@v4

@@ -1,6 +1,3 @@
-/node_modules
-.eslintcache
-.stylelintcache
-.vercel
-pinegrow.json
+node_modules
 yarn-error.log
+dist
