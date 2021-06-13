@@ -1,0 +1,11 @@
+{
+  "env": {
+    "browser": true,
+    "jquery": true,
+    "jest": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2015
+  }
+}

@@ -1,32 +1,32 @@
 ;(function () {
   'use strict'
 
-  const $window = $(window)
-  const INTERVAL = 30
+  var $window = $(window)
+  var INTERVAL = 30
 
-  const setIn = function () {
-    const inRatio = 1
-    const $ins = $('[data-in]')
+  var setIn = function () {
+    var inRatio = 1
+    var $ins = $('[data-in]')
 
-    const onScroll = function () {
-      const windowHeight = $window.height()
-      const scrollTop = $window.scrollTop()
+    var onScroll = function () {
+      var windowHeight = $window.height()
+      var scrollTop = $window.scrollTop()
 
       $ins.each(function () {
-        const $el = $(this)
+        var $el = $(this)
 
         if (!$el.is('[data-in-out]') && $el.hasClass('is-in')) {
           return
         }
 
-        const inOutTop = $el.data('in-top')
+        var inOutTop = $el.data('in-top')
         if (inOutTop) {
           $el.toggleClass('is-in', scrollTop >= inOutTop)
           return
         }
 
-        const $group = $el.closest('[data-in-group]')
-        const elTop = $group.length ? $group.offset().top : $el.offset().top
+        var $group = $el.closest('[data-in-group]')
+        var elTop = $group.length ? $group.offset().top : $el.offset().top
         $group.add($el).toggleClass('is-in', inRatio >= (elTop - scrollTop) / windowHeight)
       })
     }
@@ -41,13 +41,13 @@
     })
   }
 
-  const setSamaHeight = function () {
-    const $els = $('[data-same-height]')
+  var setSamaHeight = function () {
+    var $els = $('[data-same-height]')
 
-    const onResize = function () {
+    var onResize = function () {
       $els.each(function () {
-        const $el = $(this)
-        const height = $($el.data('same-height')).outerHeight()
+        var $el = $(this)
+        var height = $($el.data('same-height')).outerHeight()
         $el.height(height)
       })
     }
@@ -61,13 +61,13 @@
     onResize()
   }
 
-  const setSticky = function () {
+  var setSticky = function () {
     $('[data-sticky]').sticky()
   }
 
-  const fixPage = function () {
-    const $body = $('body')
-    const scrollTop = $('html, body').scrollTop()
+  var fixPage = function () {
+    var $body = $('body')
+    var scrollTop = $('html, body').scrollTop()
 
     if ($body.hasClass('is-fixed')) {
       return
@@ -81,9 +81,9 @@
     })
   }
 
-  const releasePage = function () {
-    const $body = $('body')
-    const scrollTop = $body.data('scrollTop') || 0
+  var releasePage = function () {
+    var $body = $('body')
+    var scrollTop = $body.data('scrollTop') || 0
 
     if (!$body.hasClass('is-fixed')) {
       return
@@ -93,11 +93,11 @@
     $('html, body').scrollTop(scrollTop)
   }
 
-  const setMenuModal = function () {
-    const $body = $('body')
+  var setMenuModal = function () {
+    var $body = $('body')
 
-    const toggleModal = function (isOpen) {
-      const nextIsOpen = isOpen === undefined ? !$body.hasClass('is-menu-open') : isOpen
+    var toggleModal = function (isOpen) {
+      var nextIsOpen = isOpen === undefined ? !$body.hasClass('is-menu-open') : isOpen
       $body.toggleClass('is-menu-open', nextIsOpen)
       nextIsOpen ? fixPage() : releasePage()
     }
@@ -113,15 +113,15 @@
     })
   }
 
-  const setSmoothScroll = function () {
+  var setSmoothScroll = function () {
     $('a[href^="#"]').on('click', function (ev) {
       ev.preventDefault()
-      const href = $(this).attr('href')
-      const $target = href !== '#' ? $(href) : $('body')
-      const $offset = $('[data-scroll-offset]')
-      const targetTop = $target.offset().top
-      const offsetTop = $offset.length ? $offset.height() : 0
-      const scrollTop = targetTop - offsetTop
+      var href = $(this).attr('href')
+      var $target = href !== '#' ? $(href) : $('body')
+      var $offset = $('[data-scroll-offset]')
+      var targetTop = $target.offset().top
+      var offsetTop = $offset.length ? $offset.height() : 0
+      var scrollTop = targetTop - offsetTop
       $('html, body').stop().animate(
         {
           scrollTop: scrollTop,

@@ -1,0 +1,9 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "jquery": true,
+    "jest": true,
+    "node": true
+  }
+}
