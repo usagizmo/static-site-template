@@ -3,7 +3,8 @@
 A great, small starting point for building a static site.
 
 - Pug / PostCSS / Vanilla JS
-- Gulp / Prettier / HTMLHint / ESLint / Stylelint
+- Gulp / HTMLHint / ESLint / Stylelint
+- husky / lint-staged / Prettier
 - GitHub Actions (Linting + Formatting)
 
 ## Development

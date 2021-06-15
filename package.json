@@ -5,11 +5,17 @@
   "author": "usagizmo <usagizmo@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "prepare": "husky install",
     "format": "prettier --write .",
     "build": "gulp build",
     "dev": "gulp dev",
     "test": "jest",
     "deploy": "rsync -ahvu --delete --exclude=\".*\" dist/ <SSH_HOST>:/var/www/html/"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.css": "stylelint --fix",
+    "*.{js,css,md}": "prettier --write"
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.15.3",
@@ -23,7 +29,9 @@
     "gulp-postcss": "^9.0.0",
     "gulp-pug": "^5.0.0",
     "gulp-rename": "^2.0.0",
+    "husky": ">=6",
     "jest": "^27.0.4",
+    "lint-staged": ">=10",
     "postcss": "^8.3.2",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^14.0.2",
