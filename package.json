@@ -6,11 +6,8 @@
   "license": "MIT",
   "scripts": {
     "format": "prettier --write .",
-    "build:gulp": "gulp build",
-    "build": "npm-run-all -s format build:gulp",
-    "dev:format": "onchange \"**/*\" -e \"dist/**/*\" -- prettier --write --ignore-unknown {{changed}}",
-    "dev:gulp": "gulp dev",
-    "dev": "npm-run-all -p dev:format dev:gulp",
+    "build": "gulp build",
+    "dev": "gulp dev",
     "test": "jest",
     "deploy": "rsync -ahvu --delete --exclude=\".*\" dist/ <SSH_HOST>:/var/www/html/"
   },
@@ -28,8 +25,6 @@
     "gulp-pug": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "jest": "^27.0.4",
-    "npm-run-all": "^4.1.5",
-    "onchange": "^7.1.0",
     "postcss": "^8.3.2",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^14.0.2",
