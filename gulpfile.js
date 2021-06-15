@@ -8,7 +8,6 @@ const del = require('del')
 const rename = require('gulp-rename')
 const browserSync = require('browser-sync').create()
 const cssnano = require('cssnano')
-const mqpacker = require('css-mqpacker')
 const stylelint = require('stylelint')
 const reporter = require('postcss-reporter')
 const htmlhint = require('gulp-htmlhint')
@@ -55,7 +54,6 @@ function buildCSS() {
       },
     }),
     reporter({ clearReportedMessages: true }),
-    mqpacker(),
     cssnano({ autoprefixer: false }),
   ]
 
