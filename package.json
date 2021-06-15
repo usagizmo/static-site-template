@@ -14,7 +14,6 @@
   "devDependencies": {
     "@prettier/plugin-pug": "^1.15.3",
     "browser-sync": "^2.26.14",
-    "css-mqpacker": "^7.0.0",
     "cssnano": "^5.0.6",
     "del": "^6.0.0",
     "eslint": "^7.28.0",
