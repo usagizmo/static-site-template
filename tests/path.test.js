@@ -6,8 +6,9 @@ const files = find.toString().trim().split('\n')
 
 const allowlist = [
   '/favicon.ico',
-  'https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.min.css',
+  'https://static-site-template.io/',
   'https://usagizmo.com',
+  'https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.min.css',
   'https://cdn.jsdelivr.net/npm/jquery-sticky@1.0.4/jquery.sticky.min.js',
   'https://cdn.jsdelivr.net/npm/jquery-throttle-debounce@1.0.0/jquery.ba-throttle-debounce.min.js',
   'https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js',
