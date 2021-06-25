@@ -11,16 +11,23 @@ header.c-header(data-scroll-offset='')
             a(href=base + "/#section-02") 02
           li
             a(href=base + "/#section-03") 03
+        ul
+          li
+            a(href=base + "/second/") Second
       button.c-header_menu-button.u-sp(type='button', data-toggle-menu='')
         span.c-header_menu-icons
           span
         span.u-sr-only MENU
 div(data-same-height='.c-header', style={ color: "red" })
 .c-sp-menu.u-sp
-  ul.c-sp-menu_inner
-    li
-      a.c-sp-menu_link(href=base + "/#section-01", data-close-menu='') 01
-    li
-      a.c-sp-menu_link(href=base + "/#section-02", data-close-menu='') 02
-    li
-      a.c-sp-menu_link(href=base + "/#section-03", data-close-menu='') 03
+  .c-sp-menu_inner
+    ul
+      li
+        a.c-sp-menu_link(href=base + "/#section-01", data-close-menu='') 01
+      li
+        a.c-sp-menu_link(href=base + "/#section-02", data-close-menu='') 02
+      li
+        a.c-sp-menu_link(href=base + "/#section-03", data-close-menu='') 03
+    ul
+      li
+        a.c-sp-menu_link(href=base + "/second/") Second

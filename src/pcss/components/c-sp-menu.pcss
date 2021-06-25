@@ -11,11 +11,22 @@
   transition: 0.3s;
 }
 .c-sp-menu_inner {
-  display: flex;
   height: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  & > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+  }
 }
 .c-sp-menu_link {
   display: block;

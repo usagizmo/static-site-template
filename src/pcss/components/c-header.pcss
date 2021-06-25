@@ -19,8 +19,12 @@
 }
 
 .c-header_nav {
+  display: flex;
   & ul {
     display: flex;
+    &:not(:first-child) {
+      margin-left: 16px;
+    }
   }
   & li {
   }
