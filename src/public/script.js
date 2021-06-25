@@ -114,10 +114,9 @@
   }
 
   var setSmoothScroll = function () {
-    $('a[href^="#"]').on('click', function (ev) {
-      ev.preventDefault()
-      var href = $(this).attr('href')
-      var $target = href !== '#' ? $(href) : $('body')
+    var scrollTo = function ($target) {
+      if (!$target.length) return
+
       var $offset = $('[data-scroll-offset]')
       var targetTop = $target.offset().top
       var offsetTop = $offset.length ? $offset.height() : 0
@@ -129,6 +128,20 @@
         800,
         'easeOutQuint'
       )
+    }
+
+    $('a[href^="#"], a[href^="./#"]').on('click', function (ev) {
+      ev.preventDefault()
+      var href = $(this).attr('href').replace(/^\.\//, '')
+      var $target = href !== '#' ? $(href) : $('body')
+      scrollTo($target)
+    })
+
+    $window.on({
+      load: function () {
+        var $target = $(window.location.hash)
+        scrollTo($target)
+      },
     })
   }
 
