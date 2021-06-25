@@ -89,7 +89,7 @@ function watchFiles(cb) {
 
   watch(`${paths.src}/**/*.pug`, series(buildPug, reload))
   watch(`${paths.src}/**/*.pcss`, series(buildCSS))
-  watch(`${paths.src}/public/script.js`, series(buildJS))
+  watch(`${paths.src}/public/script.js`, series(buildJS, reload))
   cb()
 }
 
