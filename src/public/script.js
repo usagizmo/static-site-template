@@ -130,8 +130,7 @@
       )
     }
 
-    $('a[href^="#"], a[href^="./#"]').on('click', function (ev) {
-      ev.preventDefault()
+    $('a[href^="#"], a[href^="./#"]').on('click', function () {
       var href = $(this).attr('href').replace(/^\.\//, '')
       var $target = href !== '#' ? $(href) : $('body')
       scrollTo($target)
