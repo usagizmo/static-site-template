@@ -9,7 +9,7 @@
     "format": "prettier --write .",
     "build": "gulp build",
     "dev": "gulp dev",
-    "test": "jest",
+    "test": "yarn build && jest",
     "deploy": "rsync -ahvu --delete --exclude=\".*\" dist/ <SSH_HOST>:/var/www/html/"
   },
   "lint-staged": {
