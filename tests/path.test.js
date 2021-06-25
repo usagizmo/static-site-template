@@ -17,7 +17,9 @@ const allowlist = [
 ]
 test.each(files)('The value of the href starts with `. `: %s', (file) => {
   const text = fs.readFileSync(file, 'utf8')
-  const links = Array.from(text.matchAll(/(?:href|src)="([^.#][^"]+?)"/g))
+  const links = Array.from(
+    text.matchAll(/(?:href|src)="((?:[^.#][^"]+?)|[^"]*(?:\/\/|\/\.\/|\.\.\.)[^"]*)"/g)
+  )
     .map((match) => match[1])
     .filter((path) => !allowlist.includes(path))
   expect(links).toHaveLength(0)
