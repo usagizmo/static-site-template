@@ -7,7 +7,7 @@
   "scripts": {
     "prepare": "husky install",
     "format": "prettier --write .",
-    "build": "gulp build",
+    "build": "cross-env NODE_ENV=production gulp build",
     "dev": "gulp dev",
     "lint": "gulp lint",
     "test": "yarn build && jest",
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@prettier/plugin-pug": "^1.15.3",
     "browser-sync": "^2.26.14",
+    "cross-env": "^7.0.3",
     "cssnano": "^5.0.6",
     "del": "^6.0.0",
     "eslint": "^7.28.0",

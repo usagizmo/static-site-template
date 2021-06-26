@@ -13,6 +13,9 @@ const reporter = require('postcss-reporter')
 const htmlhint = require('gulp-htmlhint')
 const eslint = require('gulp-eslint')
 
+const isProd = process.env.NODE_ENV === 'production'
+const isDev = process.env.NODE_ENV !== 'production'
+
 const paths = {
   dist: './dist',
   src: './src',
@@ -61,11 +64,11 @@ function baseCSS() {
       },
     }),
     reporter({ clearReportedMessages: true }),
-    cssnano({ autoprefixer: false }),
+    ...(isProd ? [cssnano({ autoprefixer: false })] : []),
   ]
 
   return src(`${paths.src}/pcss/styles.pcss`, {
-    sourcemaps: true,
+    sourcemaps: isDev,
   }).pipe(postcss(plugins))
 }
 
