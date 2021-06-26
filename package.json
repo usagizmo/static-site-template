@@ -14,7 +14,7 @@
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
-    "*.css": "stylelint --fix",
+    "*.pcss": "stylelint --fix",
     "*.{js,css,md}": "prettier --write"
   },
   "devDependencies": {
