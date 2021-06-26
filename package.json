@@ -10,7 +10,7 @@
     "build": "cross-env NODE_ENV=production gulp build",
     "dev": "gulp dev",
     "lint": "gulp lint",
-    "test": "yarn build && jest",
+    "test": "jest",
     "deploy": "rsync -ahvu --delete --exclude=\".*\" dist/ <SSH_HOST>:/var/www/html/"
   },
   "lint-staged": {

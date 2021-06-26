@@ -15,7 +15,7 @@ yarn format  # Format with prettier
 yarn lint    # Linting
 yarn build   # Linting and building
 yarn dev     # Launch the browser-sync server to watch and build files
-yarn test    # Testing
+yarn test    # Testing (It needs to be run after `build`.)
 yarn deploy  # When deploying to a VPS such as DigitalOcean using `rsync`
 ```
 
