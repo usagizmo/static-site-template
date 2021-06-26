@@ -5,7 +5,7 @@ A great, small starting point for building a static site.
 - Pug / PostCSS / Vanilla JS
 - Gulp / HTMLHint / ESLint / Stylelint
 - husky / lint-staged / Prettier
-- GitHub Actions (Linting + Formatting)
+- GitHub Actions (Cache node_modules / Formating + Linting + Testing (Validate `href` and `src` paths))
 
 ## Development
 
