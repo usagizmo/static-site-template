@@ -11,8 +11,11 @@ A great, small starting point for building a static site.
 
 ```bash
 yarn
-yarn build   # build and format
-yarn dev     # Launch the browser-sync server and watch the files for build and format
+yarn format  # Format with prettier
+yarn lint    # Linting
+yarn build   # Linting and building
+yarn dev     # Launch the browser-sync server to watch and build files
+yarn test    # Testing (It needs to be run after `build`.)
 yarn deploy  # When deploying to a VPS such as DigitalOcean using `rsync`
 ```
 

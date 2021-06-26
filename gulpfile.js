@@ -13,6 +13,9 @@ const reporter = require('postcss-reporter')
 const htmlhint = require('gulp-htmlhint')
 const eslint = require('gulp-eslint')
 
+const isProd = process.env.NODE_ENV === 'production'
+const isDev = process.env.NODE_ENV !== 'production'
+
 const paths = {
   dist: './dist',
   src: './src',
@@ -26,7 +29,7 @@ function copy() {
   return src(`${paths.src}/public/**/*`).pipe(dest(paths.dist))
 }
 
-function buildPug() {
+function basePug() {
   return src(`${paths.src}/pages/**/*.pug`)
     .pipe(
       pug({
@@ -35,10 +38,17 @@ function buildPug() {
     )
     .pipe(htmlhint('.htmlhintrc'))
     .pipe(htmlhint.reporter())
-    .pipe(dest(paths.dist))
 }
 
-function buildCSS() {
+function lintPug() {
+  return basePug()
+}
+
+function buildPug() {
+  return basePug().pipe(dest(paths.dist))
+}
+
+function baseCSS() {
   const plugins = [
     postcssFlexbugsFixes(),
     postcssImport({
@@ -54,13 +64,20 @@ function buildCSS() {
       },
     }),
     reporter({ clearReportedMessages: true }),
-    cssnano({ autoprefixer: false }),
+    ...(isProd ? [cssnano({ autoprefixer: false })] : []),
   ]
 
   return src(`${paths.src}/pcss/styles.pcss`, {
-    sourcemaps: true,
-  })
-    .pipe(postcss(plugins))
+    sourcemaps: isDev,
+  }).pipe(postcss(plugins))
+}
+
+function lintCSS() {
+  return baseCSS()
+}
+
+function buildCSS() {
+  return baseCSS()
     .pipe(
       rename({
         extname: '.css',
@@ -70,8 +87,16 @@ function buildCSS() {
     .pipe(browserSync.stream())
 }
 
+function baseJS() {
+  return src(`${paths.src}/public/script.js`).pipe(eslint())
+}
+
+function lintJS() {
+  return baseJS().pipe(eslint.failAfterError())
+}
+
 function buildJS() {
-  return src(`${paths.src}/public/script.js`).pipe(eslint()).pipe(dest(paths.dist))
+  return baseJS().pipe(dest(paths.dist))
 }
 
 function browser(cb) {
@@ -93,8 +118,10 @@ function watchFiles(cb) {
   cb()
 }
 
+const lint = parallel(lintPug, lintCSS, lintJS)
 const build = series(clear, copy, parallel(buildPug, buildCSS, buildJS))
 const dev = series(build, parallel(browser, watchFiles))
 
+exports.lint = lint
 exports.build = build
 exports.dev = dev
