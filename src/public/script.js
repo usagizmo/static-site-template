@@ -144,9 +144,14 @@
     })
   }
 
+  var startAnimation = function () {
+    $('body').removeClass('u-animation-stopped')
+  }
+
   setIn()
   setSamaHeight()
   setSticky()
   setMenuModal()
   setSmoothScroll()
+  startAnimation()
 })()
