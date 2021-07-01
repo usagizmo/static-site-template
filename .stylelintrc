@@ -3,6 +3,12 @@
   "rules": {
     "block-no-empty": null,
     "no-descending-specificity": null,
-    "selector-class-pattern": "^(?:c|is|has|u)-(?:[a-z0-9-]+?_)?[a-z0-9-]+$"
+    "selector-class-pattern": "^(?:c|is|has|u)-(?:[a-z0-9-]+?_)?[a-z0-9-]+$",
+    "declaration-property-value-allowed-list": [
+      {
+        "letter-spacing": ["em"],
+        "line-height": ["/^[0-9.]+$/"]
+      }
+    ]
   }
 }
