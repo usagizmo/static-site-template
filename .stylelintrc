@@ -1,14 +1,18 @@
 {
   "extends": ["stylelint-config-standard", "stylelint-prettier/recommended"],
   "rules": {
+    "at-rule-no-vendor-prefix": true,
     "block-no-empty": null,
-    "no-descending-specificity": null,
-    "selector-class-pattern": "^(?:c|is|has|u)-(?:[a-z0-9-]+?_)?[a-z0-9-]+$",
     "declaration-property-value-allowed-list": [
       {
         "letter-spacing": ["em"],
         "line-height": ["/^[0-9.]+$/"]
       }
-    ]
+    ],
+    "max-nesting-depth": 3,
+    "no-descending-specificity": null,
+    "property-no-vendor-prefix": true,
+    "selector-class-pattern": "^(?:c|is|has|u)-(?:[a-z0-9-]+?_)?[a-z0-9-]+$",
+    "selector-max-class": 3
   }
 }
