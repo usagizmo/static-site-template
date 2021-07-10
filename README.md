@@ -7,6 +7,8 @@ A great, small starting point for building a static site.
 - husky / lint-staged / Prettier
 - GitHub Actions (Cache node_modules / Formating + Linting + Testing (Validate `href` and `src` paths))
 
+[Demo](https://static-site-template.usagizmo.com/)
+
 ## Development
 
 ```bash
