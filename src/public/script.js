@@ -94,22 +94,29 @@
   }
 
   var setMenuModal = function () {
-    var $body = $('body')
-
-    var toggleModal = function (isOpen) {
-      var nextIsOpen = isOpen === undefined ? !$body.hasClass('is-menu-open') : isOpen
-      $body.toggleClass('is-menu-open', nextIsOpen)
+    var toggle = function ($el, isOpen) {
+      var nextIsOpen = isOpen === undefined ? !$el.hasClass('is-open') : isOpen
+      $el.toggleClass('is-open', nextIsOpen)
       nextIsOpen ? fixPage() : releasePage()
     }
 
-    $('[data-toggle-menu]').on('click', function () {
-      toggleModal()
+    $('[data-modal-toggle]').on('click', function () {
+      var $modal = $($(this).data('modal-toggle'))
+      toggle($modal)
     })
-    $('[data-open-menu]').on('click', function () {
-      toggleModal(true)
+
+    $('[data-modal-open]').on('click', function () {
+      fixPage()
+      var $modal = $($(this).data('modal-open'))
+      toggle($modal, true)
     })
-    $('[data-close-menu]').on('click', function () {
-      toggleModal(false)
+
+    $('[data-modal-close]').on('click', function () {
+      releasePage()
+      toggle($('[data-modal]'), false)
+    })
+    $('[data-modal-close-prevent]').on('click', function (ev) {
+      ev.stopPropagation()
     })
   }
 

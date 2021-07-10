@@ -13,6 +13,6 @@
     "no-descending-specificity": null,
     "property-no-vendor-prefix": true,
     "selector-class-pattern": "^(?:c|is|has|u)-(?:[a-z0-9-]+?_)?[a-z0-9-]+$",
-    "selector-max-class": 3
+    "selector-max-class": 4
   }
 }

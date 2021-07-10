@@ -3,9 +3,13 @@ doctype html
 html(lang='ja')
   include ../../partials/head.pug
   body.u-animation-stopped
-    include ../../partials/header.pug
-    main
-      section.c-second
-        p The second page
+    .c-page
+      .c-page_header
+        include ../../partials/header.pug
+      .c-page_main
+        main.c-second
+          p The second page
+      .c-page_footer
+        include ../../partials/footer.pug
 
-    include ../../partials/footer.pug
+    include ../../partials/scripts.pug
