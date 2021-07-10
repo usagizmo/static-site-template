@@ -102,14 +102,17 @@
       nextIsOpen ? fixPage() : releasePage()
     }
 
-    $('[data-toggle-menu]').on('click', function () {
+    $('[data-menu-toggle]').on('click', function () {
       toggleModal()
     })
-    $('[data-open-menu]').on('click', function () {
+    $('[data-menu-open]').on('click', function () {
       toggleModal(true)
     })
-    $('[data-close-menu]').on('click', function () {
+    $('[data-menu-close]').on('click', function () {
       toggleModal(false)
+    })
+    $('[data-menu-stop]').on('click', function (ev) {
+      ev.stopPropagation()
     })
   }
 

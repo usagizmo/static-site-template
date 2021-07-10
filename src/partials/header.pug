@@ -1,4 +1,5 @@
-header.c-header(data-scroll-offset='')
+div(data-same-height='.c-header', data-scroll-offset)
+header.c-header
   .c-container
     .c-header_inner
       h1.c-header_logo
@@ -14,20 +15,22 @@ header.c-header(data-scroll-offset='')
         ul
           li
             a(href=base + "/second/") Second
-      button.c-header_menu-button.u-sp(type='button', data-toggle-menu='')
         span.c-header_menu-icons
           span
         span.u-sr-only MENU
-div(data-same-height='.c-header', style={ color: "red" })
-.c-sp-menu.u-sp
-  .c-sp-menu_inner
+button.c-sp-menu-button.u-sp(type='button', data-menu-toggle)
+  span.c-sp-menu-button_icons
+    span
+  span.u-sr-only MENU
+.c-sp-menu.u-sp(data-menu-close)
+  .c-sp-menu_inner(data-menu-stop)
     ul
       li
-        a.c-sp-menu_link(href=base + "/#section-01", data-close-menu='') 01
+        a.c-sp-menu_link(href=base + "/#section-01", data-menu-close) 01
       li
-        a.c-sp-menu_link(href=base + "/#section-02", data-close-menu='') 02
+        a.c-sp-menu_link(href=base + "/#section-02", data-menu-close) 02
       li
-        a.c-sp-menu_link(href=base + "/#section-03", data-close-menu='') 03
+        a.c-sp-menu_link(href=base + "/#section-03", data-menu-close) 03
     ul
       li
         a.c-sp-menu_link(href=base + "/second/") Second
