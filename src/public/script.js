@@ -100,21 +100,18 @@
       nextIsOpen ? fixPage() : releasePage()
     }
 
-    $('[data-modal-toggle]').on('click', function (ev) {
-      ev.preventDefault()
+    $('[data-modal-toggle]').on('click', function () {
       var $modal = $($(this).data('modal-toggle'))
       toggle($modal)
     })
 
-    $('[data-modal-open]').on('click', function (ev) {
-      ev.preventDefault()
+    $('[data-modal-open]').on('click', function () {
       fixPage()
       var $modal = $($(this).data('modal-open'))
       toggle($modal, true)
     })
 
-    $('[data-modal-close]').on('click', function (ev) {
-      ev.preventDefault()
+    $('[data-modal-close]').on('click', function () {
       releasePage()
       toggle($('[data-modal]'), false)
     })
