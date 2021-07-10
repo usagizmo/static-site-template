@@ -1,4 +1,4 @@
-.c-sp-menu {
+.c-modal {
   position: fixed;
   display: flex;
   overflow-y: auto;
@@ -10,7 +10,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   transition: 0.3s;
 }
-.c-sp-menu_inner {
+.c-modal_inner {
   margin: auto;
   display: flex;
   justify-content: center;
@@ -33,12 +33,12 @@
     }
   }
 }
-.c-sp-menu_link {
+.c-modal_link {
   display: block;
   padding: 6px 12px;
 }
 
-body:not(.is-menu-open) .c-sp-menu {
+.c-modal:not(.is-open) {
   opacity: 0;
   pointer-events: none;
 }

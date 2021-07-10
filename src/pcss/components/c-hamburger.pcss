@@ -1,4 +1,4 @@
-.c-sp-menu-button {
+.c-hamburger {
   position: fixed;
   z-index: 1;
   right: 12px;
@@ -8,7 +8,7 @@
   height: 40px;
 }
 
-.c-sp-menu-button_icons {
+.c-hamburger_icons {
   &::before,
   & > span,
   &::after {
@@ -33,7 +33,8 @@
   }
 }
 
-body.is-menu-open .c-sp-menu-button_icons {
+/* Considering how to implement more */
+.c-modal.is-open + .c-hamburger .c-hamburger_icons {
   &::before {
     transform: translate(-50%, 0) rotate(45deg);
   }

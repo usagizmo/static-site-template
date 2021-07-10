@@ -18,19 +18,19 @@ header.c-header
         span.c-header_menu-icons
           span
         span.u-sr-only MENU
-button.c-sp-menu-button.u-sp(type='button', data-menu-toggle)
-  span.c-sp-menu-button_icons
+#sp-menu.c-modal.u-sp(data-modal, data-modal-close)
+  .c-modal_inner(data-modal-close-prevent)
+    ul
+      li
+        a.c-modal_link(href=base + "/#section-01", data-modal-close) 01
+      li
+        a.c-modal_link(href=base + "/#section-02", data-modal-close) 02
+      li
+        a.c-modal_link(href=base + "/#section-03", data-modal-close) 03
+    ul
+      li
+        a.c-modal_link(href=base + "/second/") Second
+button.c-hamburger.u-sp(type='button', data-modal-toggle='#sp-menu')
+  span.c-hamburger_icons
     span
   span.u-sr-only MENU
-.c-sp-menu.u-sp(data-menu-close)
-  .c-sp-menu_inner(data-menu-stop)
-    ul
-      li
-        a.c-sp-menu_link(href=base + "/#section-01", data-menu-close) 01
-      li
-        a.c-sp-menu_link(href=base + "/#section-02", data-menu-close) 02
-      li
-        a.c-sp-menu_link(href=base + "/#section-03", data-menu-close) 03
-    ul
-      li
-        a.c-sp-menu_link(href=base + "/second/") Second
