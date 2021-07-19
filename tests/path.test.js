@@ -81,7 +81,7 @@ describe('All paths are valid:', () => {
     /** @type [string, { exists: boolean, isValid: boolean }][] */
     const pathStatuses = await Promise.all(
       allPaths.map(async (path) => {
-        if (allowlist.includes(path)) {
+        if (allowlist.some((prefix) => path.indexOf(prefix) === 0)) {
           return [path, { exists: true, isValid: true }]
         }
 
