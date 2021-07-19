@@ -12,7 +12,7 @@
     "max-nesting-depth": 3,
     "no-descending-specificity": null,
     "property-no-vendor-prefix": true,
-    "selector-class-pattern": "^(?:c|is|has|u)-(?:[a-z0-9-]+?_)?[a-z0-9-]+$",
+    "selector-class-pattern": "^(?:c|is|has|u)-(?:[a-z0-9-]+?_)?[a-z0-9-:]+$",
     "selector-max-class": 4
   }
 }
