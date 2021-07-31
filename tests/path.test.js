@@ -61,6 +61,7 @@ describe('@relativeUrlToFilePath:', () => {
 
 const allowlist = [
   '/favicon.ico',
+  '/apple-touch-icon.png',
   'https://static-site-template.io/',
   'https://usagizmo.com',
   'https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.min.css',

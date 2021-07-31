@@ -3,10 +3,10 @@
   "rules": {
     "at-rule-no-vendor-prefix": true,
     "block-no-empty": null,
-    "declaration-property-value-allowed-list": [
+    "declaration-property-unit-allowed-list": [
       {
         "letter-spacing": ["em"],
-        "line-height": ["/^[0-9.]+$/"]
+        "line-height": []
       }
     ],
     "max-nesting-depth": 3,
