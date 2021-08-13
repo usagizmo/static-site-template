@@ -1,9 +1,14 @@
 const { readFile, access } = require('fs').promises
-const { dirname, join } = require('path')
+const { dirname, join, basename } = require('path')
 const execSync = require('child_process').execSync
 
-const find = execSync('find dist -type f -name "*.html"')
-const htmlFiles = find.toString().trim().split('\n')
+const findHtml = execSync('find src -type f -name "*.html"')
+const htmlFilePaths = findHtml.toString().trim().split('\n')
+
+const imageExtensions = ['jpg', 'png']
+const findImagesOption = imageExtensions.map((ext) => `-name "*.${ext}"`).join(' -o ')
+const findImages = execSync(`find src -type f ${findImagesOption}`)
+const imageFilePaths = findImages.toString().trim().split('\n')
 
 // ref: https://regexper.com/#%5E%28%3F%3A%28%3F%3A%23%5B%5E%3F%23%5D*%29%7C%28%3F%3A%28%3F%3A%5C.%7C%5C.%5C.%29%5C%2F%28%3F%3A%5C.%5C.%5C%2F%29*%29%28%3F%3A%5B%5Cw%5D%5B%5E%22%5D%2B%7C%28%3F%3A%5C%3F%5B%5E%3F%23%5D%2B%29%3F%28%3F%3A%23%5B%5E%3F%23%5D*%29%3F%29%3F%29%24
 const validPathPattern =
@@ -73,11 +78,11 @@ const allowlist = [
 ]
 
 describe('All paths are valid:', () => {
-  test.each(htmlFiles)(' %s', async (file) => {
-    const text = await readFile(file, 'utf8')
+  test.each(htmlFilePaths)(' %s', async (filePath) => {
+    const text = await readFile(filePath, 'utf8')
     const allPaths = Array.from(text.matchAll(/(?:href|src)="([^"]+?)"/g)).map((match) => match[1])
 
-    const baseDir = dirname(file)
+    const baseDir = dirname(filePath)
 
     /** @type [string, { exists: boolean, isValid: boolean }][] */
     const pathStatuses = await Promise.all(
@@ -103,5 +108,16 @@ describe('All paths are valid:', () => {
     })
 
     expect(invalidPathStatuses).toHaveLength(0)
+  })
+})
+
+describe('All image file names are varid:', () => {
+  const allowedImageExtensions = imageExtensions.join('|')
+
+  test.each(imageFilePaths)(' %s', async (filePath) => {
+    const fileName = basename(filePath)
+    const regex = new RegExp(`^[0-9a-zA-Z_-]+\.(?:${allowedImageExtensions})$`)
+    const isValid = regex.test(fileName)
+    expect(isValid).toBe(true)
   })
 })
