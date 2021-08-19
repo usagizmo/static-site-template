@@ -3,12 +3,6 @@
   "rules": {
     "at-rule-no-vendor-prefix": true,
     "block-no-empty": null,
-    "declaration-property-unit-allowed-list": [
-      {
-        "letter-spacing": ["em"],
-        "line-height": []
-      }
-    ],
     "max-nesting-depth": 3,
     "no-descending-specificity": null,
     "property-no-vendor-prefix": true,
