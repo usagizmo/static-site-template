@@ -2,7 +2,7 @@ const { readFile, access } = require('fs').promises
 const { dirname, join, basename } = require('path')
 const execSync = require('child_process').execSync
 
-const findHtml = execSync('find src -type f -name "*.html"')
+const findHtml = execSync('find dist -type f -name "*.html"')
 const htmlFilePaths = findHtml.toString().trim().split('\n')
 
 const imageExtensions = ['jpg', 'png']
