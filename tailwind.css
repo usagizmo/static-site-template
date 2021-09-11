@@ -1,0 +1,49 @@
+@tailwind base;
+
+html,
+body {
+  height: 100%;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@media screen and (min-width: 768px) {
+  .u-sp {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .u-pc {
+    display: none !important;
+  }
+}
+
+.u-prevent-initial-animation * {
+  animation: none !important;
+  transition: none !important;
+}
+
+.u-flex-center {
+  @apply flex justify-center items-center;
+}
+
+.u-link {
+  @apply relative overflow-hidden inline-flex text-gray-600 hover:text-black after:h-[1px] after:w-full after:bg-black after:absolute after:left-0 after:bottom-0 after:translate-x-[calc(-100%-1px)] after:duration-200 hover:after:translate-x-0;
+}
+.u-link.is-white {
+  @apply text-gray-200 hover:text-white after:bg-white;
+}
+
+.u-list-item {
+  @apply before:content-['/'] before:px-[4px] first-of-type:before:hidden;
+}
+
+.u-h2 {
+  @apply text-center text-[20px] font-semibold mt-[40px] first-of-type:mt-0 md:text-[24px];
+}
+
+.u-h3 {
+  @apply font-semibold mt-[24px] mb-[8px] md:text-[18px];
+}

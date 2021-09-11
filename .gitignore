@@ -1,4 +1,6 @@
-node_modules
-yarn-error.log
-dist
-.eslintcache
+/node_modules
+/yarn-error.log
+/.eslintcache
+
+# If you don't need to compare CSS differences, uncomment the following
+# /src/public/styles.css

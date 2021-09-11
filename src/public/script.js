@@ -2,6 +2,7 @@
   'use strict'
 
   var $window = $(window)
+  var $body = $('body')
   var INTERVAL = 30
 
   var setIn = function () {
@@ -41,32 +42,7 @@
     })
   }
 
-  var setSamaHeight = function () {
-    var $els = $('[data-same-height]')
-
-    var onResize = function () {
-      $els.each(function () {
-        var $el = $(this)
-        var height = $($el.data('same-height')).outerHeight()
-        $el.height(height)
-      })
-    }
-
-    $window.on(
-      'resize',
-      $.throttle(INTERVAL, function () {
-        onResize()
-      })
-    )
-    onResize()
-  }
-
-  var setSticky = function () {
-    $('[data-sticky]').sticky()
-  }
-
   var fixPage = function () {
-    var $body = $('body')
     var scrollTop = $('html, body').scrollTop()
 
     if ($body.hasClass('is-fixed')) {
@@ -82,7 +58,6 @@
   }
 
   var releasePage = function () {
-    var $body = $('body')
     var scrollTop = $body.data('scrollTop') || 0
 
     if (!$body.hasClass('is-fixed')) {
@@ -139,7 +114,7 @@
 
     $('a[href^="#"], a[href^="./#"]').on('click', function () {
       var href = $(this).attr('href').replace(/^\.\//, '')
-      var $target = href !== '#' ? $(href) : $('body')
+      var $target = href !== '#' ? $(href) : $body
       scrollTo($target)
     })
 
@@ -152,12 +127,10 @@
   }
 
   var startAnimation = function () {
-    $('body').removeClass('u-animation-stopped')
+    $body.removeClass('u-prevent-initial-animation')
   }
 
   setIn()
-  setSamaHeight()
-  setSticky()
   setMenuModal()
   setSmoothScroll()
   startAnimation()
