@@ -5,6 +5,19 @@
   var $body = $('body')
   var INTERVAL = 30
 
+  function throttle(func, interval) {
+    var timer = null
+    var self = this
+    return function () {
+      if (timer === null) {
+        timer = setTimeout(function () {
+          func.apply(self, arguments)
+          timer = null
+        }, interval)
+      }
+    }
+  }
+
   var setIn = function () {
     var inRatio = 1
     var $ins = $('[data-in]')
@@ -33,9 +46,9 @@
     }
 
     $window.on({
-      scroll: $.throttle(INTERVAL, function () {
+      scroll: throttle(function () {
         onScroll()
-      }),
+      }, INTERVAL),
       load: function () {
         onScroll()
       },
