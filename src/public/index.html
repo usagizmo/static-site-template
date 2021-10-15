@@ -36,220 +36,300 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="u-prevent-initial-animation flex flex-col">
-    <header
-      class="
-        flex-shrink-0
-        px-[32px]
-        py-[16px]
-        bg-white
-        u-flex-center
-        flex-col
-        space-y-[4px]
-        md:flex-row md:justify-between
-      "
-    >
-      <h1 class="text-[20px] font-semibold md:text-[24px]">Static Site Template</h1>
-      <p class="text-[14px]">A great, small starting point for building a static site.</p>
+  <body class="u-prevent-initial-animation">
+    <header class="px-[32px] py-[16px] bg-white u-flex-center flex-col md:flex-row">
+      <h1 class="text-[24px] font-semibold leading-[1.2]">Static Site Template</h1>
+      <p class="mt-[8px] md:mt-0 md:ml-auto md:mr-[16px]">
+        A great, small starting point for building a static site.
+      </p>
+      <a
+        href="https://github.com/usagizmo/static-site-template/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="
+          mt-[16px]
+          md:mt-0
+          bg-black
+          hover:bg-gray-700
+          text-white
+          font-medium
+          py-[12px]
+          px-[20px]
+          rounded-[24px]
+          duration-150
+        "
+      >
+        GitHub
+      </a>
     </header>
 
-    <main
-      class="
-        flex-1
-        u-flex-center
-        flex-col
-        bg-gradient-to-b
-        from-blue-300
-        to-green-200
-        py-[60px]
-        px-[20px]
-      "
-    >
-      <div class="w-[680px] max-w-full px-[16x]">
-        <h2 class="u-h2">Development</h2>
-
-        <div class="lg:flex">
-          <div class="flex-1 lg:px-[16px]">
-            <h3 class="u-h3">Uses</h3>
-            <ul class="flex before:content-['・'] before:font-mono">
-              <li class="u-list-item">
-                <a
-                  class="u-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://tailwindcss.com/"
-                  >Tailwind CSS</a
-                >
-                (<a
-                  class="u-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://tailwindcss.com/docs/just-in-time-mode#enabling-jit-mode"
-                  >JIT</a
-                >)
-              </li>
-              <li class="u-list-item">Vanilla JS</li>
-            </ul>
-            <ul class="flex before:content-['・'] before:font-mono">
-              <li class="u-list-item">
-                <a
-                  class="u-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://htmlhint.com/"
-                  >HTMLHint</a
-                >
-              </li>
-              <li class="u-list-item">
-                <a
-                  class="u-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://eslint.org/"
-                  >ESLint</a
-                >
-              </li>
-            </ul>
-            <ul class="flex before:content-['・'] before:font-mono">
-              <li class="u-list-item">
-                <a
-                  class="u-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://prettier.io/"
-                  >Prettier</a
-                >
-              </li>
-              <li class="u-list-item">
-                <a
-                  class="u-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://github.com/okonet/lint-staged"
-                  >lint-staged</a
-                >
-              </li>
-              <li class="u-list-item">
-                <a
-                  class="u-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://github.com/typicode/husky"
-                  >husky</a
-                >
-              </li>
-            </ul>
-            <ul class="flex before:content-['・'] before:font-mono">
-              <li class="u-list-item">
-                GitHub Actions (Formating + Linting + Testing (Validate <code>href</code> and
-                <code>src</code> paths))
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1 lg:px-[16px]">
-            <h3 class="u-h3">VS Code Extensions (Recommend)</h3>
-            <ul class="flex before:content-['・'] before:font-mono">
-              <li class="u-list-item">
-                <a
-                  class="u-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
-                  >Tailwind CSS IntelliSense</a
-                >
-              </li>
-            </ul>
-            <ul class="flex before:content-['・'] before:font-mono">
-              <li class="u-list-item">
-                <a
-                  class="u-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint"
-                  >HTMLHint</a
-                >
-              </li>
-              <li class="u-list-item">
-                <a
-                  class="u-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
-                  >ESLint</a
-                >
-              </li>
-            </ul>
-            <ul class="flex before:content-['・'] before:font-mono">
-              <li class="u-list-item">
-                <a
-                  class="u-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig"
-                  >EditorConfig</a
-                >
-              </li>
-              <li class="u-list-item">
-                <a
-                  class="u-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
-                  >Prettier</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- /Development -->
-
-        <h2 class="u-h2">Commands</h2>
-
-        <div class="py-[20px]">
-          <pre
+    <!-- Information -->
+    <div class="c-information">
+      <main class="bg-gradient-to-b from-blue-300 to-green-200 py-[40px]">
+        <div class="container">
+          <h2
             class="
-              text-[14px]
-              px-[28px]
-              py-[20px]
-              bg-gray-900
-              text-white
-              rounded-[8px]
-              overflow-x-auto
-              w-full
-            "
-          ><code class="bash">yarn
-yarn format  <span class="text-gray-400"># Format with prettier</span>
-yarn build   <span class="text-gray-400"># Build tailwind.css and output src/public/styles.css</span>
-yarn dev     <span class="text-gray-400"># Launch the browser-sync server to watch and build files</span>
-yarn lint    <span class="text-gray-400"># Linting</span>
-yarn test    <span class="text-gray-400"># Testing</span>
-yarn deploy  <span class="text-gray-400"># When deploying to a VPS such as DigitalOcean using `rsync`</span></code></pre>
-        </div>
-        <!-- /Commands -->
-
-        <div class="u-flex-center mt-[60px]">
-          <a
-            href="https://github.com/usagizmo/static-site-template/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="
-              bg-black
-              hover:bg-gray-700
-              text-white
+              text-center text-[20px]
               font-semibold
-              py-[12px]
-              px-[20px]
-              rounded-[24px]
-              duration-100
+              mt-[40px]
+              first-of-type:mt-0
+              md:text-[24px]
+              mb-[24px]
             "
           >
-            GitHub
-          </a>
-        </div>
-      </div>
-    </main>
+            Development
+          </h2>
 
-    <footer class="flex-shrink-0 py-[16px] u-flex-center">
+          <div class="md:flex">
+            <div class="flex-1 md:px-[16px]">
+              <h3 class="font-semibold mt-[24px] mb-[8px] md:text-[18px]">Uses</h3>
+              <ul class="flex before:content-['・'] before:font-mono">
+                <li class="u-list-item">
+                  <a
+                    class="u-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://tailwindcss.com/"
+                    >Tailwind CSS</a
+                  >
+                  (<a
+                    class="u-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://tailwindcss.com/docs/just-in-time-mode#enabling-jit-mode"
+                    >JIT</a
+                  >)
+                </li>
+                <li class="u-list-item">Vanilla JS</li>
+              </ul>
+              <ul class="flex before:content-['・'] before:font-mono">
+                <li class="u-list-item">
+                  <a
+                    class="u-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://htmlhint.com/"
+                    >HTMLHint</a
+                  >
+                </li>
+                <li class="u-list-item">
+                  <a
+                    class="u-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://eslint.org/"
+                    >ESLint</a
+                  >
+                </li>
+              </ul>
+              <ul class="flex before:content-['・'] before:font-mono">
+                <li class="u-list-item">
+                  <a
+                    class="u-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://prettier.io/"
+                    >Prettier</a
+                  >
+                </li>
+                <li class="u-list-item">
+                  <a
+                    class="u-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/okonet/lint-staged"
+                    >lint-staged</a
+                  >
+                </li>
+                <li class="u-list-item">
+                  <a
+                    class="u-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/typicode/husky"
+                    >husky</a
+                  >
+                </li>
+              </ul>
+              <ul class="flex before:content-['・'] before:font-mono">
+                <li class="u-list-item">
+                  GitHub Actions (Formating + Linting + Testing (Validate <code>href</code> and
+                  <code>src</code> paths))
+                </li>
+              </ul>
+            </div>
+            <div class="flex-1 md:px-[16px]">
+              <h3 class="font-semibold mt-[24px] mb-[8px] md:text-[18px]">
+                VS Code Extensions (Recommend)
+              </h3>
+              <ul class="flex before:content-['・'] before:font-mono">
+                <li class="u-list-item">
+                  <a
+                    class="u-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
+                    >Tailwind CSS IntelliSense</a
+                  >
+                </li>
+              </ul>
+              <ul class="flex before:content-['・'] before:font-mono">
+                <li class="u-list-item">
+                  <a
+                    class="u-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint"
+                    >HTMLHint</a
+                  >
+                </li>
+                <li class="u-list-item">
+                  <a
+                    class="u-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+                    >ESLint</a
+                  >
+                </li>
+              </ul>
+              <ul class="flex before:content-['・'] before:font-mono">
+                <li class="u-list-item">
+                  <a
+                    class="u-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig"
+                    >EditorConfig</a
+                  >
+                </li>
+                <li class="u-list-item">
+                  <a
+                    class="u-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+                    >Prettier</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /Development -->
+
+          <h2
+            class="
+              text-center text-[20px]
+              font-semibold
+              mt-[40px]
+              first-of-type:mt-0
+              md:text-[24px]
+              mb-[24px]
+            "
+          >
+            Commands
+          </h2>
+
+          <div>
+            <pre
+              class="
+                text-[14px]
+                px-[28px]
+                py-[20px]
+                bg-gray-900
+                text-white
+                rounded-[8px]
+                overflow-x-auto
+                w-full
+              "
+            ><code class="bash"><span class="text-teal-300">yarn</span>
+<span class="text-teal-300">yarn</span> format  <span class="text-gray-400"># Format with prettier</span>
+<span class="text-teal-300">yarn</span> build   <span class="text-gray-400"># Build tailwind.css and output src/public/styles.css</span>
+<span class="text-teal-300">yarn</span> dev     <span class="text-gray-400"># Launch the browser-sync server to watch and build files</span>
+<span class="text-teal-300">yarn</span> lint    <span class="text-gray-400"># Linting</span>
+<span class="text-teal-300">yarn</span> test    <span class="text-gray-400"># Testing</span>
+<span class="text-teal-300">yarn</span> deploy  <span class="text-gray-400"># When deploying to a VPS such as DigitalOcean using `rsync`</span></code></pre>
+          </div>
+          <!-- /Commands -->
+
+          <div class="u-flex-center mt-[40px]">
+            <a
+              href="https://github.com/usagizmo/static-site-template/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="
+                bg-black
+                hover:bg-gray-700
+                text-white
+                font-semibold
+                py-[12px]
+                px-[20px]
+                rounded-[24px]
+                duration-150
+              "
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Components -->
+    <div class="c-components py-[40px] space-y-[24px]" data-in-group>
+      <section>
+        <div class="container">
+          <h3 class="font-semibold text-[24px] mb-[16px]">To make it compatible with IE11</h3>
+          <div class="md:flex space-y-[24px] md:space-y-0 md:space-x-[36px]">
+            <div class="flex-1" data-in="fadeUp">
+              <h4 class="font-semibold mb-[8px] text-[18px]">
+                Do not use <code>space-x-#</code> <code>space-y-#</code>
+              </h4>
+              <p>
+                Replace with <code>ml-[-16px]</code> for wrappers, <code>ml-[16px]</code> for items,
+                etc.
+              </p>
+            </div>
+            <div class="flex-1 delay-100 md:delay-[0ms]" data-in="fadeUp">
+              <h4 class="font-semibold mb-[8px] text-[18px]">Overwrite the colors</h4>
+              <p>Convert to not use CSS variables.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-[24px]">
+        <div class="container">
+          <div class="js-accordion delay-200 md:delay-100" data-in="fadeUp">
+            <button class="font-semibold text-[24px] mb-[16px] js-accordion-button">
+              <span class="c-accordion-title text-gray-700 hover:text-black">Accordion</span>
+            </button>
+            <div class="js-accordion-content" style="max-height: 0px">
+              <div class="md:flex space-y-[24px] md:space-y-0 md:space-x-[36px]">
+                <div>
+                  <h3 class="font-semibold text-[20px] mb-[8px]">Title</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor.</p>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-[20px] mb-[8px]">Title</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor.</p>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-[20px] mb-[8px]">Title</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor.</p>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-[20px] mb-[8px]">Title</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="py-[16px] u-flex-center">
       <a href="https://usagizmo.com" target="_blank" rel="noopener noreferrer" class="u-link">
         <small class="text-[12px]">@usagizmo</small>
       </a>
@@ -263,11 +343,6 @@ yarn deploy  <span class="text-gray-400"># When deploying to a VPS such as Digit
     <script
       src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"
       integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/jquery-throttle-debounce@1.0.0/jquery.ba-throttle-debounce.min.js"
-      integrity="sha256-+nuEu243+6BveXk5N+Vbr268G+4FHjUOEcfKaBqfPbc="
       crossorigin="anonymous"
     ></script>
     <script src="./script.js"></script>

@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   mode: 'jit',
   purge: ['./src/public/**/*.{html,js}'],
@@ -11,7 +13,39 @@ module.exports = {
       mono: ['Source Code Pro', 'Noto Sans CJK JP', 'Noto Sans JP', 'monospace'],
       keycode: ['Lucida Grande'],
     },
-    extend: {},
+    container: {
+      center: true,
+      padding: '16px',
+    },
+    colors: {
+      // https://tailwindcss.com/docs/customizing-colors
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: colors.black,
+      white: colors.white,
+      blueGray: colors.blueGray,
+      coolGray: colors.coolGray,
+      gray: colors.gray,
+      trueGray: colors.trueGray,
+      warmGray: colors.warmGray,
+      red: colors.red,
+      orange: colors.orange,
+      amber: colors.amber,
+      yellow: colors.yellow,
+      lime: colors.lime,
+      green: colors.green,
+      emerald: colors.emerald,
+      teal: colors.teal,
+      cyan: colors.cyan,
+      sky: colors.sky,
+      blue: colors.blue,
+      indigo: colors.indigo,
+      violet: colors.violet,
+      purple: colors.purple,
+      fuchsia: colors.fuchsia,
+      pink: colors.pink,
+      rose: colors.rose,
+    },
   },
   variants: {
     extend: {},
