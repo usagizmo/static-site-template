@@ -108,6 +108,53 @@
     })
   }
 
+  var setAccordion = function () {
+    var toggleIsOpen = function (uid, $el, $content, isOpen) {
+      window[uid] = window[uid] || {
+        removeMaxHeight: function () {
+          $content.css('max-height', '')
+          $content.off('transitionend', window[uid].removeMaxHeight)
+        },
+      }
+      $content.off('transitionend', window[uid].removeMaxHeight)
+
+      if (isOpen) {
+        $el.addClass('is-open')
+        var height = $content.height()
+
+        $content.css('max-height', 'none')
+        var maxHeight = $content.height()
+
+        $content.css('max-height', height)
+
+        setTimeout(function () {
+          $content.on('transitionend', window[uid].removeMaxHeight)
+          $content.css('max-height', maxHeight)
+        }, 0)
+      } else {
+        $el.removeClass('is-open')
+        var height = $content.height()
+        $content.css('max-height', height)
+
+        setTimeout(function () {
+          $content.css('max-height', 0)
+        }, 0)
+      }
+    }
+
+    var $accordions = $('.js-accordion')
+
+    $accordions.each(function (i) {
+      var $accordion = $(this)
+      var $button = $accordion.find('.js-accordion-button')
+      var $content = $accordion.find('.js-accordion-content')
+      $button.on('click', function () {
+        var nextIsOpen = !$accordion.hasClass('is-open')
+        toggleIsOpen('accordion.' + i, $accordion, $content, nextIsOpen)
+      })
+    })
+  }
+
   var setSmoothScroll = function () {
     var scrollTo = function ($target) {
       if (!$target.length) return
@@ -146,5 +193,6 @@
   setIn()
   setMenuModal()
   setSmoothScroll()
+  setAccordion()
   startAnimation()
 })()
