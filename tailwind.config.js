@@ -15,7 +15,7 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: '16px',
+      padding: '24px',
     },
     colors: {
       // https://tailwindcss.com/docs/customizing-colors

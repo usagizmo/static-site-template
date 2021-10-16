@@ -109,6 +109,12 @@
   }
 
   var setAccordion = function () {
+    var SELECTOR = {
+      accordion: '.js-accordion',
+      button: '.js-accordion_button',
+      content: '.js-accordion_content',
+    }
+
     var toggleIsOpen = function (uid, $el, $content, isOpen) {
       window[uid] = window[uid] || {
         removeMaxHeight: function () {
@@ -142,12 +148,12 @@
       }
     }
 
-    var $accordions = $('.js-accordion')
+    var $accordions = $(SELECTOR.accordion)
 
     $accordions.each(function (i) {
       var $accordion = $(this)
-      var $button = $accordion.find('.js-accordion-button')
-      var $content = $accordion.find('.js-accordion-content')
+      var $button = $accordion.find(SELECTOR.button)
+      var $content = $accordion.find(SELECTOR.content)
       $button.on('click', function () {
         var nextIsOpen = !$accordion.hasClass('is-open')
         toggleIsOpen('accordion.' + i, $accordion, $content, nextIsOpen)

@@ -17,10 +17,10 @@ body {
     @apply flex items-center;
   }
   .c-accordion-title::after {
-    @apply ml-[24px] content-[''] h-[12px] w-[12px] border-r border-b border-black rotate-[-135deg] mt-[10px];
+    @apply ml-[16px] content-[''] h-[10px] w-[10px] border-r border-b border-black rotate-[-135deg] translate-y-[25%];
   }
   .is-open .c-accordion-title::after {
-    @apply rotate-45 mt-[-10px];
+    @apply rotate-45 translate-y-[-25%];
   }
 }
 
@@ -66,7 +66,7 @@ body {
 /* ────────────────────
 JS
 ──────────────────── */
-.js-accordion-content {
+.js-accordion_content {
   overflow: hidden;
   transition: max-height 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
