@@ -2,7 +2,7 @@
 
 html,
 body {
-  height: 100%;
+  @apply h-full;
 }
 
 @tailwind components;
@@ -27,13 +27,13 @@ body {
 @layer utilities {
   @media screen and (min-width: 768px) {
     .u-sp {
-      display: none !important;
+      @apply !hidden;
     }
   }
 
   @media screen and (max-width: 767px) {
     .u-pc {
-      display: none !important;
+      @apply !hidden;
     }
   }
 
@@ -43,8 +43,7 @@ body {
   }
 
   .u-prevent-initial-animation * {
-    animation: none !important;
-    transition: none !important;
+    @apply !animate-none !transition-none;
   }
 
   .u-flex-center {
@@ -67,7 +66,7 @@ body {
 JS
 ──────────────────── */
 .js-accordion_content {
-  overflow: hidden;
+  @apply overflow-hidden;
   transition: max-height 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -75,9 +74,8 @@ JS
 Animations
 ──────────────────── */
 [data-in="fadeUp"] {
-  transition-duration: 0.6s;
+  @apply duration-[600ms];
 }
 [data-in="fadeUp"]:not(.is-in) {
-  opacity: 0;
-  transform: translateY(10px);
+  @apply opacity-0 translate-y-[10px];
 }
