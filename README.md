@@ -72,3 +72,10 @@ const app = protect(
 module.exports = app
 " > index.js
 ```
+
+Add the `vercel-build` command to `package.json`.
+
+```diff
+"build": "concurrently \"yarn:build:tailwind\"",
++ "vercel-build": "yarn build",
+```
