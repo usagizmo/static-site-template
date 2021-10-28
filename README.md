@@ -30,3 +30,52 @@ yarn lint    # Linting
 yarn test    # Testing
 yarn deploy  # When deploying to a VPS such as DigitalOcean using `rsync`
 ```
+
+## Deploy to Vercel with Basic Authentication
+
+```bash
+# Add packages
+yarn add -D static-auth safe-compare
+```
+
+Run the following, then change the `username` and `password` in `index.js`.
+
+```bash
+# vercel.json
+printf "{
+  \"builds\": [
+    {
+      \"src\": \"index.js\",
+      \"use\": \"@vercel/node\"
+    }
+  ],
+  \"routes\": [{ \"src\": \"/.*\", \"dest\": \"index.js\" }]
+}
+" > vercel.json
+
+# index.js
+printf "const protect = require('static-auth')
+const safeCompare = require('safe-compare')
+
+const app = protect(
+  '/',
+  (username, password) =>
+    safeCompare(username, '<username>') && safeCompare(password, '<password>'),
+  {
+    directory: __dirname + '/src/public',
+    onAuthFailed: (res) => {
+      res.end('Authentication failed')
+    },
+  }
+)
+
+module.exports = app
+" > index.js
+```
+
+Add the `vercel-build` command to `package.json`.
+
+```diff
+"build": "concurrently \"yarn:build:tailwind\"",
++ "vercel-build": "yarn build",
+```
