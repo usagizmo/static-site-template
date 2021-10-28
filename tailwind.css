@@ -1,12 +1,18 @@
 @tailwind base;
-
-html,
-body {
-  height: 100%;
-}
-
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply h-full;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
 
 @layer components {
   .container {
@@ -22,18 +28,22 @@ body {
   .is-open .c-accordion-title::after {
     @apply rotate-45 translate-y-[-25%];
   }
+
+  .c-section-title {
+    @apply font-semibold leading-[1.25] mb-[16px] text-[18px] md:text-[20px];
+  }
 }
 
 @layer utilities {
   @media screen and (min-width: 768px) {
     .u-sp {
-      display: none !important;
+      @apply !hidden;
     }
   }
 
   @media screen and (max-width: 767px) {
     .u-pc {
-      display: none !important;
+      @apply !hidden;
     }
   }
 
@@ -43,12 +53,23 @@ body {
   }
 
   .u-prevent-initial-animation * {
-    animation: none !important;
-    transition: none !important;
+    @apply !animate-none !transition-none;
   }
 
   .u-flex-center {
     @apply flex justify-center items-center;
+  }
+
+  .u-aspect {
+    @apply relative h-0;
+  }
+  .u-aspect.is-16\:9 {
+    @apply pt-[56.25%];
+  }
+  .u-aspect img,
+  .u-aspect video,
+  .u-aspect iframe {
+    @apply absolute top-0 left-0 w-full h-full;
   }
 
   .u-link {
@@ -67,7 +88,7 @@ body {
 JS
 ──────────────────── */
 .js-accordion_content {
-  overflow: hidden;
+  @apply overflow-hidden;
   transition: max-height 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -75,9 +96,8 @@ JS
 Animations
 ──────────────────── */
 [data-in="fadeUp"] {
-  transition-duration: 0.6s;
+  @apply duration-[600ms];
 }
 [data-in="fadeUp"]:not(.is-in) {
-  opacity: 0;
-  transform: translateY(10px);
+  @apply opacity-0 translate-y-[10px];
 }
