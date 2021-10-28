@@ -30,15 +30,15 @@
     "*": "prettier --write --ignore-unknown"
   },
   "devDependencies": {
-    "browser-sync": "^2.27.5",
-    "concurrently": "^6.2.1",
+    "browser-sync": "^2.27.7",
+    "concurrently": "^6.3.0",
     "cross-env": "^7.0.3",
-    "eslint": "^7.32.0",
-    "htmlhint": "^0.15.1",
-    "husky": "^7.0.2",
-    "jest": "^27.1.1",
-    "lint-staged": "^11.1.2",
-    "prettier": "^2.4.0",
-    "tailwindcss": "^2.2.15"
+    "eslint": "^8.1.0",
+    "htmlhint": "^0.15.2",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "lint-staged": "^11.2.6",
+    "prettier": "^2.4.1",
+    "tailwindcss": "^2.2.17"
   }
 }
