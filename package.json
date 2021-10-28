@@ -9,7 +9,6 @@
     "format": "prettier --write .",
     "build:tailwind": "cross-env NODE_ENV=production tailwindcss -i ./tailwind.css -o ./src/public/styles.css --minify",
     "build": "concurrently \"yarn:build:tailwind\"",
-    "vercel-build": "yarn build",
     "dev:tailwind": "tailwindcss -i ./tailwind.css -o ./src/public/styles.css --watch --minify",
     "dev:browser-sync": "browser-sync src/public -w --startPath /",
     "dev": "concurrently \"yarn:dev:tailwind\" \"yarn:dev:browser-sync\"",
@@ -40,8 +39,6 @@
     "jest": "^27.3.1",
     "lint-staged": "^11.2.6",
     "prettier": "^2.4.1",
-    "safe-compare": "^1.1.4",
-    "static-auth": "^2.0.0",
     "tailwindcss": "^2.2.17"
   }
 }
