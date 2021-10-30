@@ -1,11 +1,12 @@
 const { readFile, access } = require('fs').promises
 const { dirname, join, basename } = require('path')
 const execSync = require('child_process').execSync
+const { allowedPathList } = require('./config')
 
 const findHtml = execSync('find src/public -type f -name "*.html"')
 const htmlFilePaths = findHtml.toString().trim().split('\n')
 
-const imageExtensions = ['jpg', 'png']
+const imageExtensions = ['jpg', 'png', 'webp']
 const findImagesOption = imageExtensions.map((ext) => `-name "*.${ext}"`).join(' -o ')
 const findImages = execSync(`find src/public -type f ${findImagesOption}`)
 const imageFilePaths = findImages.toString().trim().split('\n')
@@ -16,24 +17,24 @@ const validPathPattern =
 
 describe('Path validation:', () => {
   test.each([
-    ['/', false],
     ['./', true],
-    ['.//', false],
     ['../', true],
-    ['..//', false],
-    ['.../', false],
     ['#', true],
     ['#hash', true],
     ['./#', true],
     ['./#hash', true],
-    ['?', false],
-    ['?param=value', false],
-    ['./?', false],
     ['./?param=value', true],
-    ['index.html', false],
     ['./index.html', true],
     ['../index.html', true],
     ['../dir/index.html', true],
+    ['/', false],
+    ['.//', false],
+    ['..//', false],
+    ['.../', false],
+    ['?', false],
+    ['?param=value', false],
+    ['./?', false],
+    ['index.html', false],
     ['.././index.html', false],
   ])('`%s` is %s', (path, expected) => {
     expect(validPathPattern.test(path)).toBe(expected)
@@ -64,34 +65,6 @@ describe('@relativeUrlToFilePath:', () => {
   })
 })
 
-const allowlist = [
-  '/favicon.ico',
-  '/apple-touch-icon.png',
-  'https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js',
-  'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js',
-  'https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp-noto.min.css',
-  'https://eslint.org',
-  'https://fonts.googleapis.com',
-  'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap',
-  'https://fonts.gstatic.com',
-  'https://github.com/okonet/lint-staged',
-  'https://github.com/typicode/husky',
-  'https://github.com/usagizmo/static-site-template',
-  'https://htmlhint.com',
-  'https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss',
-  'https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint',
-  'https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig',
-  'https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode',
-  'https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint',
-  'https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint',
-  'https://marketplace.visualstudio.com/items?itemName=yandeu.five-server',
-  'https://prettier.io',
-  'https://static-site-template.usagizmo.com',
-  'https://tailwindcss.com',
-  'https://tailwindcss.com/docs/just-in-time-mode#enabling-jit-mode',
-  'https://usagizmo.com',
-]
-
 describe('All paths are valid:', () => {
   test.each(htmlFilePaths)(' %s', async (filePath) => {
     const text = await readFile(filePath, 'utf8')
@@ -102,7 +75,7 @@ describe('All paths are valid:', () => {
     /** @type [string, { exists: boolean, isValid: boolean }][] */
     const pathStatuses = await Promise.all(
       allPaths.map(async (path) => {
-        if (allowlist.some((prefix) => path.indexOf(prefix) === 0)) {
+        if (allowedPathList.some((allowedPath) => path === allowedPath)) {
           return [path, { exists: true, isValid: true }]
         }
 
@@ -110,14 +83,16 @@ describe('All paths are valid:', () => {
         try {
           await access(join(baseDir, relativeUrlToFilePath(path)))
           exists = true
-        } catch (err) {}
+        } catch (err) {
+          console.error(err)
+        }
 
         const isValid = validPathPattern.test(path)
         return [path, { exists, isValid }]
       })
     )
 
-    invalidPathStatuses = pathStatuses.filter((pathStatus) => {
+    const invalidPathStatuses = pathStatuses.filter((pathStatus) => {
       const [, { exists, isValid }] = pathStatus
       return !exists || !isValid
     })
@@ -131,7 +106,7 @@ describe('All image file names are varid:', () => {
 
   test.each(imageFilePaths)(' %s', async (filePath) => {
     const fileName = basename(filePath)
-    const regex = new RegExp(`^[0-9a-zA-Z_-]+\.(?:${allowedImageExtensions})$`)
+    const regex = new RegExp(`^[0-9a-z_-]+\\.(?:${allowedImageExtensions})$`)
     const isValid = regex.test(fileName)
     expect(isValid).toBe(true)
   })

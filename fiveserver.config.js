@@ -1,3 +1,5 @@
+// Ref: https://github.com/yandeu/five-server/blob/main/src/types.ts
+
 module.exports = {
   highlight: true, // enable highlight feature
   injectBody: true, // enable instant update

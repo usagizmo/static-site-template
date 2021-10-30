@@ -124,9 +124,10 @@
       }
       $content.off('transitionend', window[uid].removeMaxHeight)
 
+      var height = $content.height()
+
       if (isOpen) {
         $el.addClass('is-open')
-        var height = $content.height()
 
         $content.css('max-height', 'none')
         var maxHeight = $content.height()
@@ -139,7 +140,6 @@
         }, 0)
       } else {
         $el.removeClass('is-open')
-        var height = $content.height()
         $content.css('max-height', height)
 
         setTimeout(function () {
