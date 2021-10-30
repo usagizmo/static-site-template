@@ -163,6 +163,9 @@
                       <code>href</code> and <code>src</code> paths))
                     </li>
                   </ul>
+                  <ul class="flex before:content-['・'] before:font-mono">
+                    <li class="u-list-item">Node (<code>v8+</code>)</li>
+                  </ul>
                 </div>
               </div>
               <div class="flex-1 md:px-[16px]">
@@ -251,28 +254,41 @@
           </div>
 
           <!-- How to Use -->
-          <div data-in="fadeUp" class="u-flex-center flex-col text-[14px]">
-            <div>
-              <p>
-                Develop using VS Code's
+          <div class="u-flex-center flex-col text-[14px]">
+            <ol data-in-group class="space-y-[8px]">
+              <li data-in="fadeUp" class="relative ml-[1em] pl-[4px]">
+                <span class="inline-block absolute top-0 right-full">1.</span> Develop using VS
+                Code's
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://marketplace.visualstudio.com/items?itemName=yandeu.five-server"
-                  ><code class="bg-gray-900 mx-[2px] px-[8px] py-[2px] rounded-[4px] text-white"
-                    >Five Server</code
+                  ><span class="bg-gray-900 mx-[2px] px-[8px] py-[2px] rounded-[4px] text-white"
+                    >Five Server</span
                   ></a
                 >
                 while running
                 <code class="bg-gray-900 mx-[2px] px-[8px] py-[2px] rounded-[4px] text-white"
                   ><span class="text-teal-300">yarn</span> dev</code
                 >.
-              </p>
-              <p>
-                Scrolling follows the cursor position in VS Code, and the HTML is updated instantly.
-              </p>
-              <p>The CSS in Tailwind CSS (jit) is updated when you save the HTML file.</p>
-            </div>
+              </li>
+              <li data-in="fadeUp" class="relative ml-[1em] pl-[4px] delay-100">
+                <span class="inline-block absolute top-0 right-full">2.</span> Open
+                <a class="u-link" href="http://localhost:5555">http://localhost:5555</a> using
+                <span class="bg-gray-900 mx-[2px] px-[8px] py-[2px] rounded-[4px] text-white"
+                  >Simple Browser: Show</span
+                >
+                built into VS Code or your preferred browser.
+              </li>
+              <li data-in="fadeUp" class="relative ml-[1em] pl-[4px] delay-200">
+                <span class="inline-block absolute top-0 right-full">3.</span> Scrolling follows the
+                cursor position in VS Code, and the HTML is updated instantly.
+              </li>
+              <li data-in="fadeUp" class="relative ml-[1em] pl-[4px] delay-300">
+                <span class="inline-block absolute top-0 right-full">4.</span> The CSS in Tailwind
+                CSS (jit) is updated when you save the HTML file.
+              </li>
+            </ol>
           </div>
 
           <!-- Commands -->
