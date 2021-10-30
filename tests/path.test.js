@@ -131,7 +131,7 @@ describe('All image file names are varid:', () => {
 
   test.each(imageFilePaths)(' %s', async (filePath) => {
     const fileName = basename(filePath)
-    const regex = new RegExp(`^[0-9a-zA-Z_-]+\.(?:${allowedImageExtensions})$`)
+    const regex = new RegExp(`^[0-9a-z_-]+\.(?:${allowedImageExtensions})$`)
     const isValid = regex.test(fileName)
     expect(isValid).toBe(true)
   })
