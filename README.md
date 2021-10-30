@@ -38,8 +38,8 @@ yarn test    # Testing
 yarn deploy  # When deploying to a VPS such as DigitalOcean using `rsync`
 ```
 
-Develop using VS Code's Five Server while running `yarn dev`.
-Scrolling follows the cursor position in VS Code, and the HTML is updated instantly.
+Develop using VS Code's Five Server while running `yarn dev`.  
+Scrolling follows the cursor position in VS Code, and the HTML is updated instantly.  
 The CSS in Tailwind CSS (jit) is updated when you save the HTML file.
 
 ## Subresource Integrity
