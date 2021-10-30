@@ -15,15 +15,15 @@ A great, small starting point for building a static site.
 
 ### VS Code Extensions
 
+#### Required
+
+- [Five Server (Live Server)](https://marketplace.visualstudio.com/items?itemName=yandeu.five-server)
+
 #### Recommend
 
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-- [HTMLHint](https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint) / [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [HTMLHint](https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint) / [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) / [webhint](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint)
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) / [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-
-#### Optional
-
-- [webhint](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint)
 
 ## Commands
 
@@ -31,11 +31,15 @@ A great, small starting point for building a static site.
 yarn
 yarn format  # Format with prettier
 yarn build   # Build tailwind.css and output src/public/styles.css
-yarn dev     # Launch the browser-sync server to watch and build files
+yarn dev     # Watch and build tailwind.css
 yarn lint    # Linting
 yarn test    # Testing
 yarn deploy  # When deploying to a VPS such as DigitalOcean using `rsync`
 ```
+
+Develop using VS Code's Five Server while running `yarn dev`.
+Scrolling follows the cursor position in VS Code, and the HTML is updated instantly.
+The CSS in Tailwind CSS (jit) is updated when you save the HTML file.
 
 ## Subresource Integrity
 

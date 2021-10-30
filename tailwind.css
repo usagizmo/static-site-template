@@ -32,6 +32,10 @@
   .c-section-title {
     @apply font-semibold leading-[1.25] mb-[16px] text-[18px] md:text-[20px];
   }
+
+  .c-section-subtitle {
+    @apply font-medium mb-[8px];
+  }
 }
 
 @layer utilities {
