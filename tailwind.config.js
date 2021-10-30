@@ -2,8 +2,7 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   mode: 'jit',
-  purge: ['./src/public/**/*.{html,js}'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/public/**/*.{html,js}'],
   theme: {
     fontFamily: {
       // When not using Web fonts
@@ -32,9 +31,6 @@ module.exports = {
         rose: colors.rose,
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }
