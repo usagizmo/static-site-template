@@ -15,7 +15,7 @@
     "lint:js": "eslint . --ext .js",
     "lint": "concurrently \"yarn:lint:html\" \"yarn:lint:js\"",
     "test": "jest",
-    "deploy": "rsync -ahvu --delete --exclude=\".*\" dist/ <SSH_HOST>:/var/www/html/"
+    "deploy": "rsync -ahvu --delete --exclude=\".*\" src/public/ <SSH_HOST>:/var/www/html/"
   },
   "lint-staged": {
     "*.js": [
