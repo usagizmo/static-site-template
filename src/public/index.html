@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -22,17 +22,21 @@
       content="https://static-site-template.usagizmo.com/images/ogp-tw.png"
     />
     <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" , sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="canonical" href="https://static-site-template.usagizmo.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+      integrity="sha384-PHWW3jn9fLYtdJx6l/avHEI46VxJNC75pxXX+IFcSCn6f8EXhhkmgzjUeZGfD7ex"
+      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp-noto.min.css"
+      integrity="sha384-Mb5ChwK0gMUKT5MGlNtjdw8pLyZZUPbKRbh6JuHPMGSrCVdBXsWLn/O2vBOKJlCy"
+      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -162,68 +166,119 @@
                 </div>
               </div>
               <div class="flex-1 md:px-[16px]">
-                <h3 class="c-section-title" data-in="fadeUp">VS Code Extensions (Recommend)</h3>
-                <div data-in="fadeUp" class="delay-100">
-                  <ul class="flex before:content-['・'] before:font-mono">
-                    <li class="u-list-item">
-                      <a
-                        class="u-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
-                        >Tailwind CSS IntelliSense</a
-                      >
-                    </li>
-                  </ul>
-                  <ul class="flex before:content-['・'] before:font-mono">
-                    <li class="u-list-item">
-                      <a
-                        class="u-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint"
-                        >HTMLHint</a
-                      >
-                    </li>
-                    <li class="u-list-item">
-                      <a
-                        class="u-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
-                        >ESLint</a
-                      >
-                    </li>
-                  </ul>
-                  <ul class="flex before:content-['・'] before:font-mono">
-                    <li class="u-list-item">
-                      <a
-                        class="u-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig"
-                        >EditorConfig</a
-                      >
-                    </li>
-                    <li class="u-list-item">
-                      <a
-                        class="u-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
-                        >Prettier</a
-                      >
-                    </li>
-                  </ul>
+                <h3 class="c-section-title" data-in="fadeUp">VS Code Extensions</h3>
+                <div data-in="fadeUp" class="delay-100 space-y-[16px]">
+                  <div>
+                    <h4 class="c-section-subtitle" data-in="fadeUp">Required</h4>
+                    <ul class="flex before:content-['・'] before:font-mono">
+                      <li class="u-list-item">
+                        <a
+                          class="u-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://marketplace.visualstudio.com/items?itemName=yandeu.five-server"
+                          >Five Server (Live Server)</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="c-section-subtitle" data-in="fadeUp">Recommend</h4>
+                    <ul class="flex before:content-['・'] before:font-mono">
+                      <li class="u-list-item">
+                        <a
+                          class="u-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
+                          >Tailwind CSS IntelliSense</a
+                        >
+                      </li>
+                    </ul>
+                    <ul class="flex before:content-['・'] before:font-mono">
+                      <li class="u-list-item">
+                        <a
+                          class="u-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint"
+                          >HTMLHint</a
+                        >
+                      </li>
+                      <li class="u-list-item">
+                        <a
+                          class="u-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+                          >ESLint</a
+                        >
+                      </li>
+                      <li class="u-list-item">
+                        <a
+                          class="u-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint"
+                          >webhint</a
+                        >
+                      </li>
+                    </ul>
+                    <ul class="flex before:content-['・'] before:font-mono">
+                      <li class="u-list-item">
+                        <a
+                          class="u-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig"
+                          >EditorConfig</a
+                        >
+                      </li>
+                      <li class="u-list-item">
+                        <a
+                          class="u-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+                          >Prettier</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <!-- How to Use -->
+          <div data-in="fadeUp" class="u-flex-center flex-col text-[14px]">
+            <div>
+              <p>
+                Develop using VS Code's
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://marketplace.visualstudio.com/items?itemName=yandeu.five-server"
+                  ><code class="bg-gray-900 mx-[2px] px-[8px] py-[2px] rounded-[4px] text-white"
+                    >Five Server</code
+                  ></a
+                >
+                while running
+                <code class="bg-gray-900 mx-[2px] px-[8px] py-[2px] rounded-[4px] text-white"
+                  ><span class="text-teal-300">yarn</span> dev</code
+                >.
+              </p>
+              <p>
+                Scrolling follows the cursor position in VS Code, and the HTML is updated instantly.
+              </p>
+              <p>The CSS in Tailwind CSS (jit) is updated when you save the HTML file.</p>
             </div>
           </div>
 
           <!-- Commands -->
           <div>
             <h2
-              class="text-center text-[24px] font-semibold md:text-[28px] mb-[24px]"
+              class="text-center text-[24px] font-semibold md:text-[28px] mb-[40px]"
               data-in="fadeUp"
             >
               Commands
@@ -276,13 +331,6 @@
       </main>
     </div>
 
-    <nav class="bg-">
-      <ul class="flex">
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-      </ul>
-    </nav>
-
     <!-- Components -->
     <div class="c-components py-[40px] space-y-[32px]" data-in-group>
       <section>
@@ -312,7 +360,7 @@
             <button class="js-accordion_button c-section-title">
               <span class="c-accordion-title">Accordion</span>
             </button>
-            <div class="js-accordion_content" style="max-height: 0px">
+            <div class="js-accordion_content">
               <div class="md:flex space-y-[24px] md:space-y-0 md:space-x-[32px]">
                 <div>
                   <h3 class="font-semibold mb-[8px]">Title</h3>
@@ -345,12 +393,12 @@
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
       crossorigin="anonymous"
     ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"
-      integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k="
+      integrity="sha384-leGYpHE9Tc4N9OwRd98xg6YFpB9shlc/RkilpFi0ljr3QD4tFoFptZvgnnzzwG4Q"
       crossorigin="anonymous"
     ></script>
     <script src="./script.js"></script>

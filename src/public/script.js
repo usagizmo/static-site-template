@@ -154,6 +154,8 @@
       var $accordion = $(this)
       var $button = $accordion.find(SELECTOR.button)
       var $content = $accordion.find(SELECTOR.content)
+
+      $content.css('max-height', 0)
       $button.on('click', function () {
         var nextIsOpen = !$accordion.hasClass('is-open')
         toggleIsOpen('accordion.' + i, $accordion, $content, nextIsOpen)

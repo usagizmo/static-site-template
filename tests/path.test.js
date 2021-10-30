@@ -83,6 +83,8 @@ const allowlist = [
   'https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig',
   'https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode',
   'https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint',
+  'https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint',
+  'https://marketplace.visualstudio.com/items?itemName=yandeu.five-server',
   'https://prettier.io',
   'https://static-site-template.usagizmo.com',
   'https://tailwindcss.com',
