@@ -13,11 +13,17 @@ A great, small starting point for building a static site.
 - [Prettier](https://prettier.io/) / [lint-staged](https://github.com/okonet/lint-staged) / [husky](https://github.com/typicode/husky)
 - GitHub Actions (Formating + Linting + Testing (Validate `href` and `src` paths))
 
-### VS Code Extensions (Recommend)
+### VS Code Extensions
+
+#### Recommend
 
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 - [HTMLHint](https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint) / [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) / [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+#### Optional
+
+- [webhint](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint)
 
 ## Commands
 
@@ -30,6 +36,16 @@ yarn lint    # Linting
 yarn test    # Testing
 yarn deploy  # When deploying to a VPS such as DigitalOcean using `rsync`
 ```
+
+## Subresource Integrity
+
+You can use the openssl command to generate an SRI hash.
+
+```bash
+curl "<url>" | openssl dgst -sha384 -binary | openssl base64 -A
+```
+
+Ref: [Subresource Integrity - Web security | MDN](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
 
 ## Deploy to Vercel with Basic Authentication
 
