@@ -16,24 +16,24 @@ const validPathPattern =
 
 describe('Path validation:', () => {
   test.each([
-    ['/', false],
     ['./', true],
-    ['.//', false],
     ['../', true],
-    ['..//', false],
-    ['.../', false],
     ['#', true],
     ['#hash', true],
     ['./#', true],
     ['./#hash', true],
-    ['?', false],
-    ['?param=value', false],
-    ['./?', false],
     ['./?param=value', true],
-    ['index.html', false],
     ['./index.html', true],
     ['../index.html', true],
     ['../dir/index.html', true],
+    ['/', false],
+    ['.//', false],
+    ['..//', false],
+    ['.../', false],
+    ['?', false],
+    ['?param=value', false],
+    ['./?', false],
+    ['index.html', false],
     ['.././index.html', false],
   ])('`%s` is %s', (path, expected) => {
     expect(validPathPattern.test(path)).toBe(expected)
