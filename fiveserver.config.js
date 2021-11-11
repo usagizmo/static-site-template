@@ -7,5 +7,5 @@ module.exports = {
   injectCss: false, // disable injecting css
   navigate: false, // disable auto-navigation
   root: 'src/public',
-  open: false,
+  open: '/',
 }
