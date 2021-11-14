@@ -18,6 +18,12 @@
     }
   }
 
+  var startCSSAnimation = function () {
+    setTimeout(function () {
+      $body.removeClass('u-prevent-initial-animation')
+    }, 10)
+  }
+
   var setIn = function () {
     var inRatio = 1
     var $ins = $('[data-in]')
@@ -194,13 +200,9 @@
     })
   }
 
-  var startAnimation = function () {
-    $body.removeClass('u-prevent-initial-animation')
-  }
-
+  startCSSAnimation()
   setIn()
   setMenuModal()
   setSmoothScroll()
   setAccordion()
-  startAnimation()
 })()
