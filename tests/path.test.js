@@ -1,19 +1,19 @@
 const { readFile, access } = require('fs').promises
 const { dirname, join, basename } = require('path')
 const execSync = require('child_process').execSync
-const { allowedPathList } = require('./config')
+const { allowedPathList, publicDir, imageExtensions } = require('./config')
 
-const findHtml = execSync('find src/public -type f -name "*.html"')
+const findHtml = execSync(`find ${publicDir} -type f -name "*.html"`)
 const htmlFilePaths = findHtml.toString().trim().split('\n')
 
-const imageExtensions = ['jpg', 'png', 'webp']
 const findImagesOption = imageExtensions.map((ext) => `-name "*.${ext}"`).join(' -o ')
-const findImages = execSync(`find src/public -type f ${findImagesOption}`)
+const findImages = execSync(`find ${publicDir} -type f ${findImagesOption}`)
 const imageFilePaths = findImages.toString().trim().split('\n')
 
 // ref: https://regexper.com/#%5E%28%3F%3A%28%3F%3A%23%5B%5E%3F%23%5D*%29%7C%28%3F%3A%28%3F%3A%5C.%7C%5C.%5C.%29%5C%2F%28%3F%3A%5C.%5C.%5C%2F%29*%29%28%3F%3A%5B%5Cw%5D%5B%5E%22%5D%2B%7C%28%3F%3A%5C%3F%5B%5E%3F%23%5D%2B%29%3F%28%3F%3A%23%5B%5E%3F%23%5D*%29%3F%29%3F%29%24
 const validPathPattern =
   /^(?:(?:#[^?#]*)|(?:(?:\.|\.\.)\/(?:\.\.\/)*)(?:[\w][^"]+|(?:\?[^?#]+)?(?:#[^?#]*)?)?)$/
+const isValidPath = (path) => validPathPattern.test(path)
 
 describe('Path validation:', () => {
   test.each([
@@ -37,7 +37,7 @@ describe('Path validation:', () => {
     ['index.html', false],
     ['.././index.html', false],
   ])('`%s` is %s', (path, expected) => {
-    expect(validPathPattern.test(path)).toBe(expected)
+    expect(isValidPath(path)).toBe(expected)
   })
 })
 
@@ -87,15 +87,17 @@ describe('All paths are valid:', () => {
           console.error(err)
         }
 
-        const isValid = validPathPattern.test(path)
+        const isValid = isValidPath(path)
         return [path, { exists, isValid }]
       })
     )
 
-    const invalidPathStatuses = pathStatuses.filter((pathStatus) => {
-      const [, { exists, isValid }] = pathStatus
-      return !exists || !isValid
-    })
+    const invalidPathStatuses = pathStatuses
+      .filter((pathStatus) => {
+        const [, { exists, isValid }] = pathStatus
+        return !exists || !isValid
+      })
+      .map((status) => (process.env.NODE_ENV === 'debug' ? status : status[0]))
 
     expect(invalidPathStatuses).toHaveLength(0)
   })

@@ -14,6 +14,7 @@
     "lint:html": "htmlhint \"src/public/**/*.html\"",
     "lint:js": "eslint . --ext .js",
     "lint": "concurrently \"yarn:lint:html\" \"yarn:lint:js\"",
+    "test:debug": "cross-env NODE_ENV=debug jest",
     "test": "jest",
     "deploy": "rsync -ahvu --delete --exclude=\".*\" src/public/ <SSH_HOST>:/var/www/html/"
   },

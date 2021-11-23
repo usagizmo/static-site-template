@@ -1,3 +1,6 @@
+module.exports.publicDir = 'src/public'
+module.exports.imageExtensions = ['jpg', 'png', 'webp']
+
 module.exports.allowedPathList = [
   '/apple-touch-icon.png',
   '/favicon.ico',
