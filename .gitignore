@@ -1,4 +1,4 @@
 /node_modules
-/.pnpm-debug.log
-/.eslintcache
+.eslintcache
+.pnpm-debug.log
 /src/public/styles.css
