@@ -5,6 +5,7 @@
   "author": "usagizmo <usagizmo@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
     "format": "prettier --write .",
     "build:tailwind": "cross-env NODE_ENV=production tailwindcss -i ./tailwind.css -o ./src/public/styles.css --minify",
