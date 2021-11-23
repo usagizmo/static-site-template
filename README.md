@@ -12,7 +12,7 @@ A great, small starting point for building a static site.
 - [HTMLHint](https://htmlhint.com/) / [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/) / [lint-staged](https://github.com/okonet/lint-staged) / [husky](https://github.com/typicode/husky)
 - GitHub Actions (Formating + Linting + Testing (Validate `href` and `src` paths))
-- Node (`v8+`)
+- Node (`v8+`) / [pnpm](https://pnpm.io/)
 
 ### VS Code Extensions
 
