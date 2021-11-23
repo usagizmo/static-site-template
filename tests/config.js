@@ -17,6 +17,7 @@ module.exports.allowedPathList = [
   'https://prettier.io',
   'https://github.com/okonet/lint-staged',
   'https://github.com/typicode/husky',
+  'https://pnpm.io/',
   'https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss',
   'https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint',
   'https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint',
