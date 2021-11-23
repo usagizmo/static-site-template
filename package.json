@@ -8,13 +8,13 @@
     "prepare": "husky install",
     "format": "prettier --write .",
     "build:tailwind": "cross-env NODE_ENV=production tailwindcss -i ./tailwind.css -o ./src/public/styles.css --minify",
-    "build": "concurrently \"yarn:build:tailwind\"",
+    "build": "concurrently \"pnpm:build:tailwind\"",
     "dev:tailwind": "tailwindcss -i ./tailwind.css -o ./src/public/styles.css --watch --minify",
     "dev:browser-sync": "browser-sync src/public -w --startPath /",
-    "dev": "concurrently \"yarn:dev:tailwind\" \"yarn:dev:browser-sync\"",
+    "dev": "concurrently \"pnpm:dev:tailwind\" \"pnpm:dev:browser-sync\"",
     "lint:html": "htmlhint \"src/public/**/*.html\"",
     "lint:js": "eslint . --ext .js",
-    "lint": "concurrently \"yarn:lint:html\" \"yarn:lint:js\"",
+    "lint": "concurrently \"pnpm:lint:html\" \"pnpm:lint:js\"",
     "test:debug": "cross-env NODE_ENV=debug jest",
     "test": "jest",
     "deploy": "rsync -ahvu --delete --exclude=\".*\" src/public/ <SSH_HOST>:/var/www/html/"
@@ -41,6 +41,6 @@
     "jest": "^27.3.1",
     "lint-staged": "^11.2.6",
     "prettier": "^2.4.1",
-    "tailwindcss": "^3.0.0-alpha.1"
+    "tailwindcss": "^3.0.0-alpha.2"
   }
 }

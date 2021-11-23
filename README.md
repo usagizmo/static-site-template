@@ -16,10 +16,6 @@ A great, small starting point for building a static site.
 
 ### VS Code Extensions
 
-#### Required
-
-- [Five Server (Live Server)](https://marketplace.visualstudio.com/items?itemName=yandeu.five-server)
-
 #### Recommend
 
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
@@ -29,18 +25,14 @@ A great, small starting point for building a static site.
 ## Commands
 
 ```bash
-yarn
-yarn format  # Format with prettier
-yarn build   # Build tailwind.css and output src/public/styles.css
-yarn dev     # Watch and build tailwind.css
-yarn lint    # Linting
-yarn test    # Testing
-yarn deploy  # When deploying to a VPS such as DigitalOcean using `rsync`
+pnpm i
+pnpm format  # Format with prettier
+pnpm build   # Build tailwind.css and output src/public/styles.css
+pnpm dev     # Watch and build tailwind.css
+pnpm lint    # Linting
+pnpm test    # Testing
+pnpm deploy  # When deploying to a VPS such as DigitalOcean using `rsync`
 ```
-
-Develop using VS Code's Five Server while running `yarn dev`.  
-Scrolling follows the cursor position in VS Code, and the HTML is updated instantly.  
-The CSS in Tailwind CSS (jit) is updated when you save the HTML file.
 
 ## Subresource Integrity
 
@@ -56,7 +48,7 @@ Ref: [Subresource Integrity - Web security | MDN](https://developer.mozilla.org/
 
 ```bash
 # Add packages
-yarn add -D static-auth safe-compare
+pnpm add -D static-auth safe-compare
 ```
 
 Run the following, then change the `username` and `password` in `index.js`.
@@ -98,6 +90,6 @@ module.exports = app
 Add the `vercel-build` command to `package.json`.
 
 ```diff
-"build": "concurrently \"yarn:build:tailwind\"",
-+ "vercel-build": "yarn build",
+"build": "concurrently \"pnpm:build:tailwind\"",
++ "vercel-build": "pnpm build",
 ```
