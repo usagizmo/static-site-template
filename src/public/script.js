@@ -173,9 +173,14 @@
     var scrollTo = function ($target) {
       if (!$target.length) return
 
-      var $offset = $('[data-scroll-offset]')
+      // e.g.
+      //   <div class="fixed z-30 top-0 left-0 w-full" data-scroll-offset>
+      //   <div class="fixed z-30 top-0 left-0 w-full" data-scroll-offset="20">
+
+      var dataName = 'scroll-offset'
+      var $offset = $('[data-' + dataName + ']')
       var targetTop = $target.offset().top
-      var offsetTop = $offset.length ? $offset.height() : 0
+      var offsetTop = $offset.length ? $offset.height() + ($offset.data(dataName) || 0) : 0
       var scrollTop = targetTop - offsetTop
       $('html, body').stop().animate(
         {

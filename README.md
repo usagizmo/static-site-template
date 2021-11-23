@@ -75,7 +75,8 @@ printf "{
 " > vercel.json
 
 # index.js
-printf "const protect = require('static-auth')
+printf "const path = require('path')
+const protect = require('static-auth')
 const safeCompare = require('safe-compare')
 
 const app = protect(
@@ -83,7 +84,7 @@ const app = protect(
   (username, password) =>
     safeCompare(username, '<username>') && safeCompare(password, '<password>'),
   {
-    directory: __dirname + '/src/public',
+    directory: path.join(__dirname, '/src/public'),
     onAuthFailed: (res) => {
       res.end('Authentication failed')
     },
