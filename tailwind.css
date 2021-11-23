@@ -77,14 +77,20 @@
   }
 
   .u-link {
-    @apply relative overflow-hidden inline-flex text-gray-600 hover:text-black after:h-[1px] after:w-full after:bg-black after:absolute after:left-0 after:bottom-0 after:translate-x-[calc(-100%-1px)] after:duration-200 hover:after:translate-x-0;
+    @apply relative overflow-hidden inline-flex text-gray-600 hover:text-black after:h-[1px] after:w-full after:bg-black after:absolute after:left-0 after:bottom-0 after:translate-x-[calc(-100%-1px)] after:duration-200;
+  }
+  .u-link:hover {
+    @apply after:translate-x-0;
   }
   .u-link.is-white {
     @apply text-gray-200 hover:text-white after:bg-white;
   }
 
   .u-list-item {
-    @apply before:content-['/'] before:px-[4px] first-of-type:before:hidden;
+    @apply before:content-['/'] before:px-[4px];
+  }
+  .u-list-item:first-of-type {
+    @apply before:content-none;
   }
 }
 
