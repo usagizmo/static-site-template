@@ -1,6 +1,6 @@
 {
   "name": "static-site-template",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "repository": "ssh://git@github.com/usagizmo/static-site-template.git",
   "author": "usagizmo <usagizmo@gmail.com>",
   "license": "MIT",
@@ -33,15 +33,15 @@
   },
   "devDependencies": {
     "browser-sync": "^2.27.7",
-    "concurrently": "^6.3.0",
+    "concurrently": "^6.4.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.1.0",
+    "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.3.0",
-    "htmlhint": "^0.15.2",
+    "htmlhint": "^0.16.3",
     "husky": "^7.0.4",
     "jest": "^27.3.1",
-    "lint-staged": "^11.2.6",
+    "lint-staged": "^12.1.2",
     "prettier": "^2.4.1",
-    "tailwindcss": "^3.0.0-alpha.2"
+    "tailwindcss": "3.0.0-alpha.2"
   }
 }
