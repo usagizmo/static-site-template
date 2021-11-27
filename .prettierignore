@@ -1,5 +1,4 @@
 *.min.*
 libs
 pnpm-lock.yaml
-/src/public/pinegrow.json
 /src/public/styles.css
