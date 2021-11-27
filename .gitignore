@@ -2,3 +2,4 @@
 .eslintcache
 .pnpm-debug.log
 /src/public/styles.css
+/src/public/script.js

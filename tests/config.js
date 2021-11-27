@@ -26,6 +26,8 @@ module.exports.allowedPathList = [
   'https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode',
   'https://github.com/usagizmo/static-site-template',
   'https://usagizmo.com',
-  'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js',
-  'https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js',
+  'https://rollupjs.org/',
+  'https://cdn.jsdelivr.net/npm/picturefill@3.0.3/dist/picturefill.min.js',
+  'https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js',
+  'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js',
 ]

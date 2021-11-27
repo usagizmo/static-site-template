@@ -2,3 +2,4 @@
 libs
 pnpm-lock.yaml
 /src/public/styles.css
+/src/public/script.js

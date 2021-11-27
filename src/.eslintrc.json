@@ -2,11 +2,11 @@
   "root": true,
   "env": {
     "browser": true,
-    "es2021": true,
-    "jquery": true
+    "jquery": true,
+    "es2015": true
   },
   "extends": ["eslint:recommended", "prettier"],
   "parserOptions": {
-    "ecmaVersion": 5
+    "sourceType": "module"
   }
 }
