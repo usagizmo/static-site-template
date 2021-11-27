@@ -56,7 +56,7 @@
     clip: rect(0, 0, 0, 0);
   }
 
-  .u-prevent-initial-animation * {
+  .u-prevent-animation * {
     @apply !animate-none !transition-none;
   }
 
@@ -105,9 +105,12 @@ JS
 /* ────────────────────
 Animations
 ──────────────────── */
-[data-in="fadeUp"] {
+[data-aos] {
   @apply duration-[600ms];
 }
-[data-in="fadeUp"]:not(.is-in) {
-  @apply opacity-0 translate-y-[10px];
+[data-aos="fade-in"]:not(.aos-animate) {
+  @apply opacity-0;
+}
+[data-aos="slide-in"]:not(.aos-animate) {
+  @apply opacity-0 translate-y-[20px];
 }

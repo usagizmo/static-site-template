@@ -30,9 +30,14 @@
       integrity="sha384-Mb5ChwK0gMUKT5MGlNtjdw8pLyZZUPbKRbh6JuHPMGSrCVdBXsWLn/O2vBOKJlCy"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/picturefill@3.0.3/dist/picturefill.min.js"
+      integrity="sha256-iT+n/otuaeKCgxnASny7bxKeqCDbaV1M7VdX1ZRQtqg="
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="u-prevent-initial-animation">
+  <body class="u-prevent-animation">
     <header
       class="bg-white flex-col md:flex-row md:py-[16px] px-[32px] u-flex-center h-[80vh] md:h-auto"
     >
@@ -71,15 +76,15 @@
           <div>
             <h2
               class="text-center text-[24px] font-semibold md:text-[28px] mb-[24px]"
-              data-in="fadeUp"
+              data-aos="slide-in"
             >
               Development
             </h2>
 
             <div class="md:flex space-y-[24px] md:space-y-0">
-              <div class="flex-1 md:px-[16px]" data-in-group>
-                <h3 class="c-section-title" data-in="fadeUp">Uses</h3>
-                <div data-in="fadeUp" class="delay-100">
+              <div class="flex-1 md:px-[16px]">
+                <h3 class="c-section-title" data-aos="slide-in">Uses</h3>
+                <div data-aos="slide-in" class="delay-100">
                   <ul class="flex before:content-['・'] before:font-mono">
                     <li class="u-list-item">
                       <a
@@ -97,7 +102,16 @@
                         >JIT</a
                       >)
                     </li>
-                    <li class="u-list-item">Vanilla JS</li>
+                    <li class="u-list-item">
+                      <a
+                        class="u-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://rollupjs.org/"
+                        >Rollup</a
+                      >
+                      (Vanilla)
+                    </li>
                   </ul>
                   <ul class="flex before:content-['・'] before:font-mono">
                     <li class="u-list-item">
@@ -170,8 +184,8 @@
                 </div>
               </div>
               <div class="flex-1 md:px-[16px]">
-                <h3 class="c-section-title" data-in="fadeUp">VS Code Extensions</h3>
-                <div data-in="fadeUp" class="delay-100 space-y-[16px]">
+                <h3 class="c-section-title" data-aos="slide-in">VS Code Extensions</h3>
+                <div data-aos="slide-in" class="delay-100 space-y-[16px]">
                   <div>
                     <ul class="flex before:content-['・'] before:font-mono">
                       <li class="u-list-item">
@@ -243,7 +257,7 @@
           <div>
             <h2
               class="text-center text-[24px] font-semibold md:text-[28px] mb-[40px]"
-              data-in="fadeUp"
+              data-aos="slide-in"
             >
               Commands
             </h2>
@@ -260,7 +274,7 @@
                   text-[14px] text-white
                   w-full
                 "
-                data-in="fadeUp"
+                data-aos="slide-in"
               ><code class="bash"><span class="text-teal-300">pnpm</span> i
 <span class="text-teal-300">pnpm</span> format  <span class="text-gray-400"># Format with prettier</span>
 <span class="text-teal-300">pnpm</span> build   <span class="text-gray-400"># Build tailwind.css and output src/public/styles.css</span>
@@ -272,7 +286,7 @@
           </div>
 
           <!-- Buttons -->
-          <div class="u-flex-center" data-in="fadeUp">
+          <div class="u-flex-center" data-aos="slide-in">
             <a
               href="https://github.com/usagizmo/static-site-template"
               target="_blank"
@@ -296,12 +310,12 @@
     </div>
 
     <!-- Components -->
-    <div class="c-components py-[40px] space-y-[32px]" data-in-group>
+    <div class="c-components py-[40px] space-y-[32px]">
       <section>
         <div class="container">
-          <h3 class="c-section-title" data-in="fadeUp">To make it compatible with IE11</h3>
+          <h3 class="c-section-title" data-aos="slide-in">To make it compatible with IE11</h3>
           <div class="md:flex space-y-[24px] md:space-y-0 md:space-x-[32px]">
-            <div class="flex-1" data-in="fadeUp">
+            <div class="flex-1" data-aos="slide-in">
               <h4 class="font-semibold mb-[8px]">
                 Do not use <code>space-x-#</code> <code>space-y-#</code>
               </h4>
@@ -310,59 +324,29 @@
                 etc.
               </p>
             </div>
-            <div class="flex-1 delay-100 md:delay-[0ms]" data-in="fadeUp">
+            <div class="flex-1 delay-100 md:delay-[0ms]" data-aos="slide-in">
               <h4 class="font-semibold mb-[8px]">Overwrite the colors</h4>
               <p>Convert to not use CSS variables.</p>
             </div>
           </div>
         </div>
       </section>
-
-      <section>
-        <div class="container">
-          <div class="delay-200 md:delay-100 js-accordion" data-in="fadeUp">
-            <button class="js-accordion_button c-section-title">
-              <span class="c-accordion-title">Accordion</span>
-            </button>
-            <div class="js-accordion_content">
-              <div class="md:flex space-y-[24px] md:space-y-0 md:space-x-[32px]">
-                <div>
-                  <h3 class="font-semibold mb-[8px]">Title</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor.</p>
-                </div>
-                <div>
-                  <h3 class="font-semibold mb-[8px]">Title</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor.</p>
-                </div>
-                <div>
-                  <h3 class="font-semibold mb-[8px]">Title</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor.</p>
-                </div>
-                <div>
-                  <h3 class="font-semibold mb-[8px]">Title</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
 
-    <footer class="py-[16px] u-flex-center">
+    <footer class="mt-[40px] py-[16px] u-flex-center">
       <a href="https://usagizmo.com" target="_blank" rel="noopener noreferrer" class="u-link">
         <small class="text-[12px]">@usagizmo</small>
       </a>
     </footer>
 
     <script
-      src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
-      integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+      src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"
+      integrity="sha384-1Jq1gXc0sLyvpP1iLt5QoryVCyJkBLyfNkaeECRYRX4u1Nx7gT547w5/5YZ1b5DG"
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"
-      integrity="sha384-leGYpHE9Tc4N9OwRd98xg6YFpB9shlc/RkilpFi0ljr3QD4tFoFptZvgnnzzwG4Q"
+      src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"
+      integrity="sha384-h/95c04TkQCIvkLO1bPtWJcSGJVzKBL/2MjrvRzEJWmAwp1GoNuehghH0Sl+G+Sx"
       crossorigin="anonymous"
     ></script>
     <script src="./script.js"></script>
