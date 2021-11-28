@@ -1,7 +1,9 @@
 import { startAnimation } from './modules/startAnimation.js'
 import { setSmoothScroll } from './modules/setSmoothScroll'
-import { setAOS } from './modules/setAOS'
+import { setIn } from './modules/setIn'
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
 startAnimation()
 setSmoothScroll()
-setAOS()
+setIn()

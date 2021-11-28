@@ -28,6 +28,7 @@ module.exports.allowedPathList = [
   'https://usagizmo.com',
   'https://rollupjs.org/',
   'https://cdn.jsdelivr.net/npm/picturefill@3.0.3/dist/picturefill.min.js',
-  'https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js',
-  'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js',
+  'https://cdn.jsdelivr.net/npm/gsap@3.8.0/dist/gsap.min.js',
+  'https://cdn.jsdelivr.net/npm/gsap@3.8.0/dist/ScrollToPlugin.min.js',
+  'https://cdn.jsdelivr.net/npm/gsap@3.8.0/dist/ScrollTrigger.min.js',
 ]

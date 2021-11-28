@@ -1,12 +1,8 @@
-// ref: https://github.com/cferdinandi/smooth-scroll
-
 export function setSmoothScroll() {
-  // eslint-disable-next-line no-undef
-  new SmoothScroll('a[href*="#"]', {
-    header: null, // Selector for fixed headers
-    speed: 600,
-    speedAsDuration: true,
-    offset: 20,
-    easing: 'easeOutQuint',
+  gsap.utils.toArray('a[href*="#"]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault()
+      gsap.to(window, { scrollTo: e.target.getAttribute('href') })
+    })
   })
 }

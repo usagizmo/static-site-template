@@ -2,11 +2,15 @@
   "root": true,
   "env": {
     "browser": true,
-    "jquery": true,
     "es2015": true
   },
   "extends": ["eslint:recommended", "prettier"],
   "parserOptions": {
     "sourceType": "module"
+  },
+  "globals": {
+    "gsap": true,
+    "ScrollTrigger": true,
+    "ScrollToPlugin": true
   }
 }
