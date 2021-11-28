@@ -93,24 +93,3 @@
     @apply before:content-none;
   }
 }
-
-/* ────────────────────
-JS
-──────────────────── */
-.js-accordion_content {
-  @apply overflow-hidden;
-  transition: max-height 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-/* ────────────────────
-Animations
-──────────────────── */
-[data-aos] {
-  @apply duration-[600ms];
-}
-[data-aos="fade-in"]:not(.aos-animate) {
-  @apply opacity-0;
-}
-[data-aos="slide-in"]:not(.aos-animate) {
-  @apply opacity-0 translate-y-[20px];
-}

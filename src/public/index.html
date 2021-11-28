@@ -76,15 +76,15 @@
           <div>
             <h2
               class="text-center text-[24px] font-semibold md:text-[28px] mb-[24px]"
-              data-aos="slide-in"
+              data-in="slide-in"
             >
               Development
             </h2>
 
             <div class="md:flex space-y-[24px] md:space-y-0">
               <div class="flex-1 md:px-[16px]">
-                <h3 class="c-section-title" data-aos="slide-in">Uses</h3>
-                <div data-aos="slide-in" class="delay-100">
+                <h3 class="c-section-title" data-in="slide-in">Uses</h3>
+                <div data-in="slide-in">
                   <ul class="flex before:content-['・'] before:font-mono">
                     <li class="u-list-item">
                       <a
@@ -184,8 +184,8 @@
                 </div>
               </div>
               <div class="flex-1 md:px-[16px]">
-                <h3 class="c-section-title" data-aos="slide-in">VS Code Extensions</h3>
-                <div data-aos="slide-in" class="delay-100 space-y-[16px]">
+                <h3 class="c-section-title" data-in="slide-in">VS Code Extensions</h3>
+                <div data-in="slide-in" class="space-y-[16px]">
                   <div>
                     <ul class="flex before:content-['・'] before:font-mono">
                       <li class="u-list-item">
@@ -257,7 +257,7 @@
           <div>
             <h2
               class="text-center text-[24px] font-semibold md:text-[28px] mb-[40px]"
-              data-aos="slide-in"
+              data-in="slide-in"
             >
               Commands
             </h2>
@@ -266,7 +266,6 @@
               <pre
                 class="
                   bg-gray-900
-                  delay-100
                   overflow-x-auto
                   px-[28px]
                   py-[20px]
@@ -274,7 +273,7 @@
                   text-[14px] text-white
                   w-full
                 "
-                data-aos="slide-in"
+                data-in="slide-in"
               ><code class="bash"><span class="text-teal-300">pnpm</span> i
 <span class="text-teal-300">pnpm</span> format  <span class="text-gray-400"># Format with prettier</span>
 <span class="text-teal-300">pnpm</span> build   <span class="text-gray-400"># Build tailwind.css and output src/public/styles.css</span>
@@ -286,7 +285,7 @@
           </div>
 
           <!-- Buttons -->
-          <div class="u-flex-center" data-aos="slide-in">
+          <div class="u-flex-center" data-in="slide-in">
             <a
               href="https://github.com/usagizmo/static-site-template"
               target="_blank"
@@ -313,9 +312,9 @@
     <div class="c-components py-[40px] space-y-[32px]">
       <section>
         <div class="container">
-          <h3 class="c-section-title" data-aos="slide-in">To make it compatible with IE11</h3>
+          <h3 class="c-section-title" data-in="slide-in">To make it compatible with IE11</h3>
           <div class="md:flex space-y-[24px] md:space-y-0 md:space-x-[32px]">
-            <div class="flex-1" data-aos="slide-in">
+            <div class="flex-1" data-in="slide-in">
               <h4 class="font-semibold mb-[8px]">
                 Do not use <code>space-x-#</code> <code>space-y-#</code>
               </h4>
@@ -324,7 +323,7 @@
                 etc.
               </p>
             </div>
-            <div class="flex-1 delay-100 md:delay-[0ms]" data-aos="slide-in">
+            <div class="flex-1" data-in="slide-in">
               <h4 class="font-semibold mb-[8px]">Overwrite the colors</h4>
               <p>Convert to not use CSS variables.</p>
             </div>
@@ -340,13 +339,18 @@
     </footer>
 
     <script
-      src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"
-      integrity="sha384-1Jq1gXc0sLyvpP1iLt5QoryVCyJkBLyfNkaeECRYRX4u1Nx7gT547w5/5YZ1b5DG"
+      src="https://cdn.jsdelivr.net/npm/gsap@3.8.0/dist/gsap.min.js"
+      integrity="sha384-ydr8EgQH3ly+jQtQgWFkep3A7FRTHl3Xi6T07EIA5VVtR9wDE2sbjunIgXTMgg91"
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"
-      integrity="sha384-h/95c04TkQCIvkLO1bPtWJcSGJVzKBL/2MjrvRzEJWmAwp1GoNuehghH0Sl+G+Sx"
+      src="https://cdn.jsdelivr.net/npm/gsap@3.8.0/dist/ScrollToPlugin.min.js"
+      integrity="sha384-ewu98XpF/3U/rMa5KMxfak31imQjKOySB7dTfYY8D24taIQlPLRpULRAQLaCwXLk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.8.0/dist/ScrollTrigger.min.js"
+      integrity="sha384-576fNLyWAFIK9+Aj6NnNElb+RbLU/ohTK3CeT5U4hk4AfCnYqisARI6tQTRLqf9g"
       crossorigin="anonymous"
     ></script>
     <script src="./script.js"></script>
