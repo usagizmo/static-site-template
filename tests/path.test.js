@@ -106,6 +106,8 @@ describe('All paths are valid:', () => {
 describe('All image file names are varid:', () => {
   const allowedImageExtensions = imageExtensions.join('|')
 
+  if (imageFilePaths.length === 1 && imageFilePaths[0] === '') return
+
   test.each(imageFilePaths)(' %s', async (filePath) => {
     const fileName = basename(filePath)
     const regex = new RegExp(`^[0-9a-z_-]+\\.(?:${allowedImageExtensions})$`)
