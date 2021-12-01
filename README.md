@@ -100,6 +100,6 @@ module.exports = app
 Add the `vercel-build` command to `package.json`.
 
 ```diff
-"build": "concurrently \"pnpm:build:tailwind\"",
-+ "vercel-build": "pnpm build",
+"build": "concurrently \"npm:build:tailwind\" \"npm:build:js\"",
++ "vercel-build": "npm build",
 ```
