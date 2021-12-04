@@ -44,16 +44,6 @@ curl "<url>" | openssl dgst -sha384 -binary | openssl base64 -A
 
 Ref: [Subresource Integrity - Web security | MDN](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
 
-## Deploy to Vercel
-
-To use `pnpm`, configure the following settings in Vercel `Project Settings`.
-
-`General` > `Build` & `Development Settings` > `INSTALL COMMAND`:
-
-```bash
-npm i pnpm -g && pnpm i
-```
-
 ### With Basic Authentication
 
 ```bash
@@ -101,5 +91,5 @@ Add the `vercel-build` command to `package.json`.
 
 ```diff
 "build": "concurrently \"npm:build:tailwind\" \"npm:build:js\"",
-+ "vercel-build": "npm build",
++ "vercel-build": "npm run build",
 ```
