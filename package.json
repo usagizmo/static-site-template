@@ -7,10 +7,10 @@
   "scripts": {
     "prepare": "husky install",
     "format": "prettier --write .",
-    "build:tailwind": "cross-env NODE_ENV=production tailwindcss -i ./tailwind.css -o ./src/public/styles.css --minify",
+    "build:tailwind": "cross-env NODE_ENV=production tailwindcss -i ./src/css/styles.css -o ./src/public/styles.css --minify",
     "build:js": "cross-env NODE_ENV=production rollup --config",
     "build": "concurrently \"npm:build:tailwind\" \"npm:build:js\"",
-    "dev:tailwind": "tailwindcss -i ./tailwind.css -o ./src/public/styles.css --watch",
+    "dev:tailwind": "tailwindcss -i ./src/css/styles.css -o ./src/public/styles.css --watch",
     "dev:js": "rollup --config -w",
     "dev:browser-sync": "browser-sync src/public -w --startPath /",
     "dev": "concurrently \"npm:dev:tailwind\" \"npm:dev:js\" \"npm:dev:browser-sync\"",

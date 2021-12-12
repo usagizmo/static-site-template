@@ -11,7 +11,6 @@ module.exports.allowedPathList = [
   'https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp-noto.min.css',
   'https://github.com/usagizmo/static-site-template',
   'https://tailwindcss.com',
-  'https://tailwindcss.com/docs/just-in-time-mode#enabling-jit-mode',
   'https://htmlhint.com',
   'https://eslint.org',
   'https://prettier.io',
