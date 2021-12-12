@@ -1,5 +1,7 @@
-export function startAnimation() {
-  setTimeout(function () {
+import { nextTick } from '../utils'
+
+export const startAnimation = function () {
+  nextTick(function () {
     document.body.classList.remove('u-prevent-animation')
-  }, 10)
+  })
 }

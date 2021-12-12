@@ -1,5 +1,5 @@
 /node_modules
 .eslintcache
 .pnpm-debug.log
-/src/public/styles.css
 /src/public/script.js
+/src/public/styles.css

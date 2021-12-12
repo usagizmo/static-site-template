@@ -81,3 +81,13 @@
     @apply before:content-none;
   }
 }
+
+[data-in] {
+  @apply duration-[600ms];
+}
+[data-in="fade-in"]:not(.is-in) {
+  @apply opacity-0 pointer-events-none;
+}
+[data-in="slide-in"]:not(.is-in) {
+  @apply opacity-0 pointer-events-none translate-y-[20px];
+}
