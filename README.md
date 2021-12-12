@@ -1,6 +1,6 @@
 # Static Site Template
 
-A great, small starting point for building a static site.
+A small starting point for building a static site.
 
 [Demo](https://static-site-template.usagizmo.com/)
 
@@ -8,7 +8,7 @@ A great, small starting point for building a static site.
 
 ### Uses
 
-- [Tailwind CSS](https://tailwindcss.com/) ([JIT](https://tailwindcss.com/docs/just-in-time-mode#enabling-jit-mode)) / [Rollup](https://rollupjs.org/) (Vanilla)
+- [Tailwind CSS](https://tailwindcss.com/) (v3) / [Rollup](https://rollupjs.org/) (Vanilla)
 - [HTMLHint](https://htmlhint.com/) / [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/) / [lint-staged](https://github.com/okonet/lint-staged) / [husky](https://github.com/typicode/husky)
 - GitHub Actions (Formating + Linting + Testing (Validate `href` and `src` paths))
@@ -27,8 +27,8 @@ A great, small starting point for building a static site.
 ```bash
 pnpm i
 pnpm format  # Format with prettier
-pnpm build   # Build tailwind.css and output src/public/styles.css
-pnpm dev     # Watch and build tailwind.css
+pnpm build   # Build src/css/[styles.css,script.js] and output src/public/*
+pnpm dev     # Watch and build src/css/[styles.css,script.js]
 pnpm lint    # Linting
 pnpm test    # Testing
 pnpm deploy  # When deploying to a VPS such as DigitalOcean using `rsync`

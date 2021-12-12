@@ -38,14 +38,16 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="u-prevent-animation">
+    <!-- <div id="initial-cover" class="fixed z-[60] top-0 left-0 w-full h-full bg-white duration-500"></div> -->
     <header
-      class="bg-white flex-col md:flex-row md:py-[16px] px-[32px] u-flex-center h-[80vh] md:h-auto"
+      id="header"
+      class="sticky top-0 z-30 bg-white flex-col md:flex-row md:py-[16px] px-[32px] u-flex-center h-[80vh] md:h-auto"
     >
       <h1 class="font-semibold leading-[1.25] text-[28px] tracking-[-0.02em]">
         Static Site Template
       </h1>
       <p class="md:ml-auto md:mt-0 md:pl-[16px] md:px-[16px] mt-[8px]">
-        A great, small starting point for building a static site.
+        A small starting point for building a static site.
       </p>
       <a
         href="https://github.com/usagizmo/static-site-template"
@@ -83,13 +85,7 @@
                         href="https://tailwindcss.com"
                         >Tailwind CSS</a
                       >
-                      (<a
-                        class="u-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://tailwindcss.com/docs/just-in-time-mode#enabling-jit-mode"
-                        >JIT</a
-                      >)
+                      (v3)
                     </li>
                     <li class="u-list-item">
                       <a
@@ -257,8 +253,8 @@
                 data-in="slide-in"
               ><code class="bash"><span class="text-teal-300">pnpm</span> i
 <span class="text-teal-300">pnpm</span> format  <span class="text-gray-400"># Format with prettier</span>
-<span class="text-teal-300">pnpm</span> build   <span class="text-gray-400"># Build tailwind.css and output src/public/styles.css</span>
-<span class="text-teal-300">pnpm</span> dev     <span class="text-gray-400"># Watch and build tailwind.css</span>
+<span class="text-teal-300">pnpm</span> build   <span class="text-gray-400"># Build src/css/[styles.css,script.js] and output src/public/*</span>
+<span class="text-teal-300">pnpm</span> dev     <span class="text-gray-400"># Watch and build src/css/[styles.css,script.js]</span>
 <span class="text-teal-300">pnpm</span> lint    <span class="text-gray-400"># Linting</span>
 <span class="text-teal-300">pnpm</span> test    <span class="text-gray-400"># Testing</span>
 <span class="text-teal-300">pnpm</span> deploy  <span class="text-gray-400"># When deploying to a VPS such as DigitalOcean using `rsync`</span></code></pre>

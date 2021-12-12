@@ -1,12 +1,12 @@
-export function setIn() {
-  gsap.utils.toArray('[data-in="slide-in"]').forEach(function (el) {
-    gsap.from(el, {
+export const setIn = function () {
+  gsap.utils.toArray('[data-in]').forEach(function (el) {
+    gsap.to(el, {
       scrollTrigger: {
         trigger: el,
-        start: 'top 100%-=80px',
+        start: 'top 100%-=120px',
+        toggleClass: 'is-in',
+        once: true,
       },
-      y: 20,
-      opacity: 0,
     })
   })
 }
