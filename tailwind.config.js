@@ -1,6 +1,10 @@
 module.exports = {
   content: ['./src/public/**/*.{html,js}'],
   theme: {
+    container: {
+      center: true,
+      padding: '24px',
+    },
     extend: {
       fontFamily: {
         // When not using Web fonts
