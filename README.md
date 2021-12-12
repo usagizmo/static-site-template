@@ -1,6 +1,6 @@
 # Static Site Template
 
-A great, small starting point for building a static site.
+A small starting point for building a static site.
 
 [Demo](https://static-site-template.usagizmo.com/)
 
