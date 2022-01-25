@@ -41,19 +41,19 @@
     <!-- <div id="initial-cover" class="fixed z-[60] top-0 left-0 w-full h-full bg-white duration-500"></div> -->
     <header
       id="header"
-      class="sticky top-0 z-30 bg-white flex-col md:flex-row md:py-[16px] px-[32px] u-flex-center h-[80vh] md:h-auto"
+      class="u-flex-center sticky top-0 z-30 h-[80vh] flex-col bg-white px-[32px] md:h-auto md:flex-row md:py-[16px]"
     >
-      <h1 class="font-semibold leading-[1.25] text-[28px] tracking-[-0.02em]">
+      <h1 class="text-[28px] font-semibold leading-[1.25] tracking-[-0.02em]">
         Static Site Template
       </h1>
-      <p class="md:ml-auto md:mt-0 md:pl-[16px] md:px-[16px] mt-[8px]">
+      <p class="mt-[8px] md:ml-auto md:mt-0 md:px-[16px] md:pl-[16px]">
         A small starting point for building a static site.
       </p>
       <a
         href="https://github.com/usagizmo/static-site-template"
         target="_blank"
         rel="noopener noreferrer"
-        class="bg-black duration-150 font-medium hover:bg-gray-700 md:mt-0 mt-[24px] px-[20px] py-[12px] rounded-[24px] text-white"
+        class="mt-[24px] rounded-[24px] bg-black px-[20px] py-[12px] font-medium text-white duration-150 hover:bg-gray-700 md:mt-0"
       >
         GitHub
       </a>
@@ -66,17 +66,17 @@
           <!-- Development -->
           <div>
             <h2
-              class="text-center text-[24px] font-semibold md:text-[28px] mb-[24px]"
+              class="mb-[24px] text-center text-[24px] font-semibold md:text-[28px]"
               data-in="slide-in"
             >
               Development
             </h2>
 
-            <div class="md:flex space-y-[24px] md:space-y-0">
+            <div class="space-y-[24px] md:flex md:space-y-0">
               <div class="flex-1 md:px-[16px]">
                 <h3 class="c-section-title" data-in="slide-in">Uses</h3>
                 <div data-in="slide-in">
-                  <ul class="flex before:content-['・'] before:font-mono">
+                  <ul class="flex before:font-mono before:content-['・']">
                     <li class="u-list-item">
                       <a
                         class="u-link"
@@ -98,7 +98,7 @@
                       (Vanilla)
                     </li>
                   </ul>
-                  <ul class="flex before:content-['・'] before:font-mono">
+                  <ul class="flex before:font-mono before:content-['・']">
                     <li class="u-list-item">
                       <a
                         class="u-link"
@@ -118,7 +118,7 @@
                       >
                     </li>
                   </ul>
-                  <ul class="flex before:content-['・'] before:font-mono">
+                  <ul class="flex before:font-mono before:content-['・']">
                     <li class="u-list-item">
                       <a
                         class="u-link"
@@ -147,14 +147,14 @@
                       >
                     </li>
                   </ul>
-                  <ul class="flex before:content-['・'] before:font-mono">
+                  <ul class="flex before:font-mono before:content-['・']">
                     <li class="u-list-item">
                       GitHub Actions (Formating + Linting + Testing (Validate
 
                       <code>href</code> and <code>src</code> paths))
                     </li>
                   </ul>
-                  <ul class="flex before:content-['・'] before:font-mono">
+                  <ul class="flex before:font-mono before:content-['・']">
                     <li class="u-list-item">Node (<code>v8+</code>)</li>
                     <li class="u-list-item">
                       <a
@@ -172,7 +172,7 @@
                 <h3 class="c-section-title" data-in="slide-in">VS Code Extensions</h3>
                 <div data-in="slide-in" class="space-y-[16px]">
                   <div>
-                    <ul class="flex before:content-['・'] before:font-mono">
+                    <ul class="flex before:font-mono before:content-['・']">
                       <li class="u-list-item">
                         <a
                           class="u-link"
@@ -183,7 +183,7 @@
                         >
                       </li>
                     </ul>
-                    <ul class="flex before:content-['・'] before:font-mono">
+                    <ul class="flex before:font-mono before:content-['・']">
                       <li class="u-list-item">
                         <a
                           class="u-link"
@@ -212,7 +212,7 @@
                         >
                       </li>
                     </ul>
-                    <ul class="flex before:content-['・'] before:font-mono">
+                    <ul class="flex before:font-mono before:content-['・']">
                       <li class="u-list-item">
                         <a
                           class="u-link"
@@ -241,7 +241,7 @@
           <!-- Commands -->
           <div>
             <h2
-              class="text-center text-[24px] font-semibold md:text-[28px] mb-[40px]"
+              class="mb-[40px] text-center text-[24px] font-semibold md:text-[28px]"
               data-in="slide-in"
             >
               Commands
@@ -249,7 +249,7 @@
 
             <div>
               <pre
-                class="bg-gray-900 overflow-x-auto px-[28px] py-[20px] rounded-[8px] text-[14px] text-white w-full"
+                class="w-full overflow-x-auto rounded-[8px] bg-gray-900 px-[28px] py-[20px] text-[14px] text-white"
                 data-in="slide-in"
               ><code class="bash"><span class="text-teal-300">pnpm</span> i
 <span class="text-teal-300">pnpm</span> format  <span class="text-gray-400"># Format with prettier</span>
@@ -267,7 +267,7 @@
               href="https://github.com/usagizmo/static-site-template"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-black hover:bg-gray-700 text-white font-semibold py-[12px] px-[20px] rounded-[24px] duration-150"
+              class="rounded-[24px] bg-black py-[12px] px-[20px] font-semibold text-white duration-150 hover:bg-gray-700"
             >
               GitHub
             </a>
@@ -277,13 +277,13 @@
     </div>
 
     <!-- Components -->
-    <div class="c-components py-[40px] space-y-[32px]">
+    <div class="c-components space-y-[32px] py-[40px]">
       <section>
         <div class="container">
           <h3 class="c-section-title" data-in="slide-in">To make it compatible with IE11</h3>
-          <div class="md:flex space-y-[24px] md:space-y-0 md:space-x-[32px]">
+          <div class="space-y-[24px] md:flex md:space-y-0 md:space-x-[32px]">
             <div class="flex-1" data-in="slide-in">
-              <h4 class="font-semibold mb-[8px]">
+              <h4 class="mb-[8px] font-semibold">
                 Do not use <code>space-x-#</code> <code>space-y-#</code>
               </h4>
               <p>
@@ -292,7 +292,7 @@
               </p>
             </div>
             <div class="flex-1" data-in="slide-in">
-              <h4 class="font-semibold mb-[8px]">Overwrite the colors</h4>
+              <h4 class="mb-[8px] font-semibold">Overwrite the colors</h4>
               <p>Convert to not use CSS variables.</p>
             </div>
           </div>
@@ -300,7 +300,7 @@
       </section>
     </div>
 
-    <footer class="mt-[40px] py-[16px] u-flex-center">
+    <footer class="u-flex-center mt-[40px] py-[16px]">
       <a href="https://usagizmo.com" target="_blank" rel="noopener noreferrer" class="u-link">
         <small class="text-[12px]">@usagizmo</small>
       </a>
