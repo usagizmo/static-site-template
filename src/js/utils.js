@@ -15,6 +15,17 @@ export const throttle = function (func, interval) {
   }
 }
 
+export const onChangeMedia = function (callback) {
+  const mediaQuery = window.matchMedia('(min-width: 768px)')
+
+  function onChange(e) {
+    callback(e.matches) // isPC
+  }
+
+  mediaQuery.addListener(onChange)
+  onChange(mediaQuery)
+}
+
 export const onImagesLoaded = function (selector, callback) {
   const imgs = gsap.utils.toArray(selector)
   let count = imgs.length
