@@ -23,18 +23,18 @@
     @apply flex items-center;
   }
   .c-accordion-title::after {
-    @apply ml-[16px] content-[''] h-[10px] w-[10px] border-r border-b border-black rotate-[-135deg] translate-y-[25%];
+    @apply ml-[16px] h-[10px] w-[10px] translate-y-[25%] rotate-[-135deg] border-r border-b border-black content-[''];
   }
   .is-open .c-accordion-title::after {
-    @apply rotate-45 translate-y-[-25%];
+    @apply translate-y-[-25%] rotate-45;
   }
 
   .c-section-title {
-    @apply font-semibold leading-[1.25] mb-[16px] text-[18px] md:text-[20px];
+    @apply mb-[16px] text-[18px] font-semibold leading-[1.25] md:text-[20px];
   }
 
   .c-section-subtitle {
-    @apply font-medium mb-[8px];
+    @apply mb-[8px] font-medium;
   }
 }
 
@@ -51,31 +51,26 @@
     }
   }
 
-  .u-sr-only {
-    @apply absolute w-[1px] h-[1px] m-[-1px] overflow-hidden whitespace-nowrap border-0;
-    clip: rect(0, 0, 0, 0);
-  }
-
   .u-prevent-animation * {
     @apply !animate-none !transition-none;
   }
 
   .u-flex-center {
-    @apply flex justify-center items-center;
+    @apply flex items-center justify-center;
   }
 
   .u-link {
-    @apply relative overflow-hidden inline-flex text-gray-600 hover:text-black after:h-[1px] after:w-full after:bg-black after:absolute after:left-0 after:bottom-0 after:translate-x-[calc(-100%-1px)] after:duration-200;
+    @apply relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black;
   }
   .u-link:hover {
     @apply after:translate-x-0;
   }
   .u-link.is-white {
-    @apply text-gray-200 hover:text-white after:bg-white;
+    @apply text-gray-200 after:bg-white hover:text-white;
   }
 
   .u-list-item {
-    @apply before:content-['/'] before:px-[4px];
+    @apply before:px-[4px] before:content-['/'];
   }
   .u-list-item:first-of-type {
     @apply before:content-none;
@@ -86,8 +81,8 @@
   @apply duration-[600ms];
 }
 [data-in="fade-in"]:not(.is-in) {
-  @apply opacity-0 pointer-events-none;
+  @apply pointer-events-none opacity-0;
 }
 [data-in="slide-in"]:not(.is-in) {
-  @apply opacity-0 pointer-events-none translate-y-[20px];
+  @apply pointer-events-none translate-y-[20px] opacity-0;
 }
