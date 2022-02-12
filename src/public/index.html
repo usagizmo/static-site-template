@@ -41,19 +41,19 @@
     <!-- <div id="initial-cover" class="fixed z-[60] top-0 left-0 w-full h-full bg-white duration-500"></div> -->
     <header
       id="header"
-      class="u-flex-center sticky top-0 z-30 h-[80vh] flex-col bg-white px-[32px] md:h-auto md:flex-row md:py-[16px]"
+      class="top-0 z-30 flex h-[80vh] flex-col items-center justify-center bg-white px-8 md:sticky md:h-auto md:flex-row md:py-4"
     >
       <h1 class="text-[28px] font-semibold leading-[1.25] tracking-[-0.02em]">
         Static Site Template
       </h1>
-      <p class="mt-[8px] md:ml-auto md:mt-0 md:px-[16px] md:pl-[16px]">
+      <p class="mt-2 md:ml-auto md:mt-0 md:px-4 md:pl-4">
         A small starting point for building a static site.
       </p>
       <a
         href="https://github.com/usagizmo/static-site-template"
         target="_blank"
         rel="noopener noreferrer"
-        class="mt-[24px] rounded-[24px] bg-black px-[20px] py-[12px] font-medium text-white duration-150 hover:bg-gray-700 md:mt-0"
+        class="mt-6 rounded-[24px] bg-black px-5 py-3 font-medium text-white duration-150 hover:bg-gray-700 md:mt-0"
       >
         GitHub
       </a>
@@ -61,25 +61,30 @@
 
     <!-- Information -->
     <div class="c-information">
-      <main class="bg-gradient-to-b from-blue-300 to-green-200 py-[40px]">
-        <div class="container space-y-[48px]">
+      <main class="bg-gradient-to-b from-blue-300 to-green-200 py-10">
+        <div class="container space-y-12">
           <!-- Development -->
           <div>
             <h2
-              class="mb-[24px] text-center text-[24px] font-semibold md:text-[28px]"
+              class="mb-6 text-center text-[24px] font-semibold md:text-[28px]"
               data-in="slide-in"
             >
               Development
             </h2>
 
-            <div class="space-y-[24px] md:flex md:space-y-0">
-              <div class="flex-1 md:px-[16px]">
-                <h3 class="c-section-title" data-in="slide-in">Uses</h3>
+            <div class="space-y-6 md:flex md:space-y-0">
+              <div class="flex-1 md:px-4">
+                <h3
+                  class="mb-4 text-[18px] font-semibold leading-[1.25] md:text-[20px]"
+                  data-in="slide-in"
+                >
+                  Uses
+                </h3>
                 <div data-in="slide-in">
                   <ul class="flex before:font-mono before:content-['・']">
-                    <li class="u-list-item">
+                    <li class="before:px-1 before:content-['/'] first-of-type:before:content-none">
                       <a
-                        class="u-link"
+                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://tailwindcss.com"
@@ -87,9 +92,9 @@
                       >
                       (v3)
                     </li>
-                    <li class="u-list-item">
+                    <li class="before:px-1 before:content-['/'] first-of-type:before:content-none">
                       <a
-                        class="u-link"
+                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://rollupjs.org/"
@@ -99,18 +104,18 @@
                     </li>
                   </ul>
                   <ul class="flex before:font-mono before:content-['・']">
-                    <li class="u-list-item">
+                    <li class="before:px-1 before:content-['/'] first-of-type:before:content-none">
                       <a
-                        class="u-link"
+                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://htmlhint.com"
                         >HTMLHint</a
                       >
                     </li>
-                    <li class="u-list-item">
+                    <li class="before:px-1 before:content-['/'] first-of-type:before:content-none">
                       <a
-                        class="u-link"
+                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://eslint.org"
@@ -119,27 +124,27 @@
                     </li>
                   </ul>
                   <ul class="flex before:font-mono before:content-['・']">
-                    <li class="u-list-item">
+                    <li class="before:px-1 before:content-['/'] first-of-type:before:content-none">
                       <a
-                        class="u-link"
+                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://prettier.io"
                         >Prettier</a
                       >
                     </li>
-                    <li class="u-list-item">
+                    <li class="before:px-1 before:content-['/'] first-of-type:before:content-none">
                       <a
-                        class="u-link"
+                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://github.com/okonet/lint-staged"
                         >lint-staged</a
                       >
                     </li>
-                    <li class="u-list-item">
+                    <li class="before:px-1 before:content-['/'] first-of-type:before:content-none">
                       <a
-                        class="u-link"
+                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://github.com/typicode/husky"
@@ -148,17 +153,19 @@
                     </li>
                   </ul>
                   <ul class="flex before:font-mono before:content-['・']">
-                    <li class="u-list-item">
+                    <li class="before:px-1 before:content-['/'] first-of-type:before:content-none">
                       GitHub Actions (Formating + Linting + Testing (Validate
 
                       <code>href</code> and <code>src</code> paths))
                     </li>
                   </ul>
                   <ul class="flex before:font-mono before:content-['・']">
-                    <li class="u-list-item">Node (<code>v8+</code>)</li>
-                    <li class="u-list-item">
+                    <li class="before:px-1 before:content-['/'] first-of-type:before:content-none">
+                      Node (<code>v8+</code>)
+                    </li>
+                    <li class="before:px-1 before:content-['/'] first-of-type:before:content-none">
                       <a
-                        class="u-link"
+                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://pnpm.io/"
@@ -168,14 +175,21 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex-1 md:px-[16px]">
-                <h3 class="c-section-title" data-in="slide-in">VS Code Extensions</h3>
-                <div data-in="slide-in" class="space-y-[16px]">
+              <div class="flex-1 md:px-4">
+                <h3
+                  class="mb-4 text-[18px] font-semibold leading-[1.25] md:text-[20px]"
+                  data-in="slide-in"
+                >
+                  VS Code Extensions
+                </h3>
+                <div data-in="slide-in" class="space-y-4">
                   <div>
                     <ul class="flex before:font-mono before:content-['・']">
-                      <li class="u-list-item">
+                      <li
+                        class="before:px-1 before:content-['/'] first-of-type:before:content-none"
+                      >
                         <a
-                          class="u-link"
+                          class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                           target="_blank"
                           rel="noopener noreferrer"
                           href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
@@ -184,27 +198,33 @@
                       </li>
                     </ul>
                     <ul class="flex before:font-mono before:content-['・']">
-                      <li class="u-list-item">
+                      <li
+                        class="before:px-1 before:content-['/'] first-of-type:before:content-none"
+                      >
                         <a
-                          class="u-link"
+                          class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                           target="_blank"
                           rel="noopener noreferrer"
                           href="https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint"
                           >HTMLHint</a
                         >
                       </li>
-                      <li class="u-list-item">
+                      <li
+                        class="before:px-1 before:content-['/'] first-of-type:before:content-none"
+                      >
                         <a
-                          class="u-link"
+                          class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                           target="_blank"
                           rel="noopener noreferrer"
                           href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
                           >ESLint</a
                         >
                       </li>
-                      <li class="u-list-item">
+                      <li
+                        class="before:px-1 before:content-['/'] first-of-type:before:content-none"
+                      >
                         <a
-                          class="u-link"
+                          class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                           target="_blank"
                           rel="noopener noreferrer"
                           href="https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint"
@@ -213,18 +233,22 @@
                       </li>
                     </ul>
                     <ul class="flex before:font-mono before:content-['・']">
-                      <li class="u-list-item">
+                      <li
+                        class="before:px-1 before:content-['/'] first-of-type:before:content-none"
+                      >
                         <a
-                          class="u-link"
+                          class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                           target="_blank"
                           rel="noopener noreferrer"
                           href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig"
                           >EditorConfig</a
                         >
                       </li>
-                      <li class="u-list-item">
+                      <li
+                        class="before:px-1 before:content-['/'] first-of-type:before:content-none"
+                      >
                         <a
-                          class="u-link"
+                          class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                           target="_blank"
                           rel="noopener noreferrer"
                           href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
@@ -241,7 +265,7 @@
           <!-- Commands -->
           <div>
             <h2
-              class="mb-[40px] text-center text-[24px] font-semibold md:text-[28px]"
+              class="mb-10 text-center text-[24px] font-semibold md:text-[28px]"
               data-in="slide-in"
             >
               Commands
@@ -249,7 +273,7 @@
 
             <div>
               <pre
-                class="w-full overflow-x-auto rounded-[8px] bg-gray-900 px-[28px] py-[20px] text-[14px] text-white"
+                class="w-full overflow-x-auto rounded-[8px] bg-gray-900 px-7 py-5 text-[14px] text-white"
                 data-in="slide-in"
               ><code class="bash"><span class="text-teal-300">pnpm</span> i
 <span class="text-teal-300">pnpm</span> format  <span class="text-gray-400"># Format with prettier</span>
@@ -262,12 +286,12 @@
           </div>
 
           <!-- Buttons -->
-          <div class="u-flex-center" data-in="slide-in">
+          <div class="flex items-center justify-center" data-in="slide-in">
             <a
               href="https://github.com/usagizmo/static-site-template"
               target="_blank"
               rel="noopener noreferrer"
-              class="rounded-[24px] bg-black py-[12px] px-[20px] font-semibold text-white duration-150 hover:bg-gray-700"
+              class="rounded-[24px] bg-black py-3 px-5 font-semibold text-white duration-150 hover:bg-gray-700"
             >
               GitHub
             </a>
@@ -276,32 +300,13 @@
       </main>
     </div>
 
-    <!-- Components -->
-    <div class="c-components space-y-[32px] py-[40px]">
-      <section>
-        <div class="container">
-          <h3 class="c-section-title" data-in="slide-in">To make it compatible with IE11</h3>
-          <div class="space-y-[24px] md:flex md:space-y-0 md:space-x-[32px]">
-            <div class="flex-1" data-in="slide-in">
-              <h4 class="mb-[8px] font-semibold">
-                Do not use <code>space-x-#</code> <code>space-y-#</code>
-              </h4>
-              <p>
-                Replace with <code>ml-[-16px]</code> for wrappers, <code>ml-[16px]</code> for items,
-                etc.
-              </p>
-            </div>
-            <div class="flex-1" data-in="slide-in">
-              <h4 class="mb-[8px] font-semibold">Overwrite the colors</h4>
-              <p>Convert to not use CSS variables.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <footer class="u-flex-center mt-[40px] py-[16px]">
-      <a href="https://usagizmo.com" target="_blank" rel="noopener noreferrer" class="u-link">
+    <footer class="mt-4 flex items-center justify-center py-4">
+      <a
+        href="https://usagizmo.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
+      >
         <small class="text-[12px]">@usagizmo</small>
       </a>
     </footer>
