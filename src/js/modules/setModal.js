@@ -1,4 +1,10 @@
-import { nextTick, onImagesLoaded, fixPage, releasePage, removeHashFromURL } from '../utils'
+import {
+  nextTick,
+  onImagesLoaded,
+  fixPage,
+  releasePage,
+  removeHashFromURL,
+} from '../utils'
 
 export const setModal = function () {
   const open = function (sel) {
@@ -18,7 +24,10 @@ export const setModal = function () {
 
     const iframe = modal.querySelector('iframe')
     if (!iframe) return
-    iframe.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+    iframe.contentWindow.postMessage(
+      '{"event":"command","func":"stopVideo","args":""}',
+      '*'
+    )
 
     removeHashFromURL()
   }
@@ -47,7 +56,9 @@ export const setModal = function () {
 
   const hash = window.location.hash
   if (hash) {
-    const scrollTarget = document.querySelector('[href="' + hash + '"][data-modal-open]')
+    const scrollTarget = document.querySelector(
+      '[href="' + hash + '"][data-modal-open]'
+    )
     const modal = document.querySelector(hash)
     if (!scrollTarget || !modal) {
       return
@@ -55,7 +66,8 @@ export const setModal = function () {
 
     onImagesLoaded('img[src]', function () {
       const adjust = -180
-      const scrollTop = window.pageYOffset + scrollTarget.getBoundingClientRect().top + adjust
+      const scrollTop =
+        window.pageYOffset + scrollTarget.getBoundingClientRect().top + adjust
       scrollTo(0, scrollTop)
       open(hash)
     })
