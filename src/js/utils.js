@@ -78,5 +78,9 @@ export const releasePage = function () {
 }
 
 export const removeHashFromURL = function () {
-  history.pushState('', document.title, window.location.pathname + window.location.search)
+  history.pushState(
+    '',
+    document.title,
+    window.location.pathname + window.location.search
+  )
 }

@@ -18,9 +18,11 @@ export const setDeep = function () {
   })
 
   gsap.utils.toArray('[data-deep-group]').forEach(function (groupEl) {
-    gsap.utils.toArray(groupEl.querySelectorAll('[data-deep-group-item]')).forEach(function (el) {
-      const deep = el.dataset.deepGroupItem // 0 - 1
-      addDeep(el, deep, groupEl, 'center 30%')
-    })
+    gsap.utils
+      .toArray(groupEl.querySelectorAll('[data-deep-group-item]'))
+      .forEach(function (el) {
+        const deep = el.dataset.deepGroupItem // 0 - 1
+        addDeep(el, deep, groupEl, 'center 30%')
+      })
   })
 }

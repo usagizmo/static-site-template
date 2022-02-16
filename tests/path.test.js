@@ -6,7 +6,9 @@ const { allowedPathList, publicDir, imageExtensions } = require('./config')
 const findHtml = execSync(`find ${publicDir} -type f -name "*.html"`)
 const htmlFilePaths = findHtml.toString().trim().split('\n')
 
-const findImagesOption = imageExtensions.map((ext) => `-name "*.${ext}"`).join(' -o ')
+const findImagesOption = imageExtensions
+  .map((ext) => `-name "*.${ext}"`)
+  .join(' -o ')
 const findImages = execSync(`find ${publicDir} -type f ${findImagesOption}`)
 const imageFilePaths = findImages.toString().trim().split('\n')
 
@@ -68,7 +70,9 @@ describe('@relativeUrlToFilePath:', () => {
 describe('All paths are valid:', () => {
   test.each(htmlFilePaths)(' %s', async (filePath) => {
     const text = await readFile(filePath, 'utf8')
-    const allPaths = Array.from(text.matchAll(/(?:href|src)="([^"]+?)"/g)).map((match) => match[1])
+    const allPaths = Array.from(text.matchAll(/(?:href|src)="([^"]+?)"/g)).map(
+      (match) => match[1]
+    )
 
     const baseDir = dirname(filePath)
 
