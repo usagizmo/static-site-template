@@ -15,11 +15,11 @@ specifiers:
   postcss: 8.4.6
   prettier: 2.5.1
   prettier-plugin-tailwindcss: 0.1.7
-  rollup: 2.67.2
+  rollup: 2.67.3
   tailwindcss: 3.0.22
 
 devDependencies:
-  '@rollup/plugin-eslint': 8.0.1_rollup@2.67.2
+  '@rollup/plugin-eslint': 8.0.1_rollup@2.67.3
   autoprefixer: 10.4.2_postcss@8.4.6
   cross-env: 7.0.3
   eslint: 8.9.0
@@ -33,7 +33,7 @@ devDependencies:
   postcss: 8.4.6
   prettier: 2.5.1
   prettier-plugin-tailwindcss: 0.1.7_prettier@2.5.1
-  rollup: 2.67.2
+  rollup: 2.67.3
   tailwindcss: 3.0.22_autoprefixer@10.4.2
 
 packages:
@@ -686,7 +686,7 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@rollup/plugin-eslint/8.0.1_rollup@2.67.2:
+  /@rollup/plugin-eslint/8.0.1_rollup@2.67.3:
     resolution: {integrity: sha512-rTMAY4tKGBdbkHHQDaVhXNJg9tRmW7ihRAg7NQHiPUv13NFYBygIr+OYgpVNwSnGOH146BgCITSBAoMxMQGPTQ==}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
@@ -694,7 +694,7 @@ packages:
     dependencies:
       '@rollup/pluginutils': 4.1.2
       eslint: 7.32.0
-      rollup: 2.67.2
+      rollup: 2.67.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3894,8 +3894,8 @@ packages:
       glob: 7.2.0
     dev: true
 
-  /rollup/2.67.2:
-    resolution: {integrity: sha512-hoEiBWwZtf1QdK3jZIq59L0FJj4Fiv4RplCO4pvCRC86qsoFurWB4hKQIjoRf3WvJmk5UZ9b0y5ton+62fC7Tw==}
+  /rollup/2.67.3:
+    resolution: {integrity: sha512-G/x1vUwbGtP6O5ZM8/sWr8+p7YfZhI18pPqMRtMYMWSbHjKZ/ajHGiM+GWNTlWyOR0EHIdT8LHU+Z4ciIZ1oBw==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
