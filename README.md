@@ -28,6 +28,7 @@ A small starting point for building a static site.
 pnpm i
 pnpm format  # Format with prettier
 pnpm build   # Build src/css/[styles.css,script.js] and output src/public/*
+pnpm clean   # Remove unused image files in src/public/images/*
 pnpm dev     # Watch and build src/css/[styles.css,script.js]
 pnpm lint    # Linting
 pnpm test    # Testing
