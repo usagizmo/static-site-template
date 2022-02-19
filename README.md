@@ -71,13 +71,14 @@ printf "{
 printf "const path = require('path')
 const protect = require('static-auth')
 const safeCompare = require('safe-compare')
+const directory = path.join(__dirname, '/src/public')
 
 const app = protect(
   '/',
   (username, password) =>
     safeCompare(username, '<username>') && safeCompare(password, '<password>'),
   {
-    directory: path.join(__dirname, '/src/public'),
+    directory,
     onAuthFailed: (res) => {
       res.end('Authentication failed')
     },
