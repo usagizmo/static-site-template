@@ -55,16 +55,16 @@ jobs:
           version: 6.0.2
           run_install: true
 
-      - name: Run format 🎀
-        run: pnpm format
-
-      - uses: stefanzweifel/git-auto-commit-action@v4
-
       - name: Run build 🐣
         run: pnpm build
 
       - name: Run lint 👀
         run: pnpm lint
+
+      - name: Run format 🎀
+        run: pnpm format
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
 
       - name: Run test 🧪
         run: pnpm test
