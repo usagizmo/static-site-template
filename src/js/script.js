@@ -1,10 +1,10 @@
-import { startAnimation } from './modules/startAnimation.js'
 // import { removeInitialCover } from './modules/removeInitialCover.js'
-// import { setSpMenu } from './modules/setSpMenu'
-import { setSmoothScroll } from './modules/setSmoothScroll'
+// import { setDeep } from './modules/setDeep'
 import { setIn } from './modules/setIn'
 // import { setModal } from './modules/setModal'
-// import { setDeep } from './modules/setDeep'
+import { setSmoothScroll } from './modules/setSmoothScroll'
+// import { setSpMenu } from './modules/setSpMenu'
+import { startAnimation } from './modules/startAnimation.js'
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
