@@ -1,6 +1,6 @@
 {
   "name": "static-site-template",
-  "version": "0.13.1",
+  "version": "0.13.2",
   "repository": "ssh://git@github.com/usagizmo/static-site-template.git",
   "author": "usagizmo <usagizmo@gmail.com>",
   "license": "MIT",
