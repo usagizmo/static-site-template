@@ -12,6 +12,7 @@ A small starting point for building a static site.
 - [HTMLHint](https://htmlhint.com/) / [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/) / [lint-staged](https://github.com/okonet/lint-staged) / [husky](https://github.com/typicode/husky)
 - GitHub Actions (Formating + Linting + Testing (Validate `href` and `src` paths))
+- [Renovate](https://www.whitesourcesoftware.com/free-developer-tools/renovate/) (w/ [renovate-approve](https://github.com/apps/renovate-approve))
 - Node (`v8+`) / [pnpm](https://pnpm.io/)
 
 ### VS Code Extensions
@@ -45,7 +46,24 @@ curl "<url>" | openssl dgst -sha384 -binary | openssl base64 -A
 
 Ref: [Subresource Integrity - Web security | MDN](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
 
-### With Basic Authentication
+## Use renovate on GitHub
+
+Give [Renovate](https://www.whitesourcesoftware.com/free-developer-tools/renovate/) and [renovate-approve](https://github.com/apps/renovate-approve) permission to operate the repository.
+
+Then change your GitHub settings as follows.
+
+`Settings` > `Branches` > `Branch protection rule`
+
+- Branch name pattern: `main`
+- Protect matching branches:
+  - [x] Require a pull request before merging
+    - [x] Require approvals: `[1]`
+  - [x] Require status checks to pass before merging
+    - Status checks that are required:
+      - `Build (Node 16 on ubuntu-latest)`
+      - `Vercel`
+
+## With Basic Authentication
 
 ```bash
 # Add packages
