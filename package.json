@@ -16,6 +16,7 @@
     "dev": "run-p dev:*",
     "lint:html": "htmlhint \"src/public/**/*.html\"",
     "lint:js": "eslint --cache . --ext .js",
+    "lint:prettier": "prettier --check .",
     "lint": "run-p lint:*",
     "format:lint": "eslint --cache --fix . --ext .js",
     "format:prettier": "prettier --write .",
