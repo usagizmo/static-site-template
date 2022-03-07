@@ -28,9 +28,9 @@ A small starting point for building a static site.
 ```bash
 pnpm i
 pnpm format  # Format with prettier
-pnpm build   # Build src/css/[styles.css,script.js] and output src/public/*
+pnpm build   # Build src/[css/styles.css,js/script.js] and output src/public/*
 pnpm clean   # Remove unused image files in src/public/images/*
-pnpm dev     # Watch and build src/css/[styles.css,script.js]
+pnpm dev     # Watch and build src/[css/styles.css,js/script.js]
 pnpm lint    # Linting
 pnpm test    # Testing
 pnpm deploy  # When deploying to a VPS such as DigitalOcean using `rsync`
