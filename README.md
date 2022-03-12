@@ -50,6 +50,10 @@ pnpm clean   # Remove unused image files in `public/images/*`
 pnpm deploy  # When deploying to a VPS such as DigitalOcean using `rsync`
 ```
 
+## Known issue
+
+Because of the incompatibility of `turbo` and `tailwind --watch`, `pnpm dev` in `apps/web/` is cheating with `concurrently`. I would like to unify with `npm-run-all` in the future.
+
 ## Subresource Integrity
 
 You can use the openssl command to generate an SRI hash.
