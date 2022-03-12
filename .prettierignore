@@ -1,11 +1,6 @@
-.next
-out
-public
-generated
-
 *-lock.yaml
 *.log
 
-# Each packages
+# Each package
 /apps/web/pablic/script.js
 /apps/web/pablic/styles.css
