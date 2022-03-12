@@ -2,5 +2,5 @@
 *.log
 
 # Each package
-/apps/web/pablic/script.js
-/apps/web/pablic/styles.css
+/apps/web/public/script.js
+/apps/web/public/styles.css
