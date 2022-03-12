@@ -1,23 +1,35 @@
 # Static Site Template
 
-A small starting point for building a static site.
+A starting point for building a static site.
 
-[Demo](https://static-site-template.usagizmo.com/)
+[[Demo](https://static-site-template.usagizmo.com/)]
 
 ## Development
 
 ### Uses
 
-- [Tailwind CSS](https://tailwindcss.com/) (v3) / [Rollup](https://rollupjs.org/) (Vanilla)
-- [HTMLHint](https://htmlhint.com/) / [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/) / [lint-staged](https://github.com/okonet/lint-staged) / [husky](https://github.com/typicode/husky)
-- GitHub Actions (Formating + Linting + Testing (Validate `href` and `src` paths))
+- [Turborepo](https://turborepo.org/) x [pnpm](https://pnpm.io/)
+- [Prettier](https://prettier.io/) / [ESLint](https://eslint.org/) (w/ [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import))
+- [lint-staged](https://github.com/okonet/lint-staged) / [husky](https://github.com/typicode/husky)
 - [Renovate](https://www.whitesourcesoftware.com/free-developer-tools/renovate/) (w/ [renovate-approve](https://github.com/apps/renovate-approve))
-- Node (`v8+`) / [pnpm](https://pnpm.io/)
+- GitHub Actions (Formating + Linting + Testing (Validate `href` and `src` paths))
+- Execute `eslint --fix` and `prettier` when saving with VSCode
 
-### VS Code Extensions
+### Apps and Packages
 
-#### Recommend
+- **Apps**
+  - `web` - Static Site  
+    [Tailwind CSS](https://tailwindcss.com/) / [Rollup](https://rollupjs.org/)  
+    [HTMLHint](https://htmlhint.com/) / [webhint](https://webhint.io/)
+- **Packages**
+
+  - `eslint-preset` - Base settings used by `.eslintrc.cjs` for each package
+  - `lintstagedrc` - Base settings used by `.lintstagedrc.js` for each package
+  - `pathtest-utils` - Used in `apps/web/test/path.test.js`
+  - `script-modules` - JS modules used in `apps/web/src/script.js`
+  - `tailwind-config-base` - Used in `apps/web/tailwind.config.cjs`
+
+### VS Code Extensions (Recommend)
 
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 - [HTMLHint](https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint) / [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) / [webhint](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint)
@@ -27,12 +39,15 @@ A small starting point for building a static site.
 
 ```bash
 pnpm i
-pnpm format  # Format with prettier
-pnpm build   # Build src/[css/styles.css,js/script.js] and output src/public/*
-pnpm clean   # Remove unused image files in src/public/images/*
-pnpm dev     # Watch and build src/[css/styles.css,js/script.js]
+
+pnpm build   # Build `apps/web/src/[styles.css,script.js]` and output `apps/web/public/*`
+pnpm dev     # Watch and build `apps/web/src/[styles.css,script.js]`
 pnpm lint    # Linting
+pnpm format  # Format with eslint --fix and prettier
 pnpm test    # Testing
+
+# apps/web
+pnpm clean   # Remove unused image files in public/images/*
 pnpm deploy  # When deploying to a VPS such as DigitalOcean using `rsync`
 ```
 
@@ -63,7 +78,15 @@ Then change your GitHub settings as follows.
       - `Build (Node 16 on ubuntu-latest)`
       - `Vercel`
 
-## With Basic Authentication
+## Published on Vercel
+
+`General` > `Build & Development Settings`
+
+- FRAMEWORK PRESET: `Other`
+- OUTPUT DIRECTORY: `apps/web/public`
+- INSTALL COMMAND: `npm i pnpm -g && pnpm i`
+
+### With Basic Authentication
 
 ```bash
 # Add packages
@@ -89,7 +112,7 @@ printf "{
 printf "const path = require('path')
 const protect = require('static-auth')
 const safeCompare = require('safe-compare')
-const directory = path.join(__dirname, '/src/public')
+const directory = path.join(__dirname, '/apps/web/public')
 
 const app = protect(
   '/',
@@ -110,6 +133,6 @@ module.exports = app
 Add the `vercel-build` command to `package.json`.
 
 ```diff
-"build": "concurrently \"npm:build:tailwind\" \"npm:build:js\"",
+"build": "turbo run build",
 + "vercel-build": "npm run build",
 ```

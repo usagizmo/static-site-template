@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./src/public/**/*.{html,js}'],
+  content: [], // Override in each package
   theme: {
     container: {
       center: true,

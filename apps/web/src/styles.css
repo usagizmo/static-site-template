@@ -41,9 +41,9 @@
 [data-in] {
   @apply duration-[600ms];
 }
-[data-in="fade-in"]:not(.is-in) {
+[data-in='fade-in']:not(.is-in) {
   @apply pointer-events-none opacity-0;
 }
-[data-in="slide-in"]:not(.is-in) {
+[data-in='slide-in']:not(.is-in) {
   @apply pointer-events-none translate-y-5 opacity-0;
 }

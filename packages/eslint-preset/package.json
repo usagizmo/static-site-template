@@ -1,0 +1,23 @@
+{
+  "name": "eslint-preset",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "node.cjs",
+    "web.cjs"
+  ],
+  "scripts": {
+    "lint": "eslint . --ext .js,.cjs",
+    "lint:fix": "eslint . --ext .js,.cjs --fix"
+  },
+  "devDependencies": {
+    "eslint": "8.11.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.25.4",
+    "lintstagedrc": "workspace:*"
+  },
+  "peerDependencies": {
+    "eslint": "8.10.0"
+  }
+}

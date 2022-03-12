@@ -1,5 +1,11 @@
-*.min.*
-libs
-pnpm-lock.yaml
-/src/public/styles.css
-/src/public/script.js
+.next
+out
+public
+generated
+
+*-lock.yaml
+*.log
+
+# Each packages
+/apps/web/pablic/script.js
+/apps/web/pablic/styles.css

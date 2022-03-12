@@ -1,7 +1,7 @@
-module.exports.publicDir = 'src/public'
-module.exports.imageExtensions = ['jpg', 'png', 'webp']
+export const publicDir = './public'
+export const imageExtensions = ['jpg', 'png', 'webp']
 
-module.exports.allowedPathList = [
+export const allowedPathList = [
   '/favicon.ico',
   '/apple-touch-icon.png',
   'https://static-site-template.usagizmo.com',
