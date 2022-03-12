@@ -1,13 +1,5 @@
 {
   "pluginSearchDirs": ["."],
   "semi": false,
-  "singleQuote": true,
-  "overrides": [
-    {
-      "files": ["*.css"],
-      "options": {
-        "singleQuote": false
-      }
-    }
-  ]
+  "singleQuote": true
 }
