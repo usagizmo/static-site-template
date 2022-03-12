@@ -18,6 +18,6 @@
     "lintstagedrc": "workspace:*"
   },
   "peerDependencies": {
-    "eslint": "8.10.0"
+    "eslint": "8.11.0"
   }
 }
