@@ -17,12 +17,11 @@ A starting point for building a static site.
 
 ### Apps and Packages
 
-- **Apps**
+- **apps**
   - `web` - Static Site  
     [Tailwind CSS](https://tailwindcss.com/) / [Rollup](https://rollupjs.org/)  
     [HTMLHint](https://htmlhint.com/) / [webhint](https://webhint.io/)
-- **Packages**
-
+- **packages**
   - `eslint-preset` - Base settings used by `.eslintrc.cjs` for each package
   - `lintstagedrc` - Base settings used by `.lintstagedrc.js` for each package
   - `pathtest-utils` - Used in `apps/web/test/path.test.js`
