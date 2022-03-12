@@ -13,7 +13,7 @@ A starting point for building a static site.
 - [lint-staged](https://github.com/okonet/lint-staged) / [husky](https://github.com/typicode/husky)
 - [Renovate](https://www.whitesourcesoftware.com/free-developer-tools/renovate/) (w/ [renovate-approve](https://github.com/apps/renovate-approve))
 - GitHub Actions (Formating + Linting + Testing (Validate `href` and `src` paths))
-- Execute `eslint --fix` and `prettier` when saving with VSCode
+- Execute `eslint --fix` and `prettier` when saving with VS Code
 
 ### Apps and Packages
 
@@ -42,11 +42,11 @@ pnpm i
 pnpm build   # Build `apps/web/src/[styles.css,script.js]` and output `apps/web/public/*`
 pnpm dev     # Watch and build `apps/web/src/[styles.css,script.js]`
 pnpm lint    # Linting
-pnpm format  # Format with eslint --fix and prettier
+pnpm format  # Format with `eslint --fix` and `prettier`
 pnpm test    # Testing
 
 # apps/web
-pnpm clean   # Remove unused image files in public/images/*
+pnpm clean   # Remove unused image files in `public/images/*`
 pnpm deploy  # When deploying to a VPS such as DigitalOcean using `rsync`
 ```
 

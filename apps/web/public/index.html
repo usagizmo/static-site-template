@@ -66,7 +66,7 @@
         Static Site Template
       </h1>
       <p class="mt-2 md:ml-auto md:mt-0 md:px-4 md:pl-4">
-        A small starting point for building a static site.
+        A starting point for building a static site.
       </p>
       <a
         href="https://github.com/usagizmo/static-site-template"
@@ -90,7 +90,6 @@
             >
               Development
             </h2>
-
             <div class="space-y-6 md:flex md:space-y-0">
               <div class="flex-1 md:px-4">
                 <h3
@@ -108,22 +107,17 @@
                         class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://tailwindcss.com"
-                        >Tailwind CSS</a
+                        href="https://turborepo.org/"
+                        >Turborepo</a
                       >
-                      (v3)
-                    </li>
-                    <li
-                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                    >
+                      x
                       <a
                         class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://rollupjs.org/"
-                        >Rollup</a
+                        href="https://pnpm.io/"
+                        >pnpm</a
                       >
-                      (Vanilla)
                     </li>
                   </ul>
                   <ul class="flex before:font-mono before:content-['・']">
@@ -134,8 +128,8 @@
                         class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://htmlhint.com"
-                        >HTMLHint</a
+                        href="https://prettier.io/"
+                        >Prettier</a
                       >
                     </li>
                     <li
@@ -148,20 +142,17 @@
                         href="https://eslint.org"
                         >ESLint</a
                       >
-                    </li>
-                  </ul>
-                  <ul class="flex before:font-mono before:content-['・']">
-                    <li
-                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                    >
+                      (w/
                       <a
                         class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://prettier.io"
-                        >Prettier</a
-                      >
+                        href="https://github.com/import-js/eslint-plugin-import"
+                        >eslint-plugin-import</a
+                      >)
                     </li>
+                  </ul>
+                  <ul class="flex before:font-mono before:content-['・']">
                     <li
                       class="before:px-1 before:content-['/'] first-of-type:before:content-none"
                     >
@@ -198,7 +189,44 @@
                     <li
                       class="before:px-1 before:content-['/'] first-of-type:before:content-none"
                     >
-                      Node (<code>v8+</code>)
+                      Execute <code>eslint --fix</code> and
+                      <code>prettier</code> when saving with VS Code
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Apps and Packages -->
+          <div>
+            <h2
+              class="mb-6 text-center text-[24px] font-semibold md:text-[28px]"
+              data-in="slide-in"
+            >
+              Apps and Packages
+            </h2>
+            <div class="space-y-6 md:flex md:space-y-0">
+              <div class="flex-1 md:px-4">
+                <h3
+                  class="mb-4 text-[18px] font-semibold leading-[1.25] md:text-[20px]"
+                  data-in="slide-in"
+                >
+                  <code>apps</code>
+                </h3>
+                <div data-in="slide-in">
+                  <code>web</code> - Static Site<br />
+                  <ul class="flex before:font-mono before:content-['・']">
+                    <li
+                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
+                    >
+                      <a
+                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://tailwindcss.com"
+                        >Tailwind CSS</a
+                      >
                     </li>
                     <li
                       class="before:px-1 before:content-['/'] first-of-type:before:content-none"
@@ -207,95 +235,67 @@
                         class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://pnpm.io/"
-                        >pnpm</a
+                        href="https://rollupjs.org/"
+                        >Rollup</a
+                      >
+                    </li>
+                  </ul>
+                  <ul class="flex before:font-mono before:content-['・']">
+                    <li
+                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
+                    >
+                      <a
+                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://htmlhint.com"
+                        >HTMLHint</a
+                      >
+                    </li>
+                    <li
+                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
+                    >
+                      <a
+                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://webhint.io/"
+                        >webhint</a
                       >
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="flex-1 md:px-4">
+              <div class="md:px-4">
                 <h3
                   class="mb-4 text-[18px] font-semibold leading-[1.25] md:text-[20px]"
                   data-in="slide-in"
                 >
-                  VS Code Extensions
+                  <code>packages</code>
                 </h3>
-                <div data-in="slide-in" class="space-y-4">
-                  <div>
-                    <ul class="flex before:font-mono before:content-['・']">
-                      <li
-                        class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                      >
-                        <a
-                          class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
-                          >Tailwind CSS IntelliSense</a
-                        >
-                      </li>
-                    </ul>
-                    <ul class="flex before:font-mono before:content-['・']">
-                      <li
-                        class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                      >
-                        <a
-                          class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint"
-                          >HTMLHint</a
-                        >
-                      </li>
-                      <li
-                        class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                      >
-                        <a
-                          class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
-                          >ESLint</a
-                        >
-                      </li>
-                      <li
-                        class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                      >
-                        <a
-                          class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint"
-                          >webhint</a
-                        >
-                      </li>
-                    </ul>
-                    <ul class="flex before:font-mono before:content-['・']">
-                      <li
-                        class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                      >
-                        <a
-                          class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig"
-                          >EditorConfig</a
-                        >
-                      </li>
-                      <li
-                        class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                      >
-                        <a
-                          class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
-                          >Prettier</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
+                <div data-in="slide-in">
+                  <ul>
+                    <li class="before:font-mono before:content-['・']">
+                      <code>eslint-preset</code> - Base settings used by
+                      <code>.eslintrc.cjs</code> for each package
+                    </li>
+                    <li class="before:font-mono before:content-['・']">
+                      <code>lintstagedrc</code> - Base settings used by
+                      <code>.lintstagedrc.js</code> for each package
+                    </li>
+                    <li class="before:font-mono before:content-['・']">
+                      <code>pathtest-utils</code> - Used in
+                      <code>apps/web/test/path.test.js</code>
+                    </li>
+                    <li class="before:font-mono before:content-['・']">
+                      <code>script-modules</code> - JS modules used in
+                      <code>apps/web/src/script.js</code>
+                    </li>
+                    <li class="before:font-mono before:content-['・']">
+                      <code>tailwind-config-base</code> - Used in
+                      <code>apps/web/tailwind.config.cjs</code>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -314,13 +314,16 @@
               <pre
                 class="w-full overflow-x-auto rounded-[8px] bg-gray-900 px-7 py-5 text-[14px] text-white"
                 data-in="slide-in"
-              ><code class="bash"><span class="text-teal-300">pnpm</span> i
-<span class="text-teal-300">pnpm</span> format  <span class="text-gray-400"># Format with prettier</span>
-<span class="text-teal-300">pnpm</span> build   <span class="text-gray-400"># Build src/[css/styles.css,js/script.js] and output src/public/*</span>
-<span class="text-teal-300">pnpm</span> clean   <span class="text-gray-400"># Remove unused image files in src/public/images/*</span>
-<span class="text-teal-300">pnpm</span> dev     <span class="text-gray-400"># Watch and build src/[css/styles.css,js/script.js]</span>
+              ><code><span class="text-teal-300">pnpm</span> i
+
+<span class="text-teal-300">pnpm</span> build   <span class="text-gray-400"># Build `apps/web/src/[styles.css,script.js]` and output `apps/web/public/*`</span>
+<span class="text-teal-300">pnpm</span> dev     <span class="text-gray-400"># Watch and build `apps/web/src/[styles.css,script.js]`</span>
 <span class="text-teal-300">pnpm</span> lint    <span class="text-gray-400"># Linting</span>
+<span class="text-teal-300">pnpm</span> format  <span class="text-gray-400"># Format with `eslint --fix` and `prettier`</span>
 <span class="text-teal-300">pnpm</span> test    <span class="text-gray-400"># Testing</span>
+
+<span class="text-gray-400"># apps/web</span>
+<span class="text-teal-300">pnpm</span> clean   <span class="text-gray-400"># Remove unused image files in `public/images/*`</span>
 <span class="text-teal-300">pnpm</span> deploy  <span class="text-gray-400"># When deploying to a VPS such as DigitalOcean using `rsync`</span></code></pre>
             </div>
           </div>
