@@ -72,7 +72,7 @@
         href="https://github.com/usagizmo/static-site-template"
         target="_blank"
         rel="noopener noreferrer"
-        class="mt-6 rounded-[24px] bg-black px-5 py-3 font-medium text-white duration-150 hover:bg-gray-700 md:mt-0"
+        class="btn mt-6 rounded-full bg-gray-900 normal-case text-white md:mt-0"
       >
         GitHub
       </a>
@@ -83,216 +83,147 @@
       <main class="bg-gradient-to-b from-blue-300 to-green-200 py-10">
         <div class="container space-y-12">
           <!-- Development -->
-          <div>
-            <h2
-              class="mb-6 text-center text-[24px] font-semibold md:text-[28px]"
-              data-in="slide-in"
-            >
-              Development
-            </h2>
-            <div class="space-y-6 md:flex md:space-y-0">
-              <div class="flex-1 md:px-4">
-                <h3
-                  class="mb-4 text-[18px] font-semibold leading-[1.25] md:text-[20px]"
-                  data-in="slide-in"
-                >
-                  Uses
-                </h3>
-                <div data-in="slide-in">
-                  <ul class="flex before:font-mono before:content-['・']">
-                    <li
-                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                    >
-                      <a
-                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://turborepo.org/"
-                        >Turborepo</a
-                      >
-                      x
-                      <a
-                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://pnpm.io/"
-                        >pnpm</a
-                      >
-                    </li>
-                  </ul>
-                  <ul class="flex before:font-mono before:content-['・']">
-                    <li
-                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                    >
-                      <a
-                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://prettier.io/"
-                        >Prettier</a
-                      >
-                    </li>
-                    <li
-                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                    >
-                      <a
-                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://eslint.org"
-                        >ESLint</a
-                      >
-                      (w/
-                      <a
-                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://github.com/import-js/eslint-plugin-import"
-                        >eslint-plugin-import</a
-                      >)
-                    </li>
-                  </ul>
-                  <ul class="flex before:font-mono before:content-['・']">
-                    <li
-                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                    >
-                      <a
-                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://github.com/okonet/lint-staged"
-                        >lint-staged</a
-                      >
-                    </li>
-                    <li
-                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                    >
-                      <a
-                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://github.com/typicode/husky"
-                        >husky</a
-                      >
-                    </li>
-                  </ul>
-                  <ul class="flex before:font-mono before:content-['・']">
-                    <li
-                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                    >
-                      GitHub Actions (Formating + Linting + Testing (Validate
-
-                      <code>href</code> and <code>src</code> paths))
-                    </li>
-                  </ul>
-                  <ul class="flex before:font-mono before:content-['・']">
-                    <li
-                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                    >
-                      Execute <code>eslint --fix</code> and
-                      <code>prettier</code> when saving with VS Code
-                    </li>
-                  </ul>
-                </div>
-              </div>
+          <div class="prose max-w-none">
+            <h2 class="text-center" data-in="slide-in">Development</h2>
+            <h3 data-in="slide-in">Uses</h3>
+            <div data-in="slide-in">
+              <ul>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://turborepo.org/"
+                    >Turborepo</a
+                  >
+                  x
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://pnpm.io/"
+                    >pnpm</a
+                  >
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://prettier.io/"
+                    >Prettier</a
+                  >
+                  /
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://eslint.org"
+                    >ESLint</a
+                  >
+                  (w/
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/import-js/eslint-plugin-import"
+                    >eslint-plugin-import</a
+                  >)
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/okonet/lint-staged"
+                    >lint-staged</a
+                  >
+                  /
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/typicode/husky"
+                    >husky</a
+                  >
+                </li>
+                <li>
+                  GitHub Actions (Formating + Linting + Testing (Validate
+                  <code>href</code> and <code>src</code> paths))
+                </li>
+                <li>
+                  Execute <code>eslint --fix</code> and
+                  <code>prettier</code> when saving with VS Code
+                </li>
+              </ul>
             </div>
           </div>
 
           <!-- Apps and Packages -->
-          <div>
-            <h2
-              class="mb-6 text-center text-[24px] font-semibold md:text-[28px]"
-              data-in="slide-in"
-            >
-              Apps and Packages
-            </h2>
+          <div class="prose max-w-none">
+            <h2 class="text-center" data-in="slide-in">Apps and Packages</h2>
             <div class="space-y-6 md:flex md:space-y-0">
               <div class="flex-1 md:px-4">
-                <h3
-                  class="mb-4 text-[18px] font-semibold leading-[1.25] md:text-[20px]"
-                  data-in="slide-in"
-                >
-                  <code>apps</code>
-                </h3>
+                <h3 class="slide-in">apps</h3>
                 <div data-in="slide-in">
-                  <code>web</code> - Static Site<br />
-                  <ul class="flex before:font-mono before:content-['・']">
-                    <li
-                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                    >
-                      <a
-                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://tailwindcss.com"
-                        >Tailwind CSS</a
-                      >
-                    </li>
-                    <li
-                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                    >
-                      <a
-                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://rollupjs.org/"
-                        >Rollup</a
-                      >
-                    </li>
-                  </ul>
-                  <ul class="flex before:font-mono before:content-['・']">
-                    <li
-                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                    >
-                      <a
-                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://htmlhint.com"
-                        >HTMLHint</a
-                      >
-                    </li>
-                    <li
-                      class="before:px-1 before:content-['/'] first-of-type:before:content-none"
-                    >
-                      <a
-                        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://webhint.io/"
-                        >webhint</a
-                      >
+                  <ul>
+                    <li>
+                      <p><strong>web</strong> - Static Site</p>
+                      <ul>
+                        <li>
+                          <a
+                            class="link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://tailwindcss.com"
+                            >Tailwind CSS</a
+                          >
+                          /
+                          <a
+                            class="link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://rollupjs.org/"
+                            >Rollup</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://htmlhint.com"
+                            >HTMLHint</a
+                          >
+                          /
+                          <a
+                            class="link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://webhint.io/"
+                            >webhint</a
+                          >
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </div>
               </div>
               <div class="md:px-4">
-                <h3
-                  class="mb-4 text-[18px] font-semibold leading-[1.25] md:text-[20px]"
-                  data-in="slide-in"
-                >
-                  <code>packages</code>
-                </h3>
+                <h3 data-in="slide-in">packages</h3>
                 <div data-in="slide-in">
                   <ul>
-                    <li class="before:font-mono before:content-['・']">
-                      <code>eslint-preset</code> - Base settings used by
+                    <li>
+                      <strong>eslint-preset</strong> - Base settings used by
                       <code>.eslintrc.cjs</code> for each package
                     </li>
-                    <li class="before:font-mono before:content-['・']">
-                      <code>lintstagedrc</code> - Base settings used by
+                    <li>
+                      <strong>lintstagedrc</strong> - Base settings used by
                       <code>.lintstagedrc.js</code> for each package
                     </li>
-                    <li class="before:font-mono before:content-['・']">
-                      <code>pathtest-utils</code> - Used in
+                    <li>
+                      <strong>pathtest-utils</strong> - Used in
                       <code>apps/web/test/path.test.js</code>
                     </li>
-                    <li class="before:font-mono before:content-['・']">
-                      <code>script-modules</code> - JS modules used in
+                    <li>
+                      <strong>script-modules</strong> - JS modules used in
                       <code>apps/web/src/script.js</code>
                     </li>
-                    <li class="before:font-mono before:content-['・']">
-                      <code>tailwind-config-base</code> - Used in
+                    <li>
+                      <strong>tailwind-config-base</strong> - Used in
                       <code>apps/web/tailwind.config.cjs</code>
                     </li>
                   </ul>
@@ -302,30 +233,22 @@
           </div>
 
           <!-- Commands -->
-          <div>
-            <h2
-              class="mb-10 text-center text-[24px] font-semibold md:text-[28px]"
-              data-in="slide-in"
-            >
-              Commands
-            </h2>
+          <div class="prose mb-[1em] max-w-none">
+            <h2 class="text-center" data-in="slide-in">Commands</h2>
+          </div>
 
-            <div>
-              <pre
-                class="w-full overflow-x-auto rounded-[8px] bg-gray-900 px-7 py-5 text-[14px] text-white"
-                data-in="slide-in"
-              ><code><span class="text-teal-300">pnpm</span> i
-
-<span class="text-teal-300">pnpm</span> build   <span class="text-gray-400"># Build `apps/web/src/[styles.css,script.js]` and output `apps/web/public/*`</span>
-<span class="text-teal-300">pnpm</span> dev     <span class="text-gray-400"># Watch and build `apps/web/src/[styles.css,script.js]`</span>
-<span class="text-teal-300">pnpm</span> lint    <span class="text-gray-400"># Linting</span>
-<span class="text-teal-300">pnpm</span> format  <span class="text-gray-400"># Format with `eslint --fix` and `prettier`</span>
-<span class="text-teal-300">pnpm</span> test    <span class="text-gray-400"># Testing</span>
-
-<span class="text-gray-400"># apps/web</span>
-<span class="text-teal-300">pnpm</span> clean   <span class="text-gray-400"># Remove unused image files in `public/images/*`</span>
-<span class="text-teal-300">pnpm</span> deploy  <span class="text-gray-400"># When deploying to a VPS such as DigitalOcean using `rsync`</span></code></pre>
-            </div>
+          <div class="mockup-code slide-in bg-gray-900">
+            <pre><code><span class="text-teal-300">pnpm</span> i</code></pre>
+            <pre><code></code></pre>
+            <pre><code><span class="text-teal-300">pnpm</span> build   <span class="text-gray-400"># Build `apps/web/src/[styles.css,script.js]` and output `apps/web/public/*`</span></code></pre>
+            <pre><code><span class="text-teal-300">pnpm</span> dev     <span class="text-gray-400"># Watch and build `apps/web/src/[styles.css,script.js]`</span></code></pre>
+            <pre><code><span class="text-teal-300">pnpm</span> lint    <span class="text-gray-400"># Linting</span></code></pre>
+            <pre><code><span class="text-teal-300">pnpm</span> format  <span class="text-gray-400"># Format with `eslint --fix` and `prettier`</span></code></pre>
+            <pre><code><span class="text-teal-300">pnpm</span> test    <span class="text-gray-400"># Testing</span></code></pre>
+            <pre><code></code></pre>
+            <pre><code><span class="text-gray-400"># apps/web</span></code></pre>
+            <pre><code><span class="text-teal-300">pnpm</span> clean   <span class="text-gray-400"># Remove unused image files in `public/images/*`</span></code></pre>
+            <pre><code><span class="text-teal-300">pnpm</span> deploy  <span class="text-gray-400"># When deploying to a VPS such as DigitalOcean using `rsync`</span></code></pre>
           </div>
 
           <!-- Buttons -->
@@ -334,7 +257,7 @@
               href="https://github.com/usagizmo/static-site-template"
               target="_blank"
               rel="noopener noreferrer"
-              class="rounded-[24px] bg-black py-3 px-5 font-semibold text-white duration-150 hover:bg-gray-700"
+              class="btn rounded-full bg-gray-900 normal-case text-white"
             >
               GitHub
             </a>
@@ -344,12 +267,7 @@
     </div>
 
     <footer class="mt-4 flex items-center justify-center py-4">
-      <a
-        href="https://usagizmo.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="relative inline-flex overflow-hidden text-gray-600 after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:translate-x-[calc(-100%-1px)] after:bg-black after:duration-200 hover:text-black hover:after:translate-x-0"
-      >
+      <a href="https://usagizmo.com" target="_blank" rel="noopener noreferrer">
         <small class="text-[12px]">@usagizmo</small>
       </a>
     </footer>
