@@ -11,7 +11,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "0.5.2",
     "autoprefixer": "10.4.2",
-    "daisyui": "2.11.0",
+    "daisyui": "2.11.1",
     "eslint-preset": "workspace:*",
     "lintstagedrc": "workspace:*",
     "postcss": "8.4.8",
