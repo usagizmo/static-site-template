@@ -1,8 +1,8 @@
+All features can continue to be used in [usagizmo/nextjs-template](https://github.com/usagizmo/nextjs-template)
+
 # Static Site Template
 
 A starting point for building a static site.
-
-[[Demo](https://static-site-template.usagizmo.com/)]
 
 ## Development
 
